@@ -1,0 +1,10 @@
+{
+  "Name": "RAY OF FROST",
+  "Level": "Evoc",
+  "School": "ation cantrip",
+  "CastingTime": "I action",
+  "Range": "60 feet",
+  "Components": "V,5",
+  "Duration": "Instantaneous",
+  "Description": "A frigid beam of blue-white light streaks toward acreature within range. Make a ranged spell attackagainst the target. On a hit, it takes ld8 cold damage,and its speed is reduced by 10 feet until the start ofyour next turnoThe spell's damage increases by Id8 when you reach5th levei (2d8), 11th levei (3d8), and 17th levei (4d8)."
+}

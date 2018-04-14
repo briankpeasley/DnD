@@ -1,0 +1,10 @@
+{
+  "Name": "RARY'S TELEPATHIC BOND",
+  "Level": "5th-levei",
+  "School": "divination (ritual)",
+  "CastingTime": "1action",
+  "Range": "30 feet",
+  "Components": "V,S, M(pieces ofeggshell from twodifferent kinds ofcreatures)",
+  "Duration": "I hour",
+  "Description": "Vouforge a telepathic link among uptoeight willingcreatures ofyour choice within range, psychicallylinking each creature to all the others for the duration.Creatures with Intelligence scores of 2 ar less aren'taffected by this spell.Until the spell ends, the targets can communicatetelepathically thraugh the bond whether ar not they havea common language. The communication is possibleover any distance, though it can't extend to other planesof existence."
+}

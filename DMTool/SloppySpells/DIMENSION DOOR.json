@@ -1,0 +1,10 @@
+{
+  "Name": "DIMENSION DOOR",
+  "Level": "4th-levei",
+  "School": "conjuration",
+  "CastingTime": "1action",
+  "Range": "500 feet",
+  "Components": "V",
+  "Duration": "Instantaneous",
+  "Description": "Vouteleport yourself from your current location lo anyother spot within range. Vouarrive at exactly the spotdesired. Itcan be a place you can see, one you canvisualize, or one you can describe bystating distanceand direclion, such as \"200 feet straight downward\" or\"upward to the northwest at a 45-degree angle, 300 feet.\"Voucan bring along objects as long as their weightdoesn't exceed what you can carry. Voucan also bringone willing creature ofyour size or smaller who iscarrying gear up to its carrying capacity. The creaturemust be within 5 feet ofyou when you cast this spell.Ifyou would arrive in a place already occupied byanobject or a creature, you and any creature traveling withyou each take 4d6 force damage, and the spell fails toteleport you."
+}

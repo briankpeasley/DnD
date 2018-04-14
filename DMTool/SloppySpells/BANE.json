@@ -1,0 +1,10 @@
+{
+  "Name": "BANE",
+  "Level": "1st-leveIe",
+  "School": "nchantment",
+  "CastingTime": "1action",
+  "Range": "30 feet",
+  "Components": "V,S, M(adrop ofblood)",
+  "Duration": "Concentration, up to 1minute",
+  "Description": "Uptothree creatures ofyour choice that you can seewithin range must make Charisma saving throws.Whenever atarget that fails this saving throw makesan attack roll or asaving throw before the spell ends,the target must roll ad4 and subtract the number rolledfrom the attack roll or saving throw.At Higher LeveIs. When you cast this spell usingaspell slot of2nd leveior higher, you can target oneadditional creature foreach slot leveIabove 1st."
+}

@@ -1,0 +1,1 @@
+{"name":"Darkvision","desc":"<p>You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 60 feet.</p>","higher_level":null,"range":"Touch","components":"V, S, M","duration":"8 hours","concentration":"no","casting_time":"1 action","level":"2nd-level","Cooldown":false}

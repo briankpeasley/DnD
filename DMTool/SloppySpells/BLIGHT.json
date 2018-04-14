@@ -1,0 +1,10 @@
+{
+  "Name": "BLIGHT",
+  "Level": "4th.level",
+  "School": "necromancy",
+  "CastingTime": "1action",
+  "Range": "30feet",
+  "Components": "V,S",
+  "Duration": "Instantaneous",
+  "Description": "Necromantic energy washes overacreature ofyourchoice thatyoucan see within range, draining moistureand vitalityfromit.The target must make aConstitutionsaving throw. The target takes 8d8 necrotic damage onafailedsave,orhalfas muchdamage onasuccessfulone.This spell has noeffectonundead orconstructs.lfyoutarget aplantcreature oramagical plant,itmakes the saving throw withdisadvantage, and the spelldeals maximum damage toit.lfyou target anonmagical plant that isn't acreature,such asatree orshrub, itdoesn't make asaving throw;itsimplywithers and dies.At Higher LeveIs. When youcast this spell using aspell slotof5th leveiorhigher, thedamage increases byId8foreach slotleveIabove4th."
+}

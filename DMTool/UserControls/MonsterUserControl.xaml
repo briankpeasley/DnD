@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="DMTool.UserControls.MonsterUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DMTool.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="700">
+    <Grid x:Name="grid">
+        <ScrollViewer>
+            <StackPanel>
+                <local:CharacterUserControl x:Name="characterUserControl" Character="{Binding Path=Monster, UpdateSourceTrigger=PropertyChanged}" />
+                <Border BorderThickness="0,3,0,0" Margin="0,10,0,0" >
+                    <Border.BorderBrush>
+                        <LinearGradientBrush EndPoint="0,0" StartPoint="1,0">
+                            <GradientStop Color="#FF964529" Offset="0.46"/>
+                            <GradientStop/>
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <StackPanel >
+                        <local:StylizedTextBlock Text="Special Abilities" FontSize="13pt" FontWeight="DemiBold" />
+                        <ItemsControl x:Name="specialAbilities" >
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Margin="0,0,0,10" >
+                                        <local:StylizedTextBlock FontWeight="DemiBold">
+                                            <Run Text="{Binding Path=Name}" />
+                                            <Run Text=": " />
+                                        </local:StylizedTextBlock>
+                                        <local:StylizedTextBox Text="{Binding Path=Description, Mode=TwoWay}" TextWrapping="Wrap" MaxWidth="700"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Border>
+
+                <Border BorderThickness="0,3,0,0" Margin="0,10,0,0" >
+                    <Border.BorderBrush>
+                        <LinearGradientBrush EndPoint="0,0" StartPoint="1,0">
+                            <GradientStop Color="#FF964529" Offset="0.46"/>
+                            <GradientStop/>
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <StackPanel >
+                        <local:StylizedTextBlock Text="Actions" FontSize="13pt" FontWeight="DemiBold" />
+                        <ItemsControl x:Name="actions" >
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Margin="0,0,0,10" >
+                                        <local:StylizedTextBlock FontWeight="DemiBold">
+                                            <Run Text="{Binding Path=Name}" />
+                                            <Run Text=": " />
+                                        </local:StylizedTextBlock>
+                                        <local:StylizedTextBox Text="{Binding Path=Description, Mode=TwoWay}" TextWrapping="Wrap" MaxWidth="700"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

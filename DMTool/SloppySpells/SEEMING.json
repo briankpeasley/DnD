@@ -1,0 +1,10 @@
+{
+  "Name": "SEEMING",
+  "Level": "5th./evel",
+  "School": "iJJusion",
+  "CastingTime": "I action",
+  "Range": "30 feet",
+  "Components": "V,S",
+  "Duration": "8 hours",
+  "Description": "This spell allows you tochange the appearance ofanynumber ofcreatures that youcan see within range. Vougiveeach target you choose a new,iIIusoryappearance.Anunwilling target can make a Charisma saving throw,and ifitsucceeds, itis unaffected bythis spell.The spell disguises physical appearance as well asclothing, armor, weapons, and equipment. Voucan makeeach creature seem I footshorter or taller and appearthin, fat,or in between. Voucan't change a target's bodytype, so youmust choose a form that has the samebasic arrangement oflimbs. Otherwise, the extent ofthe illusion is up toyou. The spell lasts forthe duration,unless you use your action todismiss itsooner.The changes wrought bythis spell failto hold uptophysical inspection. For example, ifyou use this spelltoadd a hat toa creature's outtit, objects pass throughthe hat, and anyone who touches itwould feelnothingor would feelthe creature's head and hair. Ifyouusethis spell toappear thinner than youare, the hand ofsomeone who reaches out to touch youwould bump intoyouwhile itwas seemingly still in midair.Acreature can use its action to inspect a target andmake an Intelligence (Investigation) check against yourspell save DC.Ifitsucceeds, itbecomes aware that thetarget is disguised."
+}

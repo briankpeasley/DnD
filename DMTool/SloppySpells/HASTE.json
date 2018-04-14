@@ -1,0 +1,10 @@
+{
+  "Name": "HASTE",
+  "Level": "3rd-/evel",
+  "School": "transmutation",
+  "CastingTime": "1action",
+  "Range": "30feet",
+  "Components": "V,5, M(ashaving oflicorice root)",
+  "Duration": "Concentration, upto I minute",
+  "Description": "Choose awilling creature thatyoucan see within range.Untilthespell ends, thetarget's speed isdoubled, itgains a+2bonus toAC,ithas advantage onDexteritysaving throws, and itgains anadditional action oneachofitsturns. That aclion can beused onlylolake theAttack(oneweapon attack only),Dash, Disengage, Hide,orUseanObjectaclion.When lhespell ends, the target can't moveortakeactions untilafter itsnextturn, asawaveoflelhargysweeps overit."
+}

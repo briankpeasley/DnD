@@ -1,0 +1,10 @@
+{
+  "Name": "CONJURE VOLLEY",
+  "Level": "5th-levei",
+  "School": "conjumtion",
+  "CastingTime": "1action",
+  "Range": "150feet",
+  "Components": "V,S, M(one piece ofammunition or onethrown weapon)",
+  "Duration": "Instantaneous",
+  "Description": "Voufire apiece ofnonmagical ammunition fram aranged weapon or throw a nonmagical weapon intothe air and choose apoint within range. Hundreds ofduplicates ofthe ammunition or weapon fali inavolleyfrom above and then disappear. Each creature ina40-foot-radius. 20.foot.high cylinder centered on thatpoint must make a Dexterity saving throw. Acreaturetakes 8d8 damage on afailed save. or half as muchdamage on asuccessful one. The damage type is thesame as that ofthe ammunition or weapon."
+}

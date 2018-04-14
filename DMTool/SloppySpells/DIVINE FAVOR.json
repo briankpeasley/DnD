@@ -1,0 +1,10 @@
+{
+  "Name": "DIVINE FAVOR",
+  "Level": "1st-Ievel",
+  "School": "evocarion",
+  "CastingTime": "I bonus action",
+  "Range": "Self",
+  "Components": "V,S",
+  "Duration": "Concentration, up to 1minute",
+  "Description": "Your prayer empowers you with divine radiance. Untilthe spell ends, your weapon attacks deal an extra 1d4radiant damage on ahit."
+}

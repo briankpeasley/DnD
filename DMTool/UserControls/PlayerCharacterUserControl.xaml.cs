@@ -1,0 +1,81 @@
+﻿using DMTool.Source;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace DMTool.UserControls
+{
+    /// <summary>
+    /// Interaction logic for PlayerCharacterUserControl.xaml
+    /// </summary>
+    public partial class PlayerCharacterUserControl : UserControl
+    {
+        public static readonly DependencyProperty PlayerCharacterProperty =
+            DependencyProperty.Register("PlayerCharacter", typeof(PlayerCharacter), typeof(PlayerCharacterUserControl), new FrameworkPropertyMetadata(null, PlayerCharacterChanged));
+
+        private static void PlayerCharacterChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            PlayerCharacterUserControl ctrl = d as PlayerCharacterUserControl;
+            ctrl.grid.DataContext = e.NewValue;
+            ctrl.gear.ItemsSource = (e.NewValue as PlayerCharacter).Gear;
+        }
+
+        public PlayerCharacterUserControl()
+        {
+            InitializeComponent();
+
+            grid.DataContext = this;
+            characterUserControl.DataContext = this;
+            xpStack.DataContext = this;
+            gear.DataContext = this;
+        }
+
+        public PlayerCharacter PlayerCharacter
+        {
+            get { return GetValue(PlayerCharacterProperty) as PlayerCharacter; }
+            set { SetValue(PlayerCharacterProperty, value); }
+        }
+
+        private void StackPanel_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Gear g = new Gear()
+                {
+                    Name = newName.Text,
+                    Count = newCount.Text,
+                    Description = newDescription.Text,
+                    Weight = newWeight.Text,
+                    Value = newValue.Text
+                };
+
+                newName.Text = string.Empty;
+                newCount.Text = string.Empty;
+                newDescription.Text = string.Empty;
+                newWeight.Text = string.Empty;
+                newValue.Text = string.Empty;
+                PlayerCharacter.Gear.Add(g);
+            }
+        }
+
+        private void RemoveGear(object sender, RoutedEventArgs e)
+        {
+            Gear g = (sender as Button).Tag as Gear;
+            if (g != null)
+            {
+                PlayerCharacter.Gear.Remove(g);
+            }
+        }
+    }
+}

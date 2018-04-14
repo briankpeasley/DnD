@@ -1,0 +1,10 @@
+{
+  "Name": "HOLD PERSON",
+  "Level": "2nd-leveI",
+  "School": "enchantment",
+  "CastingTime": "1action",
+  "Range": "60feet",
+  "Components": "V,S.M(asmall,straight pieceofiron)",
+  "Duration": "Concentration. upto1minute",
+  "Description": "Chooseahumanoid thatyoucanseewithinrange.Thetargetmustsucceed onaWisdomsavingthroworbeparalyzed fortheduration.Attheendofeachofitsturns. thetargetcanmakeanother Wisdomsavingthrow.Onasuccess. thespellendsonthetarget.At Higher Leveis. Whenyoucastthisspellusingaspellslotof3rdleveiorhigher,youcantargetoneadditional humanoid foreachslotleveIabove2nd.Thehumanoids mustbewithin30feetofeachotherwhenyoutargetthem."
+}

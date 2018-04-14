@@ -1,0 +1,10 @@
+{
+  "Name": "TRUE STRIKE",
+  "Level": "Divi",
+  "School": "nation cantrip",
+  "CastingTime": "1action",
+  "Range": "30 feet",
+  "Components": "S",
+  "Duration": "Concentration, up to 1round",
+  "Description": "Vouextend your hand and point afinger atatarget inrange. Vourmagic grants you abrief insight into thetarget's defenses. Onyour next turn, you gain advantageonyour first attack roll against lhe target, provided thatthis spe11hasn't ended."
+}

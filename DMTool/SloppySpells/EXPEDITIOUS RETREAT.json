@@ -1,0 +1,10 @@
+{
+  "Name": "EXPEDITIOUS RETREAT",
+  "Level": "1st-leveI",
+  "School": "transmutation",
+  "CastingTime": "I bonus action",
+  "Range": "Self",
+  "Components": "V,S",
+  "Duration": "Concentration, uplo 10minutes",
+  "Description": "This spell allows youtomoveat an incredible pace.When youcast this spell, and then as a bonus actiononeach ofyour turos unlil the spell ends, youcan takethe Dash action."
+}

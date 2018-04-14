@@ -1,0 +1,10 @@
+{
+  "Name": "HEALING WORD",
+  "Level": "1st-levei",
+  "School": "evocation",
+  "CastingTime": "1bonus action",
+  "Range": "60feet",
+  "Components": "V",
+  "Duration": "Instanlaneous",
+  "Description": "Acreature ofyourchoicethat youcan see within rangeregains hitpoints equal to Id4+yourspellcastingabilitymodifier.This spell has noeffectonundeadorconstructs.At Higher Leveis. Whenyoucast this spell using aspell slotof2nd leveiorhigher, lhe healing increases byld4 foreach slolleveIabove 1st."
+}

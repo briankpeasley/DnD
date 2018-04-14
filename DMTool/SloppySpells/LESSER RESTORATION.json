@@ -1,0 +1,10 @@
+{
+  "Name": "LESSER RESTORATION",
+  "Level": "2nd-leveI",
+  "School": "abjuration",
+  "CastingTime": "I aetion",
+  "Range": "Toueh",
+  "Components": "V,S",
+  "Duration": "Instantaneous",
+  "Description": "Voutoueh a ereature and ean end either one disease orone eondition afflieting it.The eondition ean be blinded,deafened, paralyzed, or poisoned."
+}

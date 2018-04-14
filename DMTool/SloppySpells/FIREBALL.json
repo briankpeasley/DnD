@@ -1,0 +1,10 @@
+{
+  "Name": "FIREBALL",
+  "Level": "3rd~evele",
+  "School": "voeaUon",
+  "CastingTime": "1action",
+  "Range": "150 feet",
+  "Components": "V,S, M(a tiny ball of batguano and sulfur)",
+  "Duration": "Instantaneous",
+  "Description": "Abright streak flashes from your pointing linger to apoint you ehoose within range and then blossoms witha low roar into an explosion of flame. Each creaturein a 20-foot-radius sphere eentered on that point mustmake a Dexterity saving throw. Atarget takes 8d6 /iredamage on a failed save, or half as mueh damage on asueeessful one,The /ire spreads around eorners. It ignites flammableobjeets in the area that aren't being worn or earried.At Higher Leve/s. When you east this spell using aspell slot of4th levei or higher, the damage inereases byId6 for eaeh slot levei above 3rd."
+}

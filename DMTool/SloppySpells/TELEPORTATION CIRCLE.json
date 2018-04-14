@@ -1,0 +1,10 @@
+{
+  "Name": "TELEPORTATION CIRCLE",
+  "Level": "5th-leveI",
+  "School": "conjuration",
+  "CastingTime": "1 minute",
+  "Range": "10 feet",
+  "Components": "V,M (rare chalks and inks infused withprecious gems with 50 gp, which the spell consumes)",
+  "Duration": "1 round",
+  "Description": "As you cast the spell, you draw a lO-foot-diametercircle on the ground inscribed with sigils that Iinkyour location to a permanent teleportation circle ofyour choice whose sigil sequence you know and that ison the same plane of existence as you. A shimmeringportal opens within the circle you drew and remainsopen until the end of your next turn. Any creature thatenters the portal instantly appears within 5 feet of thedestination circle or in the nearest unoccupied space ifthat space is occupied.Many major tempIes, guilds, and other importantplaces have permanent teleportation circles inscribedsomewhere within their confines. Each such circleincludes a unique sigil sequence-a string of magicalrunes arranged in a particular pattern. When you firstgain the ability to cast this spell, you learn the sigilsequences for two destinations on the Material Plane,determined by the DM.Vou can learn additional sigilsequences during your adventures. Voucan commita new sigil sequence to memory after studying itfor 1 minute.Vou can create a permanent teleportation circle bycasting this spell in the same location every day for oneyear. Vou need not use the circle to teleport when youcast the spell in this way."
+}

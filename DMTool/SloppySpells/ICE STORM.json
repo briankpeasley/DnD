@@ -1,0 +1,10 @@
+{
+  "Name": "ICE STORM",
+  "Level": "4th-levei",
+  "School": "evocation",
+  "CastingTime": "1action",
+  "Range": "300 feet",
+  "Components": "V,5, M(apinchofdust and afewdrops ofwater)",
+  "Duration": "Instantaneous",
+  "Description": "Ahailofrock-hard icepounds totheground ina20-foot-radius, 40-foot-highcylinder centered onapointwithin range. Each creature inthecylinder mustmake aDexterity saving throw.Acreature takes 2d8bludgeoning damage and 4d6 colddamage onafailedsave,orhalfasmuch damage onasuccessful one.Hailstones turn the storm's area ofeffectintodifficultterrain untilthe end ofyournext turnoAt Higher Leve/s. Whenyoucast this spell using aspell slotof5th leveIorhigher, the bludgeoning damageincreases byld8 foreachslot leveiabove4th."
+}

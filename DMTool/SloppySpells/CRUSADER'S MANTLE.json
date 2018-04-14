@@ -1,0 +1,10 @@
+{
+  "Name": "CRUSADER'S MANTLE",
+  "Level": "3rd-Ievel",
+  "School": "evocation",
+  "CastingTime": "I action",
+  "Range": "Self",
+  "Components": "V",
+  "Duration": "Concentration, up to I minute",
+  "Description": "Holypower radiates from you in an aura with a 30-footradius, awakening boldness in friendly creatures. Untilthe spell ends, the aura moves with you, centered onyou. While in the aura, each nonhostile creature in theaura (including you) deals an extra Id4 radiant damagewhen ithits with a weapon attack."
+}

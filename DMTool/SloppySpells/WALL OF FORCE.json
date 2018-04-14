@@ -1,0 +1,10 @@
+{
+  "Name": "WALL OF FORCE",
+  "Level": "5th-leveI",
+  "School": "evocation",
+  "CastingTime": "I action",
+  "Range": "120 feet",
+  "Components": "V,S,M(apinch ofpowder made bycrushing aclear gemstone)",
+  "Duration": "Concentration, up to 10minutes",
+  "Description": "Aninvisible wall offorce springs into existence at apoint you choose within range. The wall appears inany orientation you choose, as ahorizontal ar verticalbarrier ar atan angle. Itcan be free floating ar restingon asolid surface. Voucan form itinto ahemisphericaldome ar asphere with aradius ofup to 10feet, ar youcan shape aflatsurface made up often IO-foot-by-IO-footpanels. Each panel must be contiguous withanother pane!. In anyform, the wall is 1/4inch thick.1tlasts forthe duration. Ifthe wall cuts through acreature's space when itappears, the creature ispushedtoone sideofthe wall (your choice which side).Nothing can physically pass through the wal!. Itisimmune toali damage and can't be dispelled bydispelmagic. Adisintegrate spell destroys the wall instantly,however. The wall also extends into the Ethereal Plane,blocking ethereal travei through the wall."
+}

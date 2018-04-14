@@ -1,0 +1,10 @@
+{
+  "Name": "POWER WORD KILL",
+  "Level": "9th-levei",
+  "School": "enchantment",
+  "CastingTime": "I action",
+  "Range": "60 feet",
+  "Components": "V",
+  "Duration": "Instantaneous",
+  "Description": "Vouutter awordofpowerthat can compel onecreatureyoucan see within range todieinstantly. lfthecreature youchoose has 100hitpoints orfewer.itdies.Otherwise. the spell has noeffect."
+}

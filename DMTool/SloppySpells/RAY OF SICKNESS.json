@@ -1,0 +1,10 @@
+{
+  "Name": "RAY OF SICKNESS",
+  "Level": "1st-leveI",
+  "School": "necromancy",
+  "CastingTime": "I action",
+  "Range": "60 feet",
+  "Components": "V,5",
+  "Duration": "Instantaneous",
+  "Description": "A ray of sickening greenish energy lashes out towarda creature within range. Make a ranged spell attackagainst the target. On a hit, the target takes 2d8 poisondamage and must make a Constitution saving throw.On a failed save, it is also poisoned until the end ofyour next turnoAt Higher Leve/s. When you cast this spell using aspell slot of 2nd levei ar higher, the damage increases byld8 for each slot levei above 1st."
+}

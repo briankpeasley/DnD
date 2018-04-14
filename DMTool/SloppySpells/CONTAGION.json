@@ -1,0 +1,10 @@
+{
+  "Name": "CONTAGION",
+  "Level": "5th-leveI",
+  "School": "necromancy",
+  "CastingTime": "1 action",
+  "Range": "Touch",
+  "Components": "Component: V,S",
+  "Duration": "7 days",
+  "Description": "Your touch inflicts disease. Make a melee spell atlackagainst a creature within your reach. On a hit, you aftlictthe creature with a disease of your choice from any ofthe ones described below.At the end of each of the target's turns, it must makea Constitution saving throw. After failing three ofthese saving throws, the disease's effects last for theduration, and the creature stops making these saves.After succeeding on three of these saving throws, thecreature recovers from the disease, and the spell ends.Since this spell induces a natural disease in itstarget, any effect that removes a disease or otherwiseameliorates a disease's effects apply to it.Blinding Sickness. Pain grips the creature's mind,and its eyes turn milky white. The creature hasdisadvantage on Wisdom checks and Wisdom savingthrows and is blinded,FiJth Fever. A raging fever sweeps through thecreature's body. The creature has disadvantage onStrength checks, Strength saving throws. and attackrolls that use Strength.Flesh Rot. The creature's flesh decays. The creaturehas disadvantage on Charisma checks and vulnerabilityto ali damage.Mindfire. The creature's mind becomes feverish. Thecreature has disadvantage on Intelligcnce checks andIntelligence saving throws, and the creature behaves asif under the effects of the confusion spell during combat.Seizure. The creature is ovcrcomc with shaking.The creature has disadvantage on Dexterity checks,Dcxterity saving throws, and attack rolls thatuse Dexterity.Slimy Doom. The creaturc begins to bleeduncontrollably. The creature has disadvantagc onConstitution checks and Constitution saving throws.In addition, whenever the creature takcs damage, it isstunned until the end of its next turno"
+}

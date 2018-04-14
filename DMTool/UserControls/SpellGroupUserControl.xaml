@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="DMTool.UserControls.SpellGroupUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DMTool.UserControls"
+             xmlns:Converters="clr-namespace:DMTool.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid x:Name="grid">
+        <Grid.Resources>
+            <Converters:CooldownToTextDecoration x:Key="CooldownConverter" />
+            <Converters:SpellToTooltip x:Key="SpellTooltip" />
+        </Grid.Resources>
+        <StackPanel HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal">
+                <local:StylizedTextBlock x:Name="nameTextBox" FontWeight="DemiBold" />
+                <Button Content="Add" Click="AddSpell" Margin="10,0,0,0"/>
+            </StackPanel>
+            <ItemsControl x:Name="spellsItemsControl" Margin="15,0,0,0">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="x" Click="RemoveSpell" Tag="{Binding}" />
+                            <CheckBox IsChecked="{Binding Path=Cooldown, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                            <local:StylizedTextBlock Text="{Binding Path=Name}" 
+                                                     Margin="10,0,0,0" 
+                                                     TextDecorations="{Binding Path=Cooldown, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource CooldownConverter}}">
+                                <local:StylizedTextBlock.ToolTip>
+                                    <local:SpellUserControl Spell="{Binding}" MaxWidth="400" />
+                                </local:StylizedTextBlock.ToolTip>
+                            </local:StylizedTextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </Grid>
+</UserControl>

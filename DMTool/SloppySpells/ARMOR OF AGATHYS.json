@@ -1,0 +1,10 @@
+{
+  "Name": "ARMOR OF AGATHYS",
+  "Level": "1st-leveI",
+  "School": "abjuration",
+  "CastingTime": "1action",
+  "Range": "Self",
+  "Components": "V,S, M(a cup ofwater)",
+  "Duration": "1hour",
+  "Description": "Aprotective magical force surrounds you, manifestingas a spectral frost that covers you and your gear.Vougain 5 temporary hit points for the duration. Ifacreature hits you with a melee attack while you havethese hit points, the creature takes 5 cold damage.At Higher Leve/s. When you cast this spell using aspell slot of 2nd levei or higher, both the temporary hitpoints and the cold damage increase by 5 for each slotleveI above 1st."
+}

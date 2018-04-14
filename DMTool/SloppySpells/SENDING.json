@@ -1,0 +1,10 @@
+{
+  "Name": "SENDING",
+  "Level": "3rd./eveI",
+  "School": "evocation",
+  "CastingTime": "I action",
+  "Range": "Unlimited",
+  "Components": "V,S, M(ashort piece oftine copper wire)",
+  "Duration": "I round",
+  "Description": "Vousend a short message oftwenty-tivewords orless toa creature with which youare familiar. Thecreature hears the message in its mind, recognizesyou as the sender ifitknows you, and can answer inalikemanner immediately. The spell enables creatureswith Intelligence scores ofat least I tounderstand themeaning ofyour message.Voucan send the message across anydistance andeven toother planes ofexistence, but ifthe target ison adifferent plane than you, there is a 5 percent chance thatthe message doesn't arrive."
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "CONTROL WEATHER",
+  "Level": "8th.level",
+  "School": "transmutation",
+  "CastingTime": "lO minutes",
+  "Range": "Self (5-mile radius)",
+  "Components": "V,S, M(burning incense and bits of earthand wood mixed in water)",
+  "Duration": "Concentration, up to 8 hours",
+  "Description": "Vou take control of the weather within 5 miles ofyoufor the duration. Vou must be outdoors to cast this spell.Moving to a place where you don't have a clear path tothe sky ends the spell early.When you cast the spell, you change the currentweather conditions, which are determined by the DMbased on the climate and season. Voucan changeprecipitation, temperature, and wind. lt takes Id4 x 10minutes for the new conditions lOtake effect. Once theydo so. you can change the conditions again. When thespell ends, the weather gradually returns to normal.When you change the weather conditions, find acurrent condition on the following tables and change itsstage by one, up or down. When changing the wind, youcan change its direction.PRECIPITATIONStage Condition1 Clear2 Light clouds3 Overcast or ground fog4 Rain, hail, or snow5 Torrential rain, driving hail, or blizzardTEMPERATURE WINDStage Condition Stage Condition1 Unbearable heat 1 Calm2 Hot 2 Moderate windWarm 3 Strong wind4 Gale4 Cool5 Cold 5 Storm6 Arctic cold"
+}

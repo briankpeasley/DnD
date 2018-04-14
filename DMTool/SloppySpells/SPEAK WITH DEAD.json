@@ -1,0 +1,10 @@
+{
+  "Name": "SPEAK WITH DEAD",
+  "Level": "3rd-Ievel",
+  "School": "necromancy",
+  "CastingTime": "I action",
+  "Range": "10 feet",
+  "Components": "V,S, M(burning incense)",
+  "Duration": "10minutes",
+  "Description": "Vougrant the semblance oflife and intelligence to acorpse ofyour choice within range, allowing Itto answerthe questions you pose. The corpse must still have amouth and can't be undead. The spell fails ifthe corpsewas the target ofthis spell within the last 10days.Until the spell ends, you can ask the corpse up to fivequestions. The corpse knows only what itknew in life,inc1uding the languages itknew. Answers are usuallybrief, cryptic, ar repetitive, and the corpse is under nocompulsion to offer a truthful answer ifyou are hostileto itor itrecognizes you as an enemy. This spell doesn'treturn the creature's soul to its body, only its animatingspiril. Thus, the corpse can't learn new Information,doesn't comprehend anything that has happened since itdied, and can't speculate about future events."
+}

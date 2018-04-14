@@ -1,0 +1,185 @@
+﻿<UserControl x:Class="DMTool.UserControls.PlayerCharacterUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DMTool.UserControls"
+             xmlns:Converters="clr-namespace:DMTool.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="300" Background="#FFEEDAA5">
+    <Grid x:Name="grid">
+        <Grid.Resources>
+            <Converters:LevelToNextLevelXP x:Key="levelToNextLevelXP" />
+            <Converters:XPToProgressBar x:Key="ProgressConverter" />
+        </Grid.Resources>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <local:CharacterUserControl x:Name="characterUserControl" Character="{Binding Path=PlayerCharacter, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Border BorderThickness="0,3,0,0" Margin="0,3,0,0">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush EndPoint="0,0" StartPoint="1,0">
+                            <GradientStop Color="#FF964529" Offset="0.46"/>
+                            <GradientStop/>
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <StackPanel>
+                        <local:StylizedTextBlock Text="Coin" />
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Horizontal" Margin="0,0,5,0">
+                                <local:StylizedTextBlock Text="Copper: " FontWeight="DemiBold" />
+                                <local:StylizedTextBox Text="{Binding Path=Coin.Copper, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Margin="0,0,5,0">
+                                <local:StylizedTextBlock Text="Silver: " FontWeight="DemiBold" />
+                                <local:StylizedTextBox Text="{Binding Path=Coin.Silver, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Margin="0,0,5,0">
+                                <local:StylizedTextBlock Text="Electrum: " FontWeight="DemiBold" />
+                                <local:StylizedTextBox Text="{Binding Path=Coin.Electrum, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Margin="0,0,5,0">
+                                <local:StylizedTextBlock Text="Gold: " FontWeight="DemiBold" />
+                                <local:StylizedTextBox Text="{Binding Path=Coin.Gold, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Margin="0,0,5,0">
+                                <local:StylizedTextBlock Text="Platinum: " FontWeight="DemiBold" />
+                                <local:StylizedTextBox Text="{Binding Path=Coin.Platinum, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Margin="0,0,5,0">
+                                <local:StylizedTextBlock Text="Total: " FontWeight="DemiBold" />
+                                <local:StylizedTextBlock Text="{Binding Path=Coin.Total, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                <Border BorderThickness="0,3,0,0" Margin="0,3,0,0">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush EndPoint="0,0" StartPoint="1,0">
+                            <GradientStop Color="#FF964529" Offset="0.46"/>
+                            <GradientStop/>
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <StackPanel KeyUp="StackPanel_KeyUp" Margin="0,0,0,20">
+                        <local:StylizedTextBlock Text="Gear" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="20" />
+                            </Grid.ColumnDefinitions>
+
+                            <Border BorderBrush="Black" BorderThickness="1">
+                                <local:StylizedTextBlock Text="Name" TextDecorations="Underline" TextAlignment="Center" />
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1">
+                                <local:StylizedTextBlock Text="Count" TextDecorations="Underline" TextAlignment="Center" />
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2">
+                                <local:StylizedTextBlock Text="Weight" TextDecorations="Underline" TextAlignment="Center" />
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1" Grid.Column="3">
+                                <local:StylizedTextBlock Text="Value" TextDecorations="Underline" TextAlignment="Center" />
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1" Grid.Column="4">
+                                <local:StylizedTextBlock Text="Description" TextDecorations="Underline" TextAlignment="Center" />
+                            </Border>
+                        </Grid>
+                        
+                        <ItemsControl x:Name="gear">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ToolTip>
+                                            <local:StylizedTextBlock Text="{Binding Path=Description}" TextWrapping="Wrap" MaxWidth="400" />
+                                        </Grid.ToolTip>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="20" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Border BorderBrush="Black" BorderThickness="1">
+                                            <local:StylizedTextBox Text="{Binding Path=Name, Mode=TwoWay}" Background="WhiteSmoke" />
+                                        </Border>
+                                        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1">
+                                            <local:StylizedTextBox Text="{Binding Path=Count, Mode=TwoWay}" Background="WhiteSmoke" />
+                                        </Border>
+                                        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2">
+                                            <local:StylizedTextBox Text="{Binding Path=Weight, Mode=TwoWay}" Background="WhiteSmoke" />
+                                        </Border>
+                                        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="3">
+                                            <local:StylizedTextBox Text="{Binding Path=Value, Mode=TwoWay}" Background="WhiteSmoke" />
+                                        </Border>
+                                        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="4">
+                                            <local:StylizedTextBox Text="{Binding Path=Description, Mode=TwoWay}" Background="WhiteSmoke" />
+                                        </Border>
+
+                                        <Button Content="X" Click="RemoveGear" Tag="{Binding}" Grid.Column="6" />
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                        
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="20" />
+                            </Grid.ColumnDefinitions>
+
+                            <Border BorderBrush="Black" BorderThickness="1">
+                                <local:StylizedTextBox x:Name="newName" Background="WhiteSmoke" />
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1">
+                                <local:StylizedTextBox x:Name="newCount" Background="WhiteSmoke" />
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2">
+                                <local:StylizedTextBox x:Name="newWeight" Background="WhiteSmoke" />
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1" Grid.Column="3">
+                                <local:StylizedTextBox x:Name="newValue" Background="WhiteSmoke" />
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1" Grid.Column="4">
+                                <local:StylizedTextBox x:Name="newDescription" Background="WhiteSmoke" />
+                            </Border>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ProgressBar Maximum="100" VerticalAlignment="Bottom" Height="20">
+            <ProgressBar.Value>
+                <MultiBinding Converter="{StaticResource ProgressConverter}" >
+                    <Binding Path="XP" UpdateSourceTrigger="PropertyChanged" />
+                    <Binding Path="Level" UpdateSourceTrigger="PropertyChanged"/>
+                </MultiBinding>
+            </ProgressBar.Value>
+        </ProgressBar>
+        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" x:Name="xpStack" HorizontalAlignment="Center">
+
+            <local:StylizedTextBox Text="{Binding Path=PlayerCharacter.XP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <local:StylizedTextBlock>
+                <Run Text=" / " />
+                <Run Text="{Binding Path=PlayerCharacter.Level, Converter={StaticResource levelToNextLevelXP}, UpdateSourceTrigger=PropertyChanged}" />
+            </local:StylizedTextBlock>
+        </StackPanel>
+
+
+    </Grid>
+</UserControl>

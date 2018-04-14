@@ -1,0 +1,10 @@
+{
+  "Name": "DISSONANT WHISPERS",
+  "Level": "1st-levei",
+  "School": "enchantment",
+  "CastingTime": "1action",
+  "Range": "60 feet",
+  "Components": "V",
+  "Duration": "Instantaneous",
+  "Description": "Vouwhisper a discordam melody that only one creatureofyour choice within range can hear, wracking itwithterrible pain. The target must make aWisdom savingthrow. On afailed save, ittakes 3d6 psychic damage andmust immediately use its reaction, ifavailable, tomoveas far as its speed allows away from you. The creaturedoesn't Inove into obviously dangerous ground, suchas a fire or apit.On asuccessful save, the target takeshalf as much damage and doesn't have tomove away.Adeafened creature automatically succeeds on the save.At Higher LeveIs. When you cast this spell using aspell slot of2nd levelor higher. the damage increases byId6 foreach slot leveiabove 1st.P\"Rf 3 SPELLS"
+}

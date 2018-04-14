@@ -1,0 +1,10 @@
+{
+  "Name": "HOLD MONSTER",
+  "Level": "5th-leveI",
+  "School": "enchantment",
+  "CastingTime": "1action",
+  "Range": "90feet",
+  "Components": "V.S.M(asmall.straight pieceofiron)",
+  "Duration": "Concentration. upto1minute",
+  "Description": "Chooseacreature thatyoucanseewithinrange.Thetargetmustsucceed onaWisdomsavingthroworbeparalyzed fortheduration. Thisspellhasnoeffectonundead.Attheendofeachofitsturns, thetargetcanmakeanother Wisdomsavingthrow.Onasuccess. thespellendsonthetarget.At Higher Leveis. Whenyoucastthisspellusingaspellslotof6thleveiorhigher.youcantargetoneadditional creature foreachslotleveIabove5th.Thecreatures mustbewithin30feetofeachotherwhenyoutargetthem."
+}

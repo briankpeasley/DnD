@@ -1,0 +1,10 @@
+{
+  "Name": "SHIELD OF FAITH",
+  "Level": "1st-levei",
+  "School": "abjuration",
+  "CastingTime": "1 bonus action",
+  "Range": "60 feet",
+  "Components": "V,S, M(a small parchment with a bit ofholy text writlen on it)",
+  "Duration": "Concentration, up to 10minutes",
+  "Description": "Ashimmering field appears and surrounds a creatureofyour choice within range, granting it a +2 bonus to ACfor the duration."
+}

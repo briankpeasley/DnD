@@ -1,0 +1,10 @@
+{
+  "Name": "INSECT PLAGUE",
+  "Level": "5th-levei",
+  "School": "conjuration",
+  "CastingTime": "1 action",
+  "Range": "300 feet",
+  "Components": "V,S, M(a few grains of sugar, somekernels of grain, and a smear of fat)",
+  "Duration": "Concentration, up to 10 minutes",
+  "Description": "Swarming, biting locusts filla 20-foot-radius spherecentered on a point you choose within range, The spherespreads around corners. The sphere remains for theduration, and its area is lightly obscured. The sphere'sarea is difficult terrain.When the area appears, each creature in it mustmake a Constitution saving throw. A creature takes4d 10 piercing damage on a failed save, ar half as muchdamage on a successful one. A creature must also makethis saving throw when it enters the spell's area for thefirst time on a turn ar ends its turn there.At Higher LeveIs. When you cast this spell using aspell slot of 6th levei ar higher, the damage increases byId 10 for each slot levei above 5th."
+}

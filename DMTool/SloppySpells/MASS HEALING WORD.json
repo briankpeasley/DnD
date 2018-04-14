@@ -1,0 +1,10 @@
+{
+  "Name": "MASS HEALING WORD",
+  "Level": "3rd.level",
+  "School": "evocation",
+  "CastingTime": "Ibonusaction",
+  "Range": "60feet",
+  "Components": "V",
+  "Duration": "Instantaneous",
+  "Description": "Asyoucalloutwordsofrestoration, uptosixcreaturesofyour choicethatyoucanseewithinrange regain hitpointsequaltoId4+yourspellcasting abilitymodifier.Thisspellhasnoeffectonundeadorconstructs.At Higher LeveIs. Whenyoucastthisspellusingaspellslotof4thleveIorhigher,thehealing increases byId4foreachslotleveiabove3rd."
+}

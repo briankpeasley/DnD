@@ -1,0 +1,10 @@
+{
+  "Name": "GATE",
+  "Level": "9th-leveI",
+  "School": "conjuration",
+  "CastingTime": "1action",
+  "Range": "60 feet",
+  "Components": "V,5, M(adiamond worth at least 5.000 gp)",
+  "Duration": "Concentration, up to 1minute",
+  "Description": "Vouconjure a portallinking an unoccupied space youcan see within range to a precise location on a differentplane ofexistence. The portal is a circular opening,which you can make 5 to 20 feet in diameter. Voucanorient the portal in any direction you choose. The portallasts for the duration.The portal has a front and a back on each plane whereitappears. Travei through the portal is possible onlybymoving through its fronl. Anything that does so isinstantly transported to the other plane, appearing inthe unoccupied space nearest to the portal.Deities and other planar ruIers can prevent portaIscreated bythis spell from opening in their presence oranywhere within their domains.When you cast this spell, you can speak the nameofa specific creature (apseudonym, title, or nicknamedoesn't work). ]f that creature is on a plane other thanthe one youare on, the portal opens in the namedcreature's immediate vicinity and draws the creaturethrough ittothe nearest unoccupied space onyour sideofthe portal. Vougain nospecial power over the creature,and itis free to act as the DMdeems appropriate. ltmight leave, attack you, or help you."
+}

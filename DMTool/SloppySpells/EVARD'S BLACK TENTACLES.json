@@ -1,0 +1,10 @@
+{
+  "Name": "EVARD'S BLACK TENTACLES",
+  "Level": "4th.level",
+  "School": "conjuration",
+  "CastingTime": "1action",
+  "Range": "90 feet",
+  "Components": "V,S, M(apiece oftentacle from agiantoctopus or agiant squid)",
+  "Duration": "Concentration, upto 1minute",
+  "Description": "Squirming, ebony tentades filla 20.foot square onground that youcan see within range. Forthe duration,these tentacles turo lhe ground inthe area intodifficultterrain.When acreature enlers the affected area forthe firsttime onaturo or starts itsturo lhere, the creaturemust succeed ona Dexterity saving throw or take 3d6bludgeoning damage and be restrained bythe tentaclesuntil the spell ends. Acreature that starts itsturo inthearea and isalready restrained bythe tentacles lakes 3d6bludgeoning damage,Acreature reslrained bythe tentacles can use ilsaction lomake a Strength ar Dexterity check (itschoice)against your spell save DC.Ona success, itfrees itself."
+}

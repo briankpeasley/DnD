@@ -1,0 +1,10 @@
+{
+  "Name": "WRATHFUL SMITE",
+  "Level": "1st-ievei",
+  "School": "evocation",
+  "CastingTime": "I bonus action",
+  "Range": "Self",
+  "Components": "V",
+  "Duration": "Concentration, up to I minute",
+  "Description": "The next time you hit with a melee weapon attackduring this spell's duration, your attack deals an extraId6 psychic damage. Additionally, ifthe target is acreature, it must make a Wisdom saving throw or befrightened ofyou until the spell ends. As an action, thecreature can make a Wisdom check against your spellsave DC to steel its resolve and end this spel!."
+}

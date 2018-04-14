@@ -1,0 +1,10 @@
+{
+  "Name": "ENTANGLE",
+  "Level": "1st.level",
+  "School": "conjuration",
+  "CastingTime": "1action",
+  "Range": "90 feet",
+  "Components": "V,S",
+  "Duration": "Concentration, upto 1minute",
+  "Description": "Grasping weeds and vines sprout fram the ground ina20-footsquare starting from a point within range. Forthe duration, these plants turo the ground inthe areaintodifficultterrain.Acreature inthe area when youcast the spell mustsucceed ona Strength saving throw ar be restrainedbythe entangling plants until the spell ends. Acreaturerestrained bythe plants can use itsaction tomakea Strength check against your spell save De. Onasuccess, itfrees itself.When the spell ends, the conjured plants wiltaway."
+}

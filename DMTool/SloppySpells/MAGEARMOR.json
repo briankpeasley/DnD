@@ -1,0 +1,10 @@
+{
+  "Name": "MAGEARMOR",
+  "Level": "1st-leveI",
+  "School": "abjuration",
+  "CastingTime": "1action",
+  "Range": "Touch",
+  "Components": "V,S, M(apiece ofcured leather)",
+  "Duration": "8hours",
+  "Description": "Voutouch awilling creature who isn't wearing armor,and apratective magical forcesurrounds ituntil thespel1ends. The target's base ACbecomes 13 +itsDexterity modifier. The spel1ends ifthe target donsarmar ar ifyoudismiss the spell as an action."
+}

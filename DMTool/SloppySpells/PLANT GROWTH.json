@@ -1,0 +1,10 @@
+{
+  "Name": "PLANT GROWTH",
+  "Level": "3rd-/evel",
+  "School": "transmutation",
+  "CastingTime": "I action or 8 hours",
+  "Range": "150feet",
+  "Components": "V,S",
+  "Duration": "lnstantaneous",
+  "Description": "This spell channels vitalityinto plants within a specificarea. There are two possible uses forthe spell, grantingeither immediate or long-term benefits.Ifyoucast this spell using I action, choose a pointwithin range. Alinormal plants in a 100-footradiuscentered on that point become thick and overgrown. Acreature moving through the area must spend 4 feet ofmovement forevery I footitmoves.Voucan exclude one or more areas ofanysize withinthe spell's area from being affected.Ifyou cast this spell over 8 hours, youenrich theland. Aliplants ina half-mile radius centered on a pointwithin range become enriched for Iyear. The plantsyield twice the normal amount offoodwhen harvested."
+}

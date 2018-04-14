@@ -1,0 +1,10 @@
+{
+  "Name": "MORDENKAINEN'S FAITHFUL HOUND",
+  "Level": "4th-leveI",
+  "School": "eorijuration",
+  "CastingTime": "Iaction",
+  "Range": "30feet",
+  "Components": "V,5, M(atinysilver whistle, apieee ofbone, and athread)",
+  "Duration": "8hours",
+  "Description": "Vouconjure aphantom watchdog inanunoccupiedspace thatyoucan seewithin range, where itremainsforthe duration, untilyoudisrniss itasanaction, oruntilyoumovemore than 100feetawayfrom it.The hound isinvisible toalicreatures except youand can't beharmed. When a5mall orlarger creaturecomes within 30feetofitwithout firstspeaking thepassword that youspecify when youcast this spell, thehound starts barking loudly.The hound sees invisiblecreatures and can see intothe Ethereal Plane. Itignores illusions.Atthestart ofeach ofyour turos, the hound attemptstobiteonecreature within 5feetofitthat ishostiletoyou.The hound's attack bonus isequal toyourspellcasting abilitymodifier +your proficiency bonus.Onahit,itdeals 4d8 piercing damage."
+}

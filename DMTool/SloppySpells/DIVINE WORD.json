@@ -1,0 +1,10 @@
+{
+  "Name": "DIVINE WORD",
+  "Level": "7th-levei",
+  "School": "evocation",
+  "CastingTime": "1bonus action",
+  "Range": "30 fee!",
+  "Components": "V",
+  "Duration": "Instantaneous",
+  "Description": "Youutter adivine word, imbued with the power tharshaped the world at the dawn ofereation. Choose anynumber ofcreatures you can see within range. Eachcreature that can hear you must make a Charismasaving throw. On a failed save, acreature suffers aneffect based on its current hit points:50 hit points or fewer: deafened for 1minute40 hit points or fewer: deafened and blinded for 10minutes30 hit points ar fewer: blinded, deafened, and stunnedfor 1hour20 hit points or fewer: killed instantlyRegardless ofits current hit points, acelestial, anelemental, a fey.or a fiend that fails its save isforcedback toits plane oforigin (ifitisn't there already) andcan't return toyour current plane for 24 hours byanymeans short ofa wish spell."
+}

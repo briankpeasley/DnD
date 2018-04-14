@@ -1,0 +1,147 @@
+﻿<UserControl x:Class="DMTool.UserControls.Combat"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DMTool.UserControls"
+             xmlns:Converters="clr-namespace:DMTool.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Background="#FFEEDAA5">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <Converters:CharacterToFontWeight x:Key="CharacterToFontWeight" />
+            <Converters:CharacterToCurrentHitPoints x:Key="CharacterToCurrentHitPoints" />
+            <Converters:ComputeCurrentHitPoints x:Key="ComputeCurrentHitPoints" />
+            <Converters:DisplayTurn x:Key="DisplayTurn" />
+            <Converters:BattleClockDisplay x:Key="BattleClockDisplay" />
+            <Converters:RiderToText x:Key="RidersToText" />
+        </Grid.Resources>
+        <ScrollViewer>
+            <StackPanel>
+                <ListView x:Name="participantsListView" Background="Transparent" ItemsSource="{Binding Path=Participants, UpdateSourceTrigger=PropertyChanged}" SelectionChanged="participantsListView_SelectionChanged">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border HorizontalAlignment="Stretch" Width="1000">
+                                <Border.Background>
+                                    <MultiBinding Converter="{StaticResource ComputeCurrentHitPoints}" FallbackValue="0" ConverterParameter="1">
+                                        <Binding Path="HitPoints" UpdateSourceTrigger="PropertyChanged" />
+                                        <Binding Path="TemporaryHitPoints" UpdateSourceTrigger="PropertyChanged" />
+                                        <Binding Path="DamageLog" UpdateSourceTrigger="PropertyChanged" />
+                                        <Binding UpdateSourceTrigger="PropertyChanged" />
+                                    </MultiBinding>
+                                </Border.Background>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="20" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <local:StylizedTextBox Text="{Binding Path=Initiative, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,40"/>
+                                    <TextBlock Text="&#x2794;" VerticalAlignment="Center" FontSize="16pt" Foreground="#FF964529">
+                                        <TextBlock.Visibility>
+                                            <MultiBinding Converter="{StaticResource DisplayTurn}">
+                                                <Binding RelativeSource="{RelativeSource AncestorType=ListView}" Path="DataContext.ActiveParticipant" UpdateSourceTrigger="PropertyChanged" />
+                                                <Binding RelativeSource="{RelativeSource AncestorType=ListView}" Path="DataContext.Participants" />
+                                                <Binding />
+                                            </MultiBinding>
+                                        </TextBlock.Visibility>
+                                    </TextBlock>
+                                    <Border Grid.Column="1" BorderThickness="0,0,0,3">
+                                        <Border.BorderBrush>
+                                            <LinearGradientBrush EndPoint="0,0" StartPoint="1,0">
+                                                <GradientStop Color="#FF964529" Offset="0.46"/>
+                                                <GradientStop/>
+                                            </LinearGradientBrush>
+                                        </Border.BorderBrush>
+                                        <StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Button Content="x" Click="RemoveCharacter" Tag="{Binding}" />
+                                                <local:StylizedTextBox Text="{Binding Path=Name}" FontWeight="{Binding Converter={StaticResource CharacterToFontWeight}}" FontSize="12pt" VerticalAlignment="Center" />
+                                                <local:StylizedTextBlock Text="  EHP: " />
+                                                <local:StylizedTextBlock VerticalAlignment="Top" FontSize="13pt">
+                                                    <TextBlock.Text>
+                                                        <MultiBinding Converter="{StaticResource ComputeCurrentHitPoints}" FallbackValue="0">
+                                                            <Binding Path="HitPoints" UpdateSourceTrigger="PropertyChanged" />
+                                                            <Binding Path="TemporaryHitPoints" UpdateSourceTrigger="PropertyChanged" />
+                                                            <Binding Path="DamageLog" UpdateSourceTrigger="PropertyChanged" />
+                                                            <Binding UpdateSourceTrigger="PropertyChanged" />
+                                                        </MultiBinding>
+                                                    </TextBlock.Text>
+                                                </local:StylizedTextBlock>
+                                                <local:StylizedTextBlock Text="Apply Damge: " FontSize="10pt" Margin="10, 0, 0, 0" VerticalAlignment="Top" />
+                                                <local:SelectableTextBox Background="Transparent" BorderThickness="0" FontSize="10pt" Text="00" VerticalAlignment="Top" KeyUp="SelectableTextBox_KeyUp" Tag="{Binding}" />
+                                            </StackPanel>
+
+                                            <StackPanel Orientation="Horizontal">
+                                                <StackPanel>
+                                                    <local:StylizedTextBlock Text="Effects: " FontWeight="DemiBold" />
+                                                    <Button Content="Add" Click="ShowEffectForm" Tag="{Binding}" />
+                                                </StackPanel>
+                                                <ItemsControl ItemsSource="{Binding Path=Riders}">
+                                                    <ItemsControl.ItemsPanel>
+                                                        <ItemsPanelTemplate>
+                                                            <StackPanel Orientation="Horizontal" />
+                                                        </ItemsPanelTemplate>
+                                                    </ItemsControl.ItemsPanel>
+                                                    <ItemsControl.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <StackPanel>
+                                                                <StackPanel.ToolTip>
+                                                                    <local:StylizedTextBlock Text="{Binding Path=Description}" MaxWidth="250" TextWrapping="Wrap" />
+                                                                </StackPanel.ToolTip>
+
+                                                                <Grid Margin="10,0,0,0">
+                                                                    <Grid.ColumnDefinitions>
+                                                                        <ColumnDefinition Width="10" />
+                                                                        <ColumnDefinition Width="*" />
+                                                                    </Grid.ColumnDefinitions>
+                                                                    <Border BorderThickness="0,0,0,1" BorderBrush="#FF964529" Grid.Column="1">
+                                                                        <local:StylizedTextBlock Text="{Binding}"/>
+                                                                    </Border>
+                                                                    <Button Content="x" Grid.Column="0" Click="DeleteRider" Tag="{Binding}"/>
+                                                                </Grid>
+                                                                <TextBlock HorizontalAlignment="Center">
+                                                                    <TextBlock.Text>
+                                                                        <MultiBinding Converter="{StaticResource RidersToText}">
+                                                                            <Binding Path="Duration" UpdateSourceTrigger="PropertyChanged" />
+                                                                            <Binding Path="Progression" UpdateSourceTrigger="PropertyChanged" />
+                                                                        </MultiBinding>
+                                                                    </TextBlock.Text>
+                                                                </TextBlock>
+                                                            </StackPanel>
+                                                        </DataTemplate>
+                                                    </ItemsControl.ItemTemplate>
+                                                </ItemsControl>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Border>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ListView>
+                <local:StylizedTextBlock Text="Ctrl + A to add Player Characters"  />
+                <local:StylizedTextBlock Text="Ctrl + M to add monsters" />
+                <local:StylizedTextBlock Text="Ctrl + S to save all Player Characters" />
+                <local:StylizedTextBlock Text="Ctrl + T to distribute coins" />
+            </StackPanel>
+        </ScrollViewer>
+
+        <Grid Grid.Row="1">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
+                <local:StylizedTextBlock Text="Battle Clock: " />
+                <local:StylizedTextBlock Text="{Binding Path=Clock, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource BattleClockDisplay}}"/>
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button Content="Long Rest" Click="LongRestClick" Margin="0,0,5,0"/>
+                <Button Content="Sort" Click="SortClick"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

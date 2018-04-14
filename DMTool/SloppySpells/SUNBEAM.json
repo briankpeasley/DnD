@@ -1,0 +1,10 @@
+{
+  "Name": "SUNBEAM",
+  "Level": "6th-levei",
+  "School": "evocation",
+  "CastingTime": "1action",
+  "Range": "Self (60-foot line)",
+  "Components": "V,S, M(amagnifying glass)",
+  "Duration": "Concentration, up to 1minute",
+  "Description": "Abeam ofbrilliant light flashes out from your handin a 5-foot-wide, 60-foot-long line. Each creature inthe line must make a Constitution saving throw. On afailed save, a creature takes 6d8 radiant damage andis blinded until your next turno On a successful save,ittakes half as much damage and isn't blinded bythisspell. Undead and oozes have disadvantage on thissaving throw.Voucan create a new line ofradiance as your actionon any turn until the spell ends.For the duration, a mote ofbrilliant radiance shines inyour hand. Itsheds bright light ina 30-foot radius anddim light foran additional 30 fee!. This lighl issunligh!."
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "MELF'S ACID ARROW",
+  "Level": "2nd-levei",
+  "School": "evocation",
+  "CastingTime": "1action",
+  "Range": "90 feet",
+  "Components": "V,S, M(powdered rhubarb leaf and anadder's stomach)",
+  "Duration": "1nstantaneous",
+  "Description": "Ashimmering green arrow streaks toward atargelwithin range and bllrsts inaspray ofacid. Make aranged spell attack against the target. On a hit, thetarget takes 4d4 acid damage immediately and 2d4 aciddamage aIthe end ofits next turnoOn amiss, the arrowsplashes the target with acid forhalf as much oftheinitial damage and no damage atthe end ofits next turnoAt Higher LeveIs. When you cast this spellllsing aspell slot of3rd leveior higher, lhe damage (both initialand later) increases by1d4 foreach slot leveiabove 2nd."
+}

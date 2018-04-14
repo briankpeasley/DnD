@@ -1,0 +1,10 @@
+{
+  "Name": "FABRICATE",
+  "Level": "4th-levei",
+  "School": "transmutation",
+  "CastingTime": "lO minutes",
+  "Range": "120 feet",
+  "Components": "V,S",
+  "Duration": "Instantaneous",
+  "Description": "Vou convert raw materiais into products of the samematerial. For example, you can fabricate a woodenbridge from a c1ump of trees, a rope from a patch ofhemp, and C10thesfrom flax or wool.Choose raw materiais that you can see wilhin range.Voucan fabricale a Large or smaller object (containedwithin a lO-fool cube. ar eight connected 5-foot cubes),given a sufficient quantity of raw material. Ifyouare working with metal. stone, or anolher mineralsubstance, however, the fabricated object can be nolarger than Medium (coutained within a single 5-footcube). The quality of objects made by the spell iscommensurate with the quality of the raw materiais.Creatures or magic items can't be created ortransmuted by this spell. Voualso can't use it tocreate items that ordinarily require a high degree ofcraftsmanship, such as jewelry, weapons. glass, orarmor, unless you have proficiency with the type ofartisan's tools used to craft such objects."
+}

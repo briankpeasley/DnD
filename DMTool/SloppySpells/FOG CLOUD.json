@@ -1,0 +1,10 @@
+{
+  "Name": "FOG CLOUD",
+  "Level": "1st-leveI",
+  "School": "conjuration",
+  "CastingTime": "Iaction",
+  "Range": "120feet",
+  "Components": "V,S",
+  "Duration": "Concentration, uptoIhOllr",
+  "Description": "Voucreatea20-foot-radiussphereoffogcentered onapointwithinrange.Thesphere spreads around coroers,anditsarea isheavilyobscured. Itlastsforthedurationoruntilawindofmoderate orgreater speed(atleast 10milesperhour)disperses it.At Higher LeveIs. Whenyoucastthisspellusingaspellslotof2ndleveiorhigher,theradius ofthefogincreases by20feetforeachslotleveiabove1st."
+}

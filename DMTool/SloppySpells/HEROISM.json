@@ -1,0 +1,10 @@
+{
+  "Name": "HEROISM",
+  "Level": "1st-levei",
+  "School": "enchantment",
+  "CastingTime": "Iaction",
+  "Range": "Touch",
+  "Components": "V,5",
+  "Duration": "Concentration, upto 1minute",
+  "Description": "Awilling creature youtouchisimbued withbravery.Untilthespell ends, the creature isimmune tobeingfrightened and gains temporary hitpoints equal toyourspellcasting abilitymodifier atthestart ofeachofitsturns. When the spell ends, the target loses anyremaining temporary hitpoints fromthis spell.At Higher Leveis. Whenyoucastthisspellusingaspellslotof2ndleveIorhigher.youcantargetoneadditional creature foreachsIotleveiabove1st."
+}

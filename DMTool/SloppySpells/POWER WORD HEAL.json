@@ -1,0 +1,10 @@
+{
+  "Name": "POWER WORD HEAL",
+  "Level": "9th-levei",
+  "School": "evocation",
+  "CastingTime": "I action",
+  "Range": "Touch",
+  "Components": "V,S",
+  "Duration": "Instantaneous",
+  "Description": "Awave ofhealing energy washes over the creatureyou touch. The target regains ali its hit points. Ifthecreature is charmed, frightened, paralyzed, ar stunned,the condition ends. Ifthe creature is prone, itcan use itsreaction tostand up.This spell has no effecton undeadar constructs."
+}

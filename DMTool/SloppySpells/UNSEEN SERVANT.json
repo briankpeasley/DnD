@@ -1,0 +1,10 @@
+{
+  "Name": "UNSEEN SERVANT",
+  "Level": "1st-leveic",
+  "School": "onjuration (ritual)",
+  "CastingTime": "1action",
+  "Range": "60 feet",
+  "Components": "V,S, M(apiece ofstring andabitofwood)",
+  "Duration": "1hour",
+  "Description": "This speIl creates an invisible, mindless, shapelessforce that performs simple tasks atyour command untilthe speIl ends. The servant springs into existence inanunoccupied space on the ground within range. Ithas AC10,I hit point, and aStrength of2,and itcan't attack. [fitdrops toOhit points, the speIl ends.Once on each ofyour turns as abonus action, youcanmentaIly command the servant tomove up to 15feet andinteract with an object. The servant can perform simpletasks that ahuman servant could do,such as felchingthings, c1eaning, mending, folding c1othes, lightingfires, serving food, and pouring wine. Once you givethecommand, the servant performs the task tothe best ofitsability until itcompletes the task, then waits foryournext command.Ifyou command the servant toperform atask thatwould move itmore than 60 feet away from you,the spe11ends."
+}

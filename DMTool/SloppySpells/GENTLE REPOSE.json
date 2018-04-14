@@ -1,0 +1,10 @@
+{
+  "Name": "GENTLE REPOSE",
+  "Level": "2nd-level",
+  "School": "necromallcy (ritual)",
+  "CastingTime": "1 action",
+  "Range": "Touch",
+  "Components": "V,S, M (a pinch of salt and one copperpiece placed on each of the corpse's eyes, which mustremain there for the duration)",
+  "Duration": "10 days",
+  "Description": "Vou touch a corpse or other remains. For theduration, the target is protected from decay and can'tbecome undead.The spell also effectively extends the time Iimit onraising the target from the dead, since days spent underthe influence of this spell don't count against the timelimit of spells such as raise dead."
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "CONTINUAL FLAME",
+  "Level": "2nd./evel",
+  "School": "evocation",
+  "CastingTime": "1 action",
+  "Range": "Touch",
+  "Components": "V,S, M (ruby dust worth 50 gp, which thespell consumes)",
+  "Duration": "Until dispelled",
+  "Description": "A flame, equivalent in brightness to a torch, springsforth from an object that you touch. The cffect looks likea regular flame, hut it creates no heat and doesn't useoxygen. AcontinuaI liame can be covered or hidden butnot smothered or quenched."
+}

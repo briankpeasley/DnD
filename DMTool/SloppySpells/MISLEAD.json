@@ -1,0 +1,10 @@
+{
+  "Name": "MISLEAD",
+  "Level": "5th-levei",
+  "School": "illusion",
+  "CastingTime": "1 action",
+  "Range": "5elf",
+  "Components": "5",
+  "Duration": "Concentration, up to 1 hour",
+  "Description": "Vou become invisible at the same time that an illusorydouble of you appears where you are standing. Thedouble lasts for the duration, but the invisibility ends ifyou attack or cast a spell.Vou can use your action to move your illusory doubleup to twice your speed and make it gesture, speak, andbehave in whatever way you choose.Vou can see through its eyes and hear through its earsas ifyou were located where it is. On each of your turnsas a bonus action, you can switch from using its sensesto using your own, or back again. While you are using itssenses, you are blinded and deafened in regard to yourown surroundings."
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "CONFUSION",
+  "Level": "4th-levei",
+  "School": "enchantment",
+  "CastingTime": "1action",
+  "Range": "90 feet",
+  "Components": "V,5, M(three nut shells)",
+  "Duration": "Concentration, up to I minute",
+  "Description": "This spell assaults and twists creatures' minds,spawning delusions and provoking uncontrolled action.Each creature ina lO-foot-radius sphere centered ona point you choose within range must succeed on aWisdom saving throw when you cast this spell or beaffected byit.An affected target can't take reactions and must roIladIO at the start ofeach ofits turns todetermine itsbehavior forthat turnodl0 Behavior1 The creature uses ali its movement to move in arandom direction. To determine the direction, relia d8 and assign a direction to each die face. Thecreature doesn't take an action this turno2-6 The creature doesn't move or take actions this turno7-8 The creature uses its action to make a melee attackagainst a randomly determined creature within itsreach. If there is no creature within its reach, thecreature does nothing this turno9-10 The creature can act and move normally.At the end ofeach of its turns, an affected target canmake a Wisdom saving throw. lf it succeeds. this effectends for that target.At Higher LeveIs. When you casl this spell using aspell slot of 5th levei or higher. the radius of the sphereincreases by 5 reet for each slot levei above 4th."
+}

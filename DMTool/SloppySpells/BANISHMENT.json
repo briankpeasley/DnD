@@ -1,0 +1,10 @@
+{
+  "Name": "BANISHMENT",
+  "Level": "4th-level",
+  "School": "abjuration",
+  "CastingTime": "1action",
+  "Range": "60 feet",
+  "Components": "V,5,M(an item distastefuI tothe target)",
+  "Duration": "Concentration, up to 1minute",
+  "Description": "Vouattempt tosend one creature that you can seewithin range toanother plane ofexistence. Thetarget must succeed on a Charisma saving throwar be banished.1fthe target isnative tothe plane ofexistence you'reon,you banish the target toaharmless demiplane.While there, the target isincapacitated. The targetremains there until the spel1ends, at which point thetarget reappears inthe space itleft ar in the nearest,unoccupied space ifthat space isoccupied.1fthe target is native toadifferent plane ofexistencethan the one you're on, the target isbanished witha faint popping noise, returning toits home plane.]fthe spel1ends before 1minute has passed, thetarget reappears inthe space itleftar in the nearestunoccupied space ifthat space isoccupied. Otherwise,the target doesn't returnoAt Higher Levels. When you cast this spel1usingaspel1slot of5th leveiar higher, you can target oneadditional creature foreach slot leveiabove 4th."
+}

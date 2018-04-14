@@ -1,0 +1,24 @@
+﻿<Window x:Class="DMTool.UserControls.AddEffectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DMTool.UserControls"
+        mc:Ignorable="d"
+        Title="AddEffectWindow" Height="450" Width="300" Loaded="Window_Loaded" KeyUp="Window_KeyUp" Background="#FFEEDAA5">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <local:StylizedTextBlock Text="Duration: " />
+                <local:StylizedTextBox Width="50" Text="60" TextAlignment="Center" x:Name="txtDuration" />
+            </StackPanel>
+            <ListBox x:Name="riders" Background="Transparent" VerticalAlignment="Center">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <local:StylizedTextBlock Text="{Binding}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+    </Grid>
+</Window>

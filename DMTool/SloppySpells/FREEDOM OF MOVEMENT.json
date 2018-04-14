@@ -1,0 +1,10 @@
+{
+  "Name": "FREEDOM OF MOVEMENT",
+  "Level": "4th-leveI",
+  "School": "abjuration",
+  "CastingTime": "1action",
+  "Range": "Touch",
+  "Components": "V,5, M(aleather strap, bound around thearm or a similar appendage)",
+  "Duration": "1hour",
+  "Description": "Voutouch a willing creature. For the duration, thetarget's movement is unaffected bydifficultterrain, andspells and other magical effects can neither reducethe target's speed nor cause the target to be paralyzedor restrained.The target can also spend 5 feet ofmovement toautomatically escape from nonmagical restraints, suchas manacles or a creature that has itgrappled. Finally,being underwater imposes no penalties on the target'smovement or attacks."
+}

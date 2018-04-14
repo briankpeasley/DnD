@@ -1,0 +1,10 @@
+{
+  "Name": "CHARM PERSON",
+  "Level": "lst.level",
+  "School": "enehantment",
+  "CastingTime": "1action",
+  "Range": "30feet",
+  "Components": "V,S",
+  "Duration": "1hour",
+  "Description": "Vouattempt toeharm ahumanoid youcan see withinrange. Itmust make aWisdom saving throw. and doessowithadvantage ifyouoryourcompanions are tightingit.[fitfailsthe saving throw. itischarmed byyouuntilthe spell ends oruntilyouoryour companions doanything harmful toit.The charmed ereature regardsyouas afriendly acquaintance. When the spell ends. thecreature knows itwas eharmed byyou.At Higher Leveis. When youcast this spell usingaspell slotof2nd leveiorhigher.youcan target oneadditional creature foreach slot leveiabove 1sI.Thecreatures must bewithin 30 feetofeach other whenyoutarget them."
+}

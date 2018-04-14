@@ -1,0 +1,10 @@
+{
+  "Name": "PROTECTION FROM ENERGY",
+  "Level": "3rd-/evel",
+  "School": "abjuration",
+  "CastingTime": "1action",
+  "Range": "Touch",
+  "Components": "V,S",
+  "Duration": "Concentration, up to 1hour",
+  "Description": "For the duration, the willing creature you touch hasresistance toone damage type ofyour choice: acid, cold,fire,lightning, or thunder."
+}

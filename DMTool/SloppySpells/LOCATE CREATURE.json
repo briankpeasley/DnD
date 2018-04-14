@@ -1,0 +1,10 @@
+{
+  "Name": "LOCATE CREATURE",
+  "Level": "4th-leveI",
+  "School": "divination",
+  "CastingTime": "1action",
+  "Range": "Self",
+  "Components": "V,S, M(abitoffur fram a bloodhound)",
+  "Duration": "Concentration, upto 1hour",
+  "Description": "Describe ar name acreature that isfamiliar toyou.Vousense the direction tothe creature's lacation, as longasthat creature iswithin 1,000 feet ofyou.lfthe creatureismoving,you know the direction ofits mavement.The spell can locate aspecific creature known toyou,ar the nearest creature ofaspecific kind (such asa human ar aunicorn), 50long asyou haveseen such acreature upclose-within 30 feet-at least once. Ifthecreature youdescribed ar named isinadifferent form,such as being under the effects ofapalymarph spell,this spell doesn't locate the creature.This spel1can't locate acreature ifrunning water atleast 10feetwide blocks adirect path between youandthe creature."
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "MISTY STEP",
+  "Level": "2nd-levei",
+  "School": "conjuration",
+  "CastingTime": "1 bonus action",
+  "Range": "5elf",
+  "Components": "V",
+  "Duration": "Instantaneous",
+  "Description": "Briefly surrounded by silvery mist, you teleport up to 30feet to an unoccupied space that you can see."
+}

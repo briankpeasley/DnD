@@ -1,0 +1,10 @@
+{
+  "Name": "CREATE FOOD AND WATER",
+  "Level": "3rd-Ievel",
+  "School": "conjuration",
+  "CastingTime": "I action",
+  "Range": "30 feet",
+  "Components": "V,S",
+  "Duration": "Instantaneous",
+  "Description": "Voucreate 45 pounds offood and 30 gallons ofwateron the ground or incontainers within range, enoughtosustain up totifteen humanoids or tivesteeds for24 hours. The food isbland but nourishing, and spoilsifuneaten after 24 hours. The water isclean anddoesn't gobad."
+}

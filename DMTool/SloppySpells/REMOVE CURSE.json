@@ -1,0 +1,10 @@
+{
+  "Name": "REMOVE CURSE",
+  "Level": "3rd./evel",
+  "School": "abjuration",
+  "CastingTime": "1 action",
+  "Range": "Touch",
+  "Components": "V,S",
+  "Duration": "Instantaneous",
+  "Description": "At your touch, all curses affecting one creature arobject end. If the object is a cursed magic item, its curseremains, but the spell breaks its owner's attunement tothe object so it can be removed ar discarded.2~1RESlSTANCEAbjuration cantripCasting Time: I actionRange: TouchComponents: V,S,M(aminialure doak)Duration: Concenlralion, uplo I minuleVoulouch one willing crealure. Once before lhe spellends, lhe largel can rollad4and add lhe numberralled loonesaving lhraw ofilschoice. Itcan ralllhe die before orafler making lhe saving lhraw. Thespelllhen ends."
+}

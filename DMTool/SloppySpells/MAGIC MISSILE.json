@@ -1,0 +1,10 @@
+{
+  "Name": "MAGIC MISSILE",
+  "Level": "Ist./evel",
+  "School": "evocation",
+  "CastingTime": "1action",
+  "Range": "120feet",
+  "Components": "V,S",
+  "Duration": "Instantaneous",
+  "Description": "Voucreatethree glowingdarts ofmagicalforce.Eachdart hitsacreature ofyourchoicethatyoucanseewithinrange.Adartdeals Id4+Iforcedamage toitstarget.Thedarts alistrikesimultaneously, andyoucandirectthemtohitonecreature orsevera!.At Higher LeveIs. Whenyoucastthisspellusingaspellslotof2ndleveiorhigher,thespellcreates onemoredart foreachslotleveIabove1st."
+}

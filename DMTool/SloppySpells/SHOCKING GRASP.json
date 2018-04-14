@@ -1,0 +1,10 @@
+{
+  "Name": "SHOCKING GRASP",
+  "Level": "Evoc",
+  "School": "at/on cantrip",
+  "CastingTime": "1action",
+  "Range": "Touch",
+  "Components": "V,S",
+  "Duration": "Instantaneous",
+  "Description": "Lightning springs from your hand to deliver a shock toa creature you try to touch. Make a melee spell atlackagainst the target. Vouhave advantage on the attack rollif the target is wearing armor made of metal. On a hit,the target takes ld8lightning damage, and it can't takereactions until the start of its next turnoThe spell's damage incrcases hy ld8 when you reach5th levei (2d8), 11th levei (3d8), and 17th levei (4d8)."
+}

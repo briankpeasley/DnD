@@ -1,0 +1,10 @@
+{
+  "Name": "REVIVIFY",
+  "Level": "3rd-level",
+  "School": "conjuration",
+  "CastingTime": "I action",
+  "Range": "Touch",
+  "Components": "V,S,M(diamonds worlh 300 gp,whichlhe spell consumes)",
+  "Duration": "Inslanlaneous",
+  "Description": "Voulouch acrealure lhal has died wilhin lhe laslminule. Thal crealure relurns lolifewilh I hilpoinl.This spell can'l relurn lolifeacrealure lhal has died ofoldage,norcan ilreslore anymissing bodyparIs."
+}

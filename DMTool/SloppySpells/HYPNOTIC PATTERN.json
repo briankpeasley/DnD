@@ -1,0 +1,10 @@
+{
+  "Name": "HYPNOTIC PATTERN",
+  "Level": "3rd-level",
+  "School": "iIIusion",
+  "CastingTime": "1action",
+  "Range": "120feet",
+  "Components": "5, M(aglowingstickofincense oracrystal viaIfilledwithphosphorescent material)",
+  "Duration": "Concentration, upto 1minute",
+  "Description": "Voucreate atwisting pattern ofcolors that weavesthrough the air inside a30-footcubewithin range.The pattern appears foramoment andvanishes. Eachcreature inthe area whosees the pattern must makeaWisdom saving throw.Onafailedsave,the creaturebecomes charmed fortheduration. While charmedbythisspell,thecreature isincapacitated andhasaspeed ofO.The spell ends foranaffected creature ifittakes anydamage orifsomeone e1seuses anaction toshake thecreature outofitsstupor."
+}

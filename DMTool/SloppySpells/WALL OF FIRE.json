@@ -1,0 +1,10 @@
+{
+  "Name": "WALL OF FIRE",
+  "Level": "4th-leveI",
+  "School": "evocation",
+  "CastingTime": "I action",
+  "Range": "120 feet",
+  "Components": "V,S,M(asmall piece ofphosphorus)",
+  "Duration": "Concentration, upto I minute",
+  "Description": "Voucreate awall offireon asolid surface withinrange. Voucan make the wall up to60 feet long, 20feet high, and I footthick, ar aringed wall up to20 feetindiameter, 20 feet high, and I footthick. The wall isopaque and lasts forthe duration.When the wall appears, each creature within itsareamust make aDexterity saving throw. Onafailed save, acreature takes 5d8 firedamage, ar half as much damageon asuccessful save.One side ofthe wall, selected byyou when you castthis spell, deals 5d8 firedamage toeach creature lhatends itsturo within 10feet ofthat side ar inside thewal!. Acreature takes the same damage when itentersthe wall forthe first time on aturo ar ends itsturo there.The other side ofthe wall deals nodamage.At Higher LeveIs. When you cast lhis spell using aspell slot of5th leveiar higher, the damage increases byId8 foreach slot leveiabove 4th."
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "CURE WOUNDS",
+  "Level": "1st-levei",
+  "School": "evocation",
+  "CastingTime": "I action",
+  "Range": "Touch",
+  "Components": "V,S",
+  "Duration": "Instantaneous",
+  "Description": "Acreature you touch regains a number ofhit pointsequal to Id8 +your spellcasting ability modifier. Thisspell has no effect on undead or constructs.At Higher Leveis. When you cast this spell using aspell slot of2nd levei or higher, the healing increases byId8 foreach slot leveIabove IsI."
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "HEROES' FEAST",
+  "Level": "6th-levei",
+  "School": "conjuration",
+  "CastingTime": "10minutes",
+  "Range": "30feet",
+  "Components": "V,5 ,M(agem-encrusted bowlworth atleast 1,000gp,which thespell consumes)",
+  "Duration": "Instantaneous",
+  "Description": "Voubring forth agreat feast, including magnificentfoodand drink. The feast takes I hour toconsume anddisappears attheend ofthat time,and the beneficiaieffectsdon'tset inuntilthis hour isover.Uptotwelveother creatures can partake ofthe feast.Acreature that partakes ofthe feast gains severalbenefits. Thecreature iscured ofalidiseases andpoison, becomes immune topoison and beingfrightened, and makes aliWisdom saving throws withadvantage. Itshitpoint maximum also increases by2dl0, and itgains the same number ofhitpoints. Thesebenefits last for24hours."
+}

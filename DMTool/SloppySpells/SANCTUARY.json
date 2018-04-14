@@ -1,0 +1,10 @@
+{
+  "Name": "SANCTUARY",
+  "Level": "Ist./evel",
+  "School": "abjuration",
+  "CastingTime": "I bonus aclion",
+  "Range": "30feet",
+  "Components": "V,S,M(asmall silver mirror)",
+  "Duration": "I minule",
+  "Description": "Vouward acrealure within range againsl allack. Unlillhe spell ends, anycrealure wholargels lhe wardedcrealure wilh an allack oraharmful spell musl firslmake aWisdom saving lhrow. Onafailedsave,thecreature musl choose anew largel orlose lhe allackor spell. This spell doesn't protect the warded creaturefrom area effects, such as the explosion of a fireball.Ifthe warded creature makes an attack or casts a spellthat affects an enemy creature, this spell ends."
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "FLAME STRIKE",
+  "Level": "5th-levei",
+  "School": "evocation",
+  "CastingTime": "I aetion",
+  "Range": "60 feet",
+  "Components": "V,5, M(pineh of sulfur)",
+  "Duration": "Instantaneous",
+  "Description": "Avertieal column of divine /ire roars down from theheavens in a loeation YOllspecify. Eaeh ereature ina lO.foot.radius, 40.foot-high cylinder eentered on apoint within range must make a Dexterity saving throw.Aereature takes 4d6 /ire damage and 4d6 radiantdamage on a failed save, or half as mueh damage on asueeessful one.At Higher Leve/s. When you east this spel1 using aspell slot of 6th levei or higher, the /ire damage or theradiant damage (your ehoice) inereases by Id6 for eaehslot levei above 5th."
+}

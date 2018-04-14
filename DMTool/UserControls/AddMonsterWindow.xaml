@@ -1,0 +1,53 @@
+﻿<Window x:Class="DMTool.UserControls.AddMonsterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DMTool.UserControls"
+        mc:Ignorable="d"
+        Title="AddMonsterWindow" Height="600" Width="700" Background="#FFEEDAA5" KeyUp="Window_KeyUp" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <local:StylizedTextBlock Text="Search: " />
+            <TextBox x:Name="txtSearch" Width="100" TextChanged="txtSearch_TextChanged" />
+            <Button Content="Refresh" HorizontalAlignment="Right" Margin="50,0,0,0" Click="RefreshMonsters" />
+        </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1">
+            <ListView x:Name="monsters" Background="Transparent" MouseDoubleClick="monsters_MouseDoubleClick">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <local:StylizedTextBlock Text="{Binding Path=Name}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="1">
+            <Button Content="Generate " Click="GenerateEncounter" />
+            <RadioButton x:Name="easy" Content="Easy" GroupName="Difficutly" IsChecked="True" VerticalAlignment="Center"/>
+            <RadioButton x:Name="medium" Content="Medium" GroupName="Difficutly" VerticalAlignment="Center"/>
+            <RadioButton x:Name="hard" Content="Hard" GroupName="Difficutly" VerticalAlignment="Center" />
+            <RadioButton x:Name="deadly" Content="Deadly" GroupName="Difficutly" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <Button Content="Save" Grid.Column="1" Click="SaveEncounterTable" HorizontalAlignment="Right" />
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.Column="1">
+        <ListView x:Name="encounterableMonsters" Background="Transparent" MouseDoubleClick="discoverableMonsters_MouseDoubleClick">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <local:StylizedTextBlock Text="{Binding Path=Name}" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ListView>
+        </ScrollViewer>
+    </Grid>
+</Window>

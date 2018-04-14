@@ -1,0 +1,10 @@
+{
+  "Name": "CLOUDKILL",
+  "Level": "5th-levei",
+  "School": "conjuration",
+  "CastingTime": "I action",
+  "Range": "120feet",
+  "Components": "V,5",
+  "Duration": "Concentration, upto10minutes",
+  "Description": "Voucreate a20-foot-radius sphere ofpoisonous, yellow-green fogcentered onapointyouchoose within range.The fogspreads around corners. ltlasts forthe durationar untilstrong winddisperses the fog,ending the spell.ltsarea isheavilyobscured.When acreature enters thespell's area forthe firsttime onaturn ar starts itsturn there, that creature mustmake aConstitution saving throw.Thecreature takes5d8poison damage onafailedsave,ar halfasmuchdamage onasuccessful one,Creatures are affectedeveniftheyholdtheir breath ar don'tneed tobreathe.Thefogmoves 10feetawayfromyouatthestartofeach ofyourturns, rollingalong thesurface oftheground. Thevapors, being heavier than air,sink tothelowest leveiofthe land,evenpouring down openings.At Higher Leveis. Whenyoucast this spell using aspell slotof6th levelar higher, thedamage increases byld8 foreachslot leveiabove5th."
+}

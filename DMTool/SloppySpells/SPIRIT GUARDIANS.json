@@ -1,0 +1,10 @@
+{
+  "Name": "SPIRIT GUARDIANS",
+  "Level": "3rd-/evel",
+  "School": "conjuration",
+  "CastingTime": "I action",
+  "Range": "SeIf(15-foot radius)",
+  "Components": "V,S, M(aholysymbol)",
+  "Duration": "Concentration, up to lOminutes",
+  "Description": "Voucall forth spirits toprotect you. They fiitaround youtoa distance of 15feet for the duration. Ifyou are goodor neutra!. their spectral form appears angelic or fey(your choice). Ifyou are evil, they appear fiendish.When you cast this spell, you can designate anynumber ofcreatures you can see to be unaffected byit.An affected creature's speed is halved in the area, andwhen the creature enters the area forthe first time ona turn or starts its turn there, itmust make a Wisdomsaving throw. On a failed save, the creature takes 3d8radiant damage (ifyou are good or neutral) or 3d8necrotic damage (ifyou are evil). On a successful save,the creature takes half as much damage.At Higher Leveis. When you cast this spell using aspell slot of4th leveIor higher, the damage increases byId8 for each slot leveIabove 3rd."
+}

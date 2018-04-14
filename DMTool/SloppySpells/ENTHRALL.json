@@ -1,0 +1,10 @@
+{
+  "Name": "ENTHRALL",
+  "Level": "2nd.level",
+  "School": "enchantment",
+  "CastingTime": "1action",
+  "Range": "60 feet",
+  "Components": "V,S",
+  "Duration": "1minute",
+  "Description": "Vouweavea distracting string ofwords, causingcreatllres ofyour choice that youcan see within rangeand that can hear you tomake aWisdom savingthrow. Anycreature that can't becharmed succeedson this saving throw automatically, and ifyou orYOllrcompanions are fighting acreature, ithas advantage onthe save. Onafailed save, the target has disadvantageonWisdom (Perception) checks made toperceive anycreature other than you until the spell ends oruntil thetarget can nolonger hear YOll.The spell ends ifyouareincapacitated or can nolonger speak."
+}

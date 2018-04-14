@@ -1,0 +1,10 @@
+{
+  "Name": "CLAIRVOYANCE",
+  "Level": "3rd-/evel",
+  "School": "divination",
+  "CastingTime": "10minutes",
+  "Range": "1mile",
+  "Components": "V,5, M(afocusworth atleast 100gp,either ajeweled horn forhearing ar aglasseyeforseeing)",
+  "Duration": "Concentration, upto 10minutes",
+  "Description": "Voucreate aninvisiblesensor within range inalocationfamiliar toyou(aplaceyouhavevisitedar seen before)ar inanobviouslocation that isunfamiliar toyou(suchas behind adoar,around acorner, arinagroveoftrees).Thesensorremains inplace forthe duration, and itcan't beattacked ar otherwise interacted with.When youcast the spell,youchoose seeing arhearing. Voucan use thechosen sense through thesensorasifyouwere initsspace. Asyouraction,youcan switch between seeing and hearing.Acreature that can see thesensor (suchasacreaturebenefiting fromsee invisibility artruesight) sees aluminous, intangible orbabout thesize ofyourfist."
+}

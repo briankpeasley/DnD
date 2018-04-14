@@ -1,0 +1,10 @@
+{
+  "Name": "AUGURY",
+  "Level": "2nd-levei",
+  "School": "divination (ritual)",
+  "CastingTime": "1minute",
+  "Range": "Sei f",
+  "Components": "V,S, M(specially marked sticks, bones,or similar tokens worth at least 25 gp)",
+  "Duration": "Instantaneous",
+  "Description": "Bycasting gem-inlaid sticks, rolling dragon bones,laying out ornate cards, or employing some otherdivining tool,you receive an omen from an otherworldlyentity about the results ofaspecific course ofaction thatyou plan totake within the next 30 minutes, The DMchooses from the following possible omens:Weal, forgood resultsWoe, forbad resultsWealand woe, for both good and bad resultsNothing, for results that aren't especially good or badThe spell doesn't take into account any possiblecircumstances that might change the outcome, suchas the casting ofadditional spells or the loss or gainofacompanion.Ifyou cast the spell two or more times beforecompleting your next long rest, there isacumulative 25percent chance for each casting after the first that youget a random reading. The DMmakes this roll insecret."
+}

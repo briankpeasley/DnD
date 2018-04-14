@@ -1,0 +1,4 @@
+{
+  "Name": "Prone",
+  "Description": "-A prone creature’s only Movement option is to crawl, unless it stands up and thereby ends the condition.\n\n-The creature has disadvantage on Attack rolls.\n\n-An Attack roll against the creature has advantage if the attacker is within 5 feet of the creature. Otherwise, the Attack roll has disadvantage."
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "COMMAND",
+  "Level": "/st-/evel",
+  "School": "enchantment",
+  "CastingTime": "Iaction",
+  "Range": "60feet",
+  "Components": "V",
+  "Duration": "1round",
+  "Description": "Vouspeak aone-word command toacreature youcanseewithin range. The target must succeed onaWisdomsaving throw orfollowthecommand onitsnextturnoThe spell has noeffectifthetarget isundead, ifitdoesn't understand yourlanguage, orifyourcommandisdirectly harmful toit.Some typical commands and their effects follow.Voumight issue acommand other than onedescribed here.Ifyoudoso,theOMdetermines howthetarget behaves.Ifthetarget can't followyourcommand, thespell ends.Approach. The target moves toward youbytheshortest and most direct route, ending itsturn ifitmoveswithin 5feetofYOU.Drop.The target drops whatever itisholding and thenends itsturnoF/ee. The target spends itsturn moving awayfromyoubythefastest available means.Grove/. The target fallsprone andthen ends itsturnoHa/t. The target doesn't moveandtakes noactions.Afiyingcreature stays aloft,provided that itisabletodosO.Ifitmust movetostayaloft,itfiiesthe minimumdistance needed toremain intheair.At Higher Leve/s. When youeast this spell usingaspell slotof2ndleveIorhigher,youcan affeetoneadditional creature foreach slotlevelabove 1st.Thecreatures must bewithin 30feetofeach other whenyoutarget them."
+}

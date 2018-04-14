@@ -1,0 +1,10 @@
+{
+  "Name": "DOMINATE MONSTER",
+  "Level": "8th.level",
+  "School": "enchantment",
+  "CastingTime": "I action",
+  "Range": "60 feet",
+  "Components": "V,5",
+  "Duration": "Concentration, up to I hour",
+  "Description": "Vouattempt tobeguile acreature that you can seewithin range. lt must succeed on aWisdom savingthrow or be charmed byyou forthe duration. Ifyou orcreatures that are friendly toyou are fighting it,ithasadvantage on the saving throw.While the creature ischarmed, you have a telepathiclink with itas long as the two ofyou are on the sameplane ofexistence. Voucan use this telepathic link toissue commands tothe creature while you are conscious(noaction required), which itdoes its best toobey. Voucan specify asimple and general course ofaction, suchas \"Attack that creature,\" \"Run over there,\" or \"Fetchthat object.\" Ifthe creature completes the order anddoesn't receive further direction from you, itdefendsand preserves itself tothe best ofits ability.Voucan use your action totake total and precisecontraI ofthe targe!. Until the end ofyour next turn, thecreature takes only the actions you choose, and doesn'tdoanything that you don't allow ittodo. During thistime, you can also cause the creature touse areaction,but this requires you touse your own reaction as well.Each time the target takes damage, itmakes a newWisdom saving throw against the spell. Ifthe savingthrow succeeds, the spell ends.At Higher Leve/s. When you cast this spell witha9th.level spell slot, the duration isconcentration,up to8hours."
+}

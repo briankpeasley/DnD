@@ -1,0 +1,10 @@
+{
+  "Name": "VAMPIRIC TOUCH",
+  "Level": "3rd-Jevel",
+  "School": "necromancy",
+  "CastingTime": "I action",
+  "Range": "Self",
+  "Components": "V,S",
+  "Duration": "Concentration, up to I minute",
+  "Description": "The touch ofyour shadow-wreathed hand can siphon lifeforce from others toheal your wounds. Make ameleespell attack against acreature wilhin your reach. Onahit,the target takes 3d6 necrotic damage, and youregain hit points equal tohalf the amount ofnecraticdamage dealt. Until the spell ends, you can make theattack again on each ofyour turns as an action.At Higher LeveIs. When you cast this spell using aspell slot of4th leveiar higher, the damage increases byId6 foreach slot leveiabove 3rd."
+}

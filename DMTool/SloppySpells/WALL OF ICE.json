@@ -1,0 +1,10 @@
+{
+  "Name": "WALL OF ICE",
+  "Level": "6th-leveI",
+  "School": "evocation",
+  "CastingTime": "I action",
+  "Range": "120 feet",
+  "Components": "V,S, M(asmall piece ofquartz)",
+  "Duration": "Concentration, up to 10minutes",
+  "Description": "Voucreate awall oficeon asolid surface within range.Voucan form itinto ahemispherical dome ar aspherewith aradius ofupto 10feet, aryou can shape aflatsurface made up often IO-foot-square panels. Eachpanel must be contiguous with another pane!. Inanyform, the wall is I footthick and lasts forthe duration.Ifthe wall cuts through acreature's space when itappears, the creature within its area ispushed toonesideofthe wall and must make aDexterity saving throw.On afailed save, the creature takes IOd6cold damage,ar half as much damage on asuccessful save.The wall isan object that can bedamaged and thusbreached. 1thas AC12and 30 hit points per IO-footsection, and itisvulnerable tofiredamage. Reducinga 10-footsection ofwall toOhit points destrays itandleaves behind asheet offrigid air inthe space the walloccupied. Acreature moving thraugh the sheet offrigidair forthe first time onaturo must make aConstitutionsaving thraw. That creature takes 5d6 cold damage on afailed save, ar half as much damage on asuccessful one.At Higher LeveIs. When you cast this spell using aspell slot of7th leveiar higher, the damage the walldeals when itappears increases by2d6, and the damagefram passing through the sheet offrigid air increases byId6, foreach slot leveiabove 6th."
+}

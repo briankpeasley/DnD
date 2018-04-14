@@ -1,0 +1,10 @@
+{
+  "Name": "CHAIN LIGHTNING",
+  "Level": "6th.level",
+  "School": "evoeation",
+  "CastingTime": "1action",
+  "Range": "150feet",
+  "Components": "V.S. M(abitoffur;apiece ofamber.glass. oracrystal rod;and three silver pins)",
+  "Duration": "Instantaneous",
+  "Description": "Voucreate aboltoflightning that ares toward atarget ofyour choice that youcan see within range. Three boltsthen leap fromthat target toas many as three othertargets. each ofwhich must bewithin 30feetofthe tirsttarget. Atarget can beacreature oran objeet and eanbetargeted byonlyone ofthe bolts.Atarget must make aDexterity saving throw. Thetarget takes lOd8lightning damage onafailedsave.orhalfas much damage onasuccessful one.At Higher Leve/s. Whenyoucast this spell usingaspellslotof7thleveiorhigher. one additional boltleaps fromthe tirst target toanother target foreach slotleveiabove6th."
+}

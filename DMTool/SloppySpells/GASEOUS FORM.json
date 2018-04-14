@@ -1,0 +1,10 @@
+{
+  "Name": "GASEOUS FORM",
+  "Level": "3rd-IeveI",
+  "School": "transmutation",
+  "CastingTime": "1action",
+  "Range": "Touch",
+  "Components": "V,5. M(abitofgauze and awisp ofsmoke)",
+  "Duration": "Concentration, up to 1hour",
+  "Description": "Voutransform a willing creature you touch, along witheverything it's wearing and carrying, into a misty cloudforthe duration. The spell ends ifthe creature drops toO hit points. An incorporeal creature isn't affected.While in this form, the target's only method ofmovement is a flyingspeed of 10feel. The target canenter and occupy the space ofanother creature. Thetarget has resistance to nonmagical damage, and ithasadvantage on 5trength, Dexterity, and Constitutionsaving throws. The target can pass through small holes,narrow openings, and even mere cracks, though ittreatsliquids as though they were solid surfaces. The targetcan't fali and remains hovering in the air even whenstunned or otherwise incapacitated.While in the form ofa misty cloud, the target can't talkor manipulate objects, and any objects itwas carrying orholding can't be dropped, used, or otherwise interactedwith. The target can't attack or cast spells."
+}

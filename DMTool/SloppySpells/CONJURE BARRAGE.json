@@ -1,0 +1,10 @@
+{
+  "Name": "CONJURE BARRAGE",
+  "Level": "3rd-/evel",
+  "School": "conjuration",
+  "CastingTime": "1action",
+  "Range": "Sei f(60-foot cone)",
+  "Components": "V,S, M(one piece of ammunition or athrown weapon)",
+  "Duration": "Instantaneous",
+  "Description": "Vouthrow a nonmagical weapon or fire a piece ofnonmagicaI ammunition into the air to create a coneof identical weapons that shoot forward and thendisappear. Each creature in a 60.foot cone must succeedon a Dexterity saving throw. Acreature takes 3d8damage on a failed save, ar half as much damage on asuccessful one. The damage type is the same as that ofthe weapon or ammunition used as a component."
+}

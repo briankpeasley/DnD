@@ -1,0 +1,10 @@
+{
+  "Name": "FORESIGHT",
+  "Level": "9th-leveI",
+  "School": "divination",
+  "CastingTime": "1minute",
+  "Range": "Touch",
+  "Components": "V,5, M(ahummingbird feather)",
+  "Duration": "8 hours",
+  "Description": "Voutouch a willing creature and bestow a limited abilityto see into the immediate future. For the duration, thetarget can't be surprised and has advantage on attackrolls, ability checks, and saving throws. Additionally,other creatures have disadvantage on attack rollsagainst the target for the duration.This spell immediately ends ifyou cast itagain beforeits duration ends."
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "CIRCLE OF POWER",
+  "Level": "5th-levei",
+  "School": "abjuration",
+  "CastingTime": "1action",
+  "Range": "Self(30-footradius)",
+  "Components": "V",
+  "Duration": "Concentration. upto10minutes",
+  "Description": "Divineenergy radiates fromyou,distorting anddiffusing magical energy within 30feetofyou.Untilthe spell ends, the sphere moveswithyou,centered onyou.Fortheduration, each friendlycreature inthearea(includingyou)has advantage onsaving throws againstspells and other magical effects.Additionally,whenanaffectedcreature succeeds onasaving throw madeagainst aspell ar magical effectthat allows ittomake asaving throw totake onlyhalfdamage, itinstead takesnodamage ifitsucceeds onthe saving throw."
+}

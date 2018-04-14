@@ -1,0 +1,10 @@
+{
+  "Name": "BLADE BARRIER",
+  "Level": "6th-levei",
+  "School": "evocation",
+  "CastingTime": "1action",
+  "Range": "90feet",
+  "Components": "V,S",
+  "Duration": "Concentration, upto10minutes",
+  "Description": "Youcreate averticalwallofwhirling,razor-sharp bladesmadeofmagicalenergy.Thewallappears withinrangeandlastsfortheduration. Youcanmakeastraight wallupto100feetlong,20feethigh,and5feetthick,oraringedwallupto60feetindiameter, 20feethigh,and5feetthick.Thewallprovidesthree-quarters covertocreatures behindit,anditsspaceisdifficultterrain.Whenacreature enters thewall'sarea forthefirsttimeonaturnorstarts itsturnthere,thecreature mustmakeaDexteritysavingthrow.Onafailedsave.thecreature takes 6d1Oslashing damage. Onasuccessfulsave,thecreature takes halfasmuchdamage."
+}

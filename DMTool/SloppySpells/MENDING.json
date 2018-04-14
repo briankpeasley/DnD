@@ -1,0 +1,10 @@
+{
+  "Name": "MENDING",
+  "Level": "Tran",
+  "School": "smutation cantrip",
+  "CastingTime": "1minute",
+  "Range": "Touch",
+  "Components": "V.S, M(two lodestones)",
+  "Duration": "Instantaneous",
+  "Description": "This spell repairs asingle break or tear inan objectyou touch, such as abroken chain link. two halves ofabroken key,atorn c1oak,or aleaking wineskin. Aslong as the break or tear is no larger than 1foot inany dimension, you mend it.leaving no trace oftheformer damage.This spell can physically repair amagic itemor construct, but the spell can't restore magic tosuch an object."
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "CREATE UNDEAD",
+  "Level": "6th-leveI",
+  "School": "necromancy",
+  "CastingTime": "I minute",
+  "Range": "10feet",
+  "Components": "V,S, M(one clay pot tilled with grave dirt.one clay pot tilled with brackish water, and one 150gpblack onyx stone foreach corpse)",
+  "Duration": "Instantaneous",
+  "Description": "Voucan cast this spell only at nighl. Choose up tothreecorpses ofMedium or Small humanoids within range.Each corpse becomes aghoul under your control. (TheDMhas game statistics for these creatures.)As abonus action on each ofyour turns, you canmentally command any creature you animated withthis spell ifthe creature iswithin 120 feet ofyou (ifyoucontrol multiple creatures, you can command any or aliofthem at the same time, issuing the same command toeach one).Voudecide what action the creature will takeand where itwill move during its next turn, oryou canissue ageneral command, such as toguard a particularchamber or corridor. Ifyou issue nocommands, thecreature only defends itself against hostile creatures.Once given an order, the creature continues tofollowituntil its task iscomplete.The creaturc isunder your control for 24 hours,after which itstops obeying any command you havegiven il.Tomaintain control ofthe creature foranother24 hours, you must cast this spell on the creaturebefore the current 24-hour period ends. This useofthe spell reasserts your control over up tothreecreatures you have animated with this spell, rather thananimating new ones.At Higher Leve/s. When you cast this spell using a7th-leveI spell slot, youcan animate or reassert controlover four ghouls. When you cast this spellusing an8th-leveI spell slot, you can animate or reassert controlover tiveghouls or two ghasts or wights. When you castthis spell using a 9th-leveI spell slot, you can animate orreassert control over six ghouls, three ghasts or wights,or two mummies."
+}

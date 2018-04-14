@@ -1,0 +1,10 @@
+{
+  "Name": "FLY",
+  "Level": "3rd-Ievel",
+  "School": "transmutation",
+  "CastingTime": "Iaction",
+  "Range": "Touch",
+  "Components": "V,S,M(awingfeatherfromanyblrd)",
+  "Duration": "Concentration, upto10minutes",
+  "Description": "Voutouchawillingcreature. Thetargetgainsaflyingspeedof60feetfortheduration. Whenthespellends,thetargetfallsifitisstillaloft,unless ItcanstopthefalI.At Higher LeveIs. Whenyoucastthisspellusingaspellslotof4thleveIorhigher,youcantargetoneadditional creature foreachslotleveiabove3rd."
+}

@@ -1,0 +1,29 @@
+﻿<Window x:Class="DMTool.UserControls.AddSpellWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DMTool.UserControls"
+        mc:Ignorable="d"
+        Title="AddSpellWindow" Height="500" Width="300" Loaded="Window_Loaded" Background="#FFEEDAA5" KeyUp="Window_KeyUp">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <local:StylizedTextBlock Text="Search: " />
+            <TextBox x:Name="txtSearch" Width="100" TextChanged="txtSearch_TextChanged" />
+            <Button Content="Refresh" HorizontalAlignment="Right" Margin="50,0,0,0" Click="RefreshSpells" />
+        </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1">
+            <ListView x:Name="spells" Background="Transparent">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <local:StylizedTextBlock Text="{Binding Path=Name}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+    </Grid>
+</Window>

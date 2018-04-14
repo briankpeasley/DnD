@@ -1,0 +1,10 @@
+{
+  "Name": "SPARE THE DYING",
+  "Level": "Necr",
+  "School": "omancy cantrip",
+  "CastingTime": "I action",
+  "Range": "Touch",
+  "Components": "V,S",
+  "Duration": "Instantaneous",
+  "Description": "Voutouch a living creature that has Ohit points. Thecreature becomes stable. This spell has no effect onundead ar constructs."
+}

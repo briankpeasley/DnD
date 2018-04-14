@@ -1,0 +1,10 @@
+{
+  "Name": "FINGE R OF DEATH",
+  "Level": "7th-leveI",
+  "School": "neeromaney",
+  "CastingTime": "1action",
+  "Range": "60 feet",
+  "Components": "V,S",
+  "Duration": "Instantaneous",
+  "Description": "Yousend negative energy coursing through a ereaturethat you ean see within range, causing itsearing pain.The target must make a Constitution saving throw. Ittakes 7d8 +30 necrotic damage on a failed save, or halfas mueh damage on a sueeessful one.Ahumanoid killed by this spell rises at the start ofyour next turo as a zombie that is permanently underyour command, following your verbal orders to the bestof its ability."
+}

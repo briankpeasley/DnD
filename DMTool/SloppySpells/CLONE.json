@@ -1,0 +1,10 @@
+{
+  "Name": "CLONE",
+  "Level": "8th-levei",
+  "School": "necromancy",
+  "CastingTime": "1hour",
+  "Range": "Touch",
+  "Components": "V,5, M(adiamond worth atleast 1,000gpand atleast I cubicinchoffleshofthe creaturethat istobecloned,which thespell consumes, and avessel worth atleast 2,000 gpthat has asealable lidand islargeenough toholdaMediumcreature, suchasahugeurn, coffin,mud-filledcystinthe ground, arcrystal container filledwithsalt water)",
+  "Duration": "!nstantaneous",
+  "Description": "This spell grows aninert duplicate ofalivingcreatureas asafeguard against death. This cloneforms insideasealed vessel and grows tofullsizeand maturityafter 120days;youcan also choose tohavethe clonebeayounger version ofthe same creature. ltremainsinert and endures indefinitely,aslongas itsvesselremains undisturbed.Atanytimeafter theclone matures, iftheoriginalcreature dies, itssoul transfers tothe clone,providedthat the soul isfreeandwilling toreturnoThe cloneisphysicallyidentical tothe original and has thesamepersonality, memories, and abilities, butnane oftheoriginal's equipment. The original creature's physicalremains, iftheystillexist, become inert and can'tthereafter berestored tolife,since the creature's souIiselsewhere."
+}
