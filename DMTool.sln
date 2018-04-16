@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMTool", "DMTool\DMTool.csproj", "{F6020C34-1DD7-497B-BF41-F409F940DA9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapReveal", "MapReveal\MapReveal.csproj", "{30BC2508-D89A-4978-8F70-988B009C3ED3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F6020C34-1DD7-497B-BF41-F409F940DA9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6020C34-1DD7-497B-BF41-F409F940DA9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6020C34-1DD7-497B-BF41-F409F940DA9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30BC2508-D89A-4978-8F70-988B009C3ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30BC2508-D89A-4978-8F70-988B009C3ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30BC2508-D89A-4978-8F70-988B009C3ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30BC2508-D89A-4978-8F70-988B009C3ED3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
