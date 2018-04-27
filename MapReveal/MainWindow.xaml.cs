@@ -41,19 +41,21 @@ namespace MapReveal
             _eraser.HorizontalAlignment = HorizontalAlignment.Left;
             _eraser.VerticalAlignment = VerticalAlignment.Top;
             _eraser.Visibility = Visibility.Hidden;
+            _eraser.IsHitTestVisible = false;
             this.grid.Children.Add(_eraser);
             _eraser.Loaded += _eraser_Loaded;
 
             _pv = new PlayerView();
             _pv.Loaded += Pv_Loaded;
             _pv.Show();
+
+            _pv.laserPoint.Visibility = Visibility.Hidden;
         }
 
         private void _eraser_Loaded(object sender, RoutedEventArgs e)
         {
             _eraser.Width = MapViewModel.EraserSize;
             _eraser.Height = MapViewModel.EraserSize;
-            
         }
 
         private void Pv_Loaded(object sender, RoutedEventArgs e)
@@ -111,20 +113,23 @@ namespace MapReveal
             }
         }
 
-        private void DMView_MouseEnter(object sender, MouseEventArgs e)
-        {
-            _eraser.Visibility = Visibility.Visible;
-        }
-
         private void DMView_MouseMove(object sender, MouseEventArgs e)
         {
             Point pos = e.GetPosition(sender as IInputElement);
             _eraser.Margin = new Thickness(pos.X - MapViewModel.EraserSize / 2, pos.Y - MapViewModel.EraserSize / 2, 0, 0);
+            _pv.laserPoint.Margin = new Thickness(pos.X - 5, pos.Y - 5, 0, 0);
+        }
+
+        private void DMView_MouseEnter(object sender, MouseEventArgs e)
+        {
+            _eraser.Visibility = Visibility.Visible;
+            _pv.laserPoint.Visibility = Visibility.Visible;
         }
 
         private void DMView_MouseLeave(object sender, MouseEventArgs e)
         {
             _eraser.Visibility = Visibility.Hidden;
+            _pv.laserPoint.Visibility = Visibility.Hidden;
         }
     }
 }
