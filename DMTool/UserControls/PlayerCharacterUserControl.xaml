@@ -29,11 +29,7 @@
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
                                         <local:StylizedTextBlock Text="{Binding Path=Name}" FontWeight="Bold" />
-                                        <local:StylizedTextBlock>
-                                            <Run Text="(" />
-                                            <Run Text="{Binding Path=Max}" />
-                                            <Run Text="): " />
-                                        </local:StylizedTextBlock>
+                                        <local:SelectableTextBox Text="{Binding Path=Max, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
                                         <local:StylizedTextBlock Text="{Binding Path=Current}" />
                                         <Button Content="5" FontFamily="Marlett" Margin="10,0,0,0" Tag="{Binding}" Click="IncrementCounter" />
                                         <Button Content="6" FontFamily="Marlett" Tag="{Binding}" Click="DecrementCounter" />

@@ -48,15 +48,15 @@ namespace DMTool
                 Name = "Empty"
             };
 
-            Character c = JsonConvert.DeserializeObject<PlayerCharacter>(File.ReadAllText("./PlayerCharacter/Test.json"));
-            (c as PlayerCharacter).Counters.Add(new Counter()
-            {
-                Name = "Test",
-                Max = 25,
-                Current = 10
-            });
-
-            (App.Current as App).CombatViewModel.Participants.Add(c);
+            // Used for testing a default character
+            ////Character c = JsonConvert.DeserializeObject<PlayerCharacter>(File.ReadAllText("./PlayerCharacter/Test.json"));
+            ////(c as PlayerCharacter).Counters.Add(new Counter()
+            ////{
+            ////    Name = "Test",
+            ////    Max = 25,
+            ////    Current = 10
+            ////});
+            ////(App.Current as App).CombatViewModel.Participants.Add(c);
 
             combatControl.DataContext = (App.Current as App).CombatViewModel;
         }
