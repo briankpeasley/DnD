@@ -15,7 +15,48 @@
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <StackPanel>
                 <local:CharacterUserControl x:Name="characterUserControl" Character="{Binding Path=PlayerCharacter, UpdateSourceTrigger=PropertyChanged}" />
+                <Border BorderThickness="0,3,0,0" Margin="0,3,0,0">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush EndPoint="0,0" StartPoint="1,0">
+                            <GradientStop Color="#FF964529" Offset="0.46"/>
+                            <GradientStop/>
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <StackPanel KeyUp="StackPanel_KeyUp_1">
+                        <local:StylizedTextBlock Text="Counters" />
+                        <ItemsControl x:Name="counters">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <local:StylizedTextBlock Text="{Binding Path=Name}" FontWeight="Bold" />
+                                        <local:StylizedTextBlock>
+                                            <Run Text="(" />
+                                            <Run Text="{Binding Path=Max}" />
+                                            <Run Text="): " />
+                                        </local:StylizedTextBlock>
+                                        <local:StylizedTextBlock Text="{Binding Path=Current}" />
+                                        <Button Content="5" FontFamily="Marlett" Margin="10,0,0,0" Tag="{Binding}" Click="IncrementCounter" />
+                                        <Button Content="6" FontFamily="Marlett" Tag="{Binding}" Click="DecrementCounter" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
 
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Border BorderBrush="Black" BorderThickness="1">
+                                <local:StylizedTextBox x:Name="newCounter" Background="WhiteSmoke" />
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1">
+                                <local:StylizedTextBox x:Name="newCounterMax" Background="WhiteSmoke" />
+                            </Border>
+                        </Grid>
+                    </StackPanel>
+                </Border>
                 <Border BorderThickness="0,3,0,0" Margin="0,3,0,0">
                     <Border.BorderBrush>
                         <LinearGradientBrush EndPoint="0,0" StartPoint="1,0">

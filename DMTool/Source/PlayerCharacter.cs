@@ -134,11 +134,33 @@ namespace DMTool.Source
         }
     }
 
+    public class Counter : ViewModel
+    {
+        public string Name
+        {
+            get { return GetProperty<string>(); }
+            set { SetProperty(value); }
+        }
+
+        public int Max
+        {
+            get { return GetProperty<int>(); }
+            set { SetProperty(value); }
+        }
+
+        public int Current
+        {
+            get { return GetProperty<int>(); }
+            set { SetProperty(value); }
+        }
+    }
+
     public class PlayerCharacter : Character
     {
         public PlayerCharacter()
         {
-            Gear = new ObservableCollection<Source.Gear>();
+            Gear = new ObservableCollection<Gear>();
+            Counters = new ObservableCollection<Counter>();
             Coin = new Coin();
         }
 
@@ -149,6 +171,7 @@ namespace DMTool.Source
         }
 
         public ObservableCollection<Gear> Gear;
+        public ObservableCollection<Counter> Counters;
 
         public Coin Coin
         {

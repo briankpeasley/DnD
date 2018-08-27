@@ -69,6 +69,21 @@ namespace DMTool.Source
         {
             foreach (Character c in Participants)
             {
+                c.DamageLog.Clear();
+                c.ComputeCurrentHitPoints();
+                c.InvokePropertyChange("HitPoints");
+
+                if (c.GetType() == typeof(PlayerCharacter))
+                {
+                    foreach (Counter counter in (c as PlayerCharacter).Counters)
+                    {
+                        if (counter.Current < counter.Max)
+                        {
+                            counter.Current = counter.Max;
+                        }
+                    }
+                }
+                
                 foreach(Spell s in c.Cantrips)
                 {
                     s.Cooldown = false;

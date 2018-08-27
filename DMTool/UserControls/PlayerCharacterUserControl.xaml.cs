@@ -29,6 +29,7 @@ namespace DMTool.UserControls
             PlayerCharacterUserControl ctrl = d as PlayerCharacterUserControl;
             ctrl.grid.DataContext = e.NewValue;
             ctrl.gear.ItemsSource = (e.NewValue as PlayerCharacter).Gear;
+            ctrl.counters.ItemsSource = (e.NewValue as PlayerCharacter).Counters;
         }
 
         public PlayerCharacterUserControl()
@@ -75,6 +76,35 @@ namespace DMTool.UserControls
             if (g != null)
             {
                 PlayerCharacter.Gear.Remove(g);
+            }
+        }
+
+        private void IncrementCounter(object sender, RoutedEventArgs e)
+        {
+            Counter c = (sender as Button).Tag as Counter;
+            c.Current++;
+        }
+
+        private void DecrementCounter(object sender, RoutedEventArgs e)
+        {
+            Counter c = (sender as Button).Tag as Counter;
+            c.Current--;
+        }
+
+        private void StackPanel_KeyUp_1(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Counter c = new Counter()
+                {
+                    Name = newCounter.Text,
+                    Max = Int32.Parse(newCounterMax.Text),
+                    Current = Int32.Parse(newCounterMax.Text)
+                };
+
+                newCounter.Text = string.Empty;
+                newCounterMax.Text = string.Empty;
+                PlayerCharacter.Counters.Add(c);
             }
         }
     }
