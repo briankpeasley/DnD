@@ -64,6 +64,10 @@
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
+                        <local:StylizedTextBlock Text="Hit Dice: "  Margin="10,0,0,0"/>
+                        <local:StylizedTextBlock Text="{Binding Path=RemainingHitDice}" />
+                        <Button Content="5" FontFamily="Marlett" Margin="3,0,0,0" Click="IncrementRemainingHitDice" />
+                        <Button Content="6" FontFamily="Marlett" Click="DecrementRemainingHitDice"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">

@@ -19,12 +19,12 @@ namespace DMTool.Source
             ActiveParticipant = 0;
             Clock = 0;
         }
-        
+
         public void SaveAll()
         {
-            foreach(Character c in Participants)
+            foreach (Character c in Participants)
             {
-                if(c.GetType() == typeof(PlayerCharacter))
+                if (c.GetType() == typeof(PlayerCharacter))
                 {
                     c.Save();
                 }
@@ -36,15 +36,15 @@ namespace DMTool.Source
         public void DistributeCoin(Coin coin)
         {
             int playerCharacterCount = 0;
-            foreach(Character c in Participants)
+            foreach (Character c in Participants)
             {
-                if(c.GetType() == typeof(PlayerCharacter))
+                if (c.GetType() == typeof(PlayerCharacter))
                 {
                     playerCharacterCount++;
                 }
             }
 
-            if(playerCharacterCount > 0)
+            if (playerCharacterCount > 0)
             {
                 Coin d = new Coin()
                 {
@@ -83,8 +83,14 @@ namespace DMTool.Source
                         }
                     }
                 }
-                
-                foreach(Spell s in c.Cantrips)
+
+                try
+                {
+                    c.RemainingHitDice = Int32.Parse(c.Level);
+                }
+                catch { }
+
+                foreach (Spell s in c.Cantrips)
                 {
                     s.Cooldown = false;
                 }
@@ -158,28 +164,28 @@ namespace DMTool.Source
 
         private void Participants_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
-            if(e.NewItems != null)
+            if (e.NewItems != null)
             {
-                foreach(Character c in e.NewItems)
+                foreach (Character c in e.NewItems)
                 {
                     c.RemoveCharacter += (s, evt) =>
                     {
                         // update the active player to the first player in initiation order
                         // if this participant was last in the order
                         int index = Participants.IndexOf(s as Character);
-                        if(index == Participants.Count - 1 && ActiveParticipant == index)
+                        if (index == Participants.Count - 1 && ActiveParticipant == index)
                         {
                             ActiveParticipant = 0;
                         }
 
 
                         // assign XP to the players
-                        if(s.GetType() == typeof(Monster))
+                        if (s.GetType() == typeof(Monster))
                         {
                             double xp = 0;
                             try
                             {
-                                 xp = Charts.ChallengeToXp[(s as Monster).ChallengeRating];
+                                xp = Charts.ChallengeToXp[(s as Monster).ChallengeRating];
                             }
                             catch { }
 
@@ -192,15 +198,15 @@ namespace DMTool.Source
                             xp *= ratio;
 
                             int pcCount = 0;
-                            foreach(Character pc in Participants)
+                            foreach (Character pc in Participants)
                             {
-                                if(pc.GetType() == typeof(PlayerCharacter))
+                                if (pc.GetType() == typeof(PlayerCharacter))
                                 {
                                     pcCount++;
                                 }
                             }
 
-                            if(pcCount > 0)
+                            if (pcCount > 0)
                             {
                                 xp /= pcCount;
                             }
@@ -234,7 +240,7 @@ namespace DMTool.Source
             get { return GetProperty<float>(); }
             set { SetProperty(value); }
         }
-        
+
         public void NextTurn(int dir)
         {
             int active = ActiveParticipant;
@@ -242,9 +248,9 @@ namespace DMTool.Source
             float clockIncrement = dir * (float)secondsPerRound / (float)Participants.Count;
             Clock += clockIncrement;
 
-            foreach(Character c in Participants)
+            foreach (Character c in Participants)
             {
-                for(int i = c.Riders.Count - 1; i >= 0; i--)
+                for (int i = c.Riders.Count - 1; i >= 0; i--)
                 {
                     if (c.Riders[i].ClockTick(clockIncrement))
                     {

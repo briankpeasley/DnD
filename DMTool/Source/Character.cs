@@ -27,7 +27,7 @@ namespace DMTool.Source
             Level7 = new ObservableCollection<Spell>();
             Level8 = new ObservableCollection<Spell>();
             Level9 = new ObservableCollection<Spell>();
-            
+
             HandleSpellList(Cantrips);
             HandleSpellList(Level1);
             HandleSpellList(Level2);
@@ -50,9 +50,9 @@ namespace DMTool.Source
         {
             spellList.CollectionChanged += (s, e) =>
             {
-                if(e.NewItems != null)
+                if (e.NewItems != null)
                 {
-                    foreach(Spell spell in e.NewItems)
+                    foreach (Spell spell in e.NewItems)
                     {
                         spell.RemoveSpell += (sender, evt) =>
                         {
@@ -65,9 +65,9 @@ namespace DMTool.Source
 
         private void Riders_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
-            if(e.NewItems != null)
+            if (e.NewItems != null)
             {
-                foreach(Rider r in e.NewItems)
+                foreach (Rider r in e.NewItems)
                 {
                     r.Remove += (s, evt) =>
                     {
@@ -84,7 +84,18 @@ namespace DMTool.Source
         public string Level
         {
             get { return GetProperty<string>(); }
-            set { SetProperty(value); }
+            set
+            {
+                SetProperty(value);
+                if (string.IsNullOrEmpty(value) == false)
+                {
+                    try
+                    {
+                        RemainingHitDice = Int32.Parse(value);
+                    }
+                    catch { }
+                }
+            }
         }
 
         [JsonProperty(PropertyName = "name")]
@@ -182,6 +193,13 @@ namespace DMTool.Source
         public List<int> DamageLog
         {
             get { return GetProperty<List<int>>(); }
+            set { SetProperty(value); }
+        }
+
+        [JsonProperty(PropertyName = "RemainingHitDice")]
+        public int RemainingHitDice
+        {
+            get { return GetProperty<int>(); }
             set { SetProperty(value); }
         }
 

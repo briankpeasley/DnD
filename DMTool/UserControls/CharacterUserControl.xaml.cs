@@ -61,5 +61,15 @@ namespace DMTool.UserControls
                 MessageBox.Show("Character saved");
             }
         }
+
+        private void IncrementRemainingHitDice(object sender, RoutedEventArgs e)
+        {
+            Character.RemainingHitDice++;
+        }
+
+        private void DecrementRemainingHitDice(object sender, RoutedEventArgs e)
+        {
+            Character.RemainingHitDice--;
+        }
     }
 }
