@@ -20,7 +20,7 @@ namespace DMTool.Source
             Clock = 0;
         }
 
-        public void SaveAll()
+        public void SaveAll(bool showAcknowledgementUI)
         {
             foreach (Character c in Participants)
             {
@@ -30,7 +30,10 @@ namespace DMTool.Source
                 }
             }
 
-            MessageBox.Show("Player Characters have been saved");
+            if (showAcknowledgementUI)
+            {
+                MessageBox.Show("Player Characters have been saved");
+            }
         }
 
         public void DistributeCoin(Coin coin)
@@ -243,6 +246,7 @@ namespace DMTool.Source
 
         public void NextTurn(int dir)
         {
+            SaveAll(false);
             int active = ActiveParticipant;
             active += dir;
             float clockIncrement = dir * (float)secondsPerRound / (float)Participants.Count;

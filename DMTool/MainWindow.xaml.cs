@@ -102,7 +102,7 @@ namespace DMTool
             }
             else if (e.Key == Key.S && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
             {
-                (App.Current as App).CombatViewModel.SaveAll();
+                (App.Current as App).CombatViewModel.SaveAll(true);
             }
             else if (e.Key == Key.T && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
             {
