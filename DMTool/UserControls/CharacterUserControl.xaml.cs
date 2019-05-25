@@ -59,6 +59,7 @@ namespace DMTool.UserControls
             {
                 this.Character.Save();
                 MessageBox.Show("Character saved");
+                (App.Current as App).MonstersViewModel.Refresh();
             }
         }
 

@@ -192,14 +192,6 @@ namespace DMTool.Source
                             }
                             catch { }
 
-                            double ratio = 1.0;
-                            if ((s as Character).HitPoints > 0)
-                            {
-                                ratio = Math.Min(1.0, 1.0 - (double)(s as Character).ComputeCurrentHitPoints() / (double)(s as Character).HitPoints);
-                            }
-
-                            xp *= ratio;
-
                             int pcCount = 0;
                             foreach (Character pc in Participants)
                             {
@@ -207,9 +199,13 @@ namespace DMTool.Source
                                 {
                                     pcCount++;
                                 }
+                                else if (pc.Name.ToLower().StartsWith("npc") || pc.Name.ToLower().Contains("friendly"))
+                                {
+                                    pcCount++;
+                                }
                             }
 
-                            if (pcCount > 0)
+                            if (pcCount > 1)
                             {
                                 xp /= pcCount;
                             }

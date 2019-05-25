@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DMTool.UserControls"
         mc:Ignorable="d"
-        Title="MonsterWindow" Height="700" Width="700" Background="#FFEEDAA5" WindowStyle="ToolWindow">
+        Closing="Window_Closing"
+        Title="MonsterWindow" Height="700" Width="700" Background="#FFEEDAA5">
     <Grid>
         <local:MonsterUserControl x:Name="MonsterUserControl" />
     </Grid>
