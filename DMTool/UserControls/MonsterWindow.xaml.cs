@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DMTool.Source;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,11 @@ namespace DMTool.UserControls
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = true;
+        }
+        
+        private void Window_KeyUp(object sender, KeyEventArgs e)
+        {
+            KeyboardInput.Process(sender, e);
         }
     }
 }

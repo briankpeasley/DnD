@@ -46,9 +46,7 @@ namespace DMTool.UserControls
             int dmg;
             if(e.Key == Key.Enter && Int32.TryParse((sender as TextBox).Text, out dmg))
             {
-                List<int> newLog = new List<int>(Character.DamageLog);
-                newLog.Add(dmg);
-                Character.DamageLog = newLog;
+                Character.ApplyDamage(dmg);
                 (sender as TextBox).Text = "0";
             }
         }

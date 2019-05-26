@@ -181,9 +181,11 @@ namespace DMTool.Source
                             ActiveParticipant = 0;
                         }
 
-
                         // assign XP to the players
-                        if (s.GetType() == typeof(Monster))
+                        if (
+                            s.GetType() == typeof(Monster) && 
+                            (s as Character).Name.Contains("npc") == false && 
+                            (s as Character).Name.ToLower().Contains("friendly"))
                         {
                             double xp = 0;
                             try
@@ -196,10 +198,6 @@ namespace DMTool.Source
                             foreach (Character pc in Participants)
                             {
                                 if (pc.GetType() == typeof(PlayerCharacter))
-                                {
-                                    pcCount++;
-                                }
-                                else if (pc.Name.ToLower().StartsWith("npc") || pc.Name.ToLower().Contains("friendly"))
                                 {
                                     pcCount++;
                                 }

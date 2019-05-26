@@ -23,7 +23,7 @@ namespace DMTool.UserControls
     {
         public static readonly DependencyProperty MonsterProperty =
            DependencyProperty.Register("Monster", typeof(Monster), typeof(MonsterUserControl), new FrameworkPropertyMetadata(null, MonsterChanged));
-
+        
         private static void MonsterChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             MonsterUserControl ctrl = d as MonsterUserControl;

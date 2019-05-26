@@ -77,6 +77,7 @@
     <Compile Include="Source\CharacterExtensions.cs" />
     <Compile Include="Source\CombatViewModel.cs" />
     <Compile Include="Converters\CooldownToTextDecoration.cs" />
+    <Compile Include="Source\KeyboardInput.cs" />
     <Compile Include="Source\Monster.cs" />
     <Compile Include="Source\MonstersViewModel.cs" />
     <Compile Include="Source\PlayerCharacter.cs" />

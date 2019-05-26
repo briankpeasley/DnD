@@ -6,8 +6,14 @@
         xmlns:local="clr-namespace:DMTool.UserControls"
         mc:Ignorable="d"
         Closing="Window_Closing"
-        Title="MonsterWindow" Height="700" Width="700" Background="#FFEEDAA5">
+        Title="MonsterWindow" Height="700" Width="700" Background="#FFEEDAA5" KeyUp="Window_KeyUp">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
         <local:MonsterUserControl x:Name="MonsterUserControl" />
+        <local:PlayerCharacterUserControl Grid.Column="1" x:Name="PlayerCharacterUserControl" />
     </Grid>
 </Window>

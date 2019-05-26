@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:DMTool.UserControls"
              xmlns:Converters="clr-namespace:DMTool.Converters"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300" Background="Transparent">
+             d:DesignHeight="300" d:DesignWidth="600" Background="Transparent">
     <Grid x:Name="grid">
         <Grid.Resources>
             <Converters:AttributeToString x:Key="AttributeToString" />
@@ -69,7 +69,7 @@
                         <Button Content="5" FontFamily="Marlett" Margin="3,0,0,0" Click="IncrementRemainingHitDice" />
                         <Button Content="6" FontFamily="Marlett" Click="DecrementRemainingHitDice"/>
                         <local:StylizedTextBlock Text="Apply Damage: " FontSize="10pt" Margin="10, 0, 0, 0" VerticalAlignment="Top" />
-                        <local:SelectableTextBox Background="Transparent" BorderThickness="0" FontSize="10pt" Text="00" VerticalAlignment="Top" KeyUp="SelectableTextBox_KeyUp" Tag="{Binding}" />
+                        <local:SelectableTextBox Background="Transparent" BorderThickness="0" FontSize="10pt" Text="00" VerticalAlignment="Top" KeyUp="SelectableTextBox_KeyUp" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
