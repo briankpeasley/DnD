@@ -28,6 +28,7 @@ namespace DMTool.UserControls
         {
             MonsterUserControl ctrl = d as MonsterUserControl;
             ctrl.grid.DataContext = e.NewValue;
+            ctrl.test.DataContext = ctrl;
             ctrl.characterUserControl.DataContext = ctrl;
             ctrl.specialAbilities.ItemsSource = (e.NewValue as Monster).SpecialAbilities;
             ctrl.actions.ItemsSource = (e.NewValue as Monster).Actions;

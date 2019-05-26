@@ -3,7 +3,9 @@ using DMTool.UserControls;
 using Microsoft.Win32;
 using Newtonsoft.Json;
 using System;
+using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -17,10 +19,10 @@ namespace DMTool
     {
         public PlayerCharacter TestCharacter { get; set; }
 
-
         public MainWindow()
         {
             InitializeComponent();
+            Title = $"DMTool.  Version: {(App.Current as App).Version}";
             ToolTipService.ShowDurationProperty.OverrideMetadata(
                 typeof(DependencyObject), new FrameworkPropertyMetadata(Int32.MaxValue));
 
@@ -39,7 +41,7 @@ namespace DMTool
             };
 
             // Used for testing a default character
-            for (int i = 0; i < 5; i++)
+            /*for (int i = 0; i < 5; i++)
             {
                 Character c = JsonConvert.DeserializeObject<PlayerCharacter>(File.ReadAllText("./PlayerCharacter/Test.json"));
                 (c as PlayerCharacter).Counters.Add(new Counter()
@@ -49,7 +51,7 @@ namespace DMTool
                     Current = 10
                 });
                 (App.Current as App).CombatViewModel.Participants.Add(c);
-            }
+            }*/
 
             combatControl.DataContext = (App.Current as App).CombatViewModel;
         }

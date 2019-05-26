@@ -6,8 +6,10 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -24,8 +26,12 @@ namespace DMTool
         public MonsterWindow MonsterWindow { get; set; }
         public CombatViewModel CombatViewModel { get; set; }
         public Random RNG { get; set; }
+        public string Version { get; set; }
         public App()
         {
+            FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(Assembly.GetEntryAssembly().Location);
+            Version = fvi.FileVersion;
+
             RNG = new Random();
             RiderViewModel = new RidersViewModel();
             SpellsViewModel = new SpellsViewModel();

@@ -18,6 +18,19 @@
                         </LinearGradientBrush>
                     </Border.BorderBrush>
                     <StackPanel >
+                        <StackPanel Orientation="Horizontal">
+                            <local:StylizedTextBlock Text="Hit Dice: " FontSize="13pt" FontWeight="DemiBold" />
+                            <local:SelectableTextBox x:Name="test" Text="{Binding Path=Monster.HitDice, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="100" Background="Transparent" />
+                        </StackPanel>
+                        
+                        <Border BorderThickness="0,3,0,0" Margin="0,10,0,0" >
+                            <Border.BorderBrush>
+                                <LinearGradientBrush EndPoint="0,0" StartPoint="1,0">
+                                    <GradientStop Color="#FF964529" Offset="0.46"/>
+                                    <GradientStop/>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                        </Border>
                         <local:StylizedTextBlock Text="Special Abilities" FontSize="13pt" FontWeight="DemiBold" />
                         <ItemsControl x:Name="specialAbilities" >
                             <ItemsControl.ItemTemplate>
