@@ -3,6 +3,7 @@ using Microsoft.Win32;
 using Newtonsoft.Json;
 using System;
 using System.IO;
+using System.Linq;
 using System.Windows.Input;
 
 namespace DMTool.Source
@@ -44,6 +45,8 @@ namespace DMTool.Source
 
                 window.MonsterSelected += (s, m) =>
                 {
+                    int count = (App.Current as App).CombatViewModel.Participants.Where(x => x.Name.ToLower().Contains(m.Name.ToLower())).Count();
+                    m.Name = $"{m.Name} {count+1}";
                     (App.Current as App).CombatViewModel.Participants.Add(m as Character);
                 };
                 window.ShowDialog();
