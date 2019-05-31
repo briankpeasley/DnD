@@ -182,10 +182,7 @@ namespace DMTool.Source
                         }
 
                         // assign XP to the players
-                        if (
-                            s.GetType() == typeof(Monster) && 
-                            (s as Character).Name.Contains("npc") == false && 
-                            (s as Character).Name.ToLower().Contains("friendly"))
+                        if (s.GetType() == typeof(Monster))
                         {
                             double xp = 0;
                             try
