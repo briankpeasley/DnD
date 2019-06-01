@@ -1,0 +1,55 @@
+{
+	"description": "Medium humanoid (any race), any non-lawful alignment",
+	"ImageLocation": "https://media-waterdeep.cursecdn.com/avatars/thumbnails/9/858/1000/1000/636332937533244694.jpeg",
+	"challenge_rating": "3",
+	"special_abilities": null,
+	"actions": [
+		{
+			"name": "Lightfooted",
+			"desc": "The swashbuckler can take the Dash or Disengage action as a bonus action on each of its turns."
+		},
+		{
+			"name": "Multiattack",
+			"desc": "The swashbuckler makes three attacks: one with a dagger and two with its rapier."
+		},
+		{
+			"name": "Rapier",
+			"desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) piercing damage."
+		},
+		{
+			"name": "Dagger",
+			"desc": "Melee or Ranged Weapon Attack: +6 to hit, range 5 ft./80 ft., one target. Hit: 6 (1d4 + 4) piercing damage."
+		}
+	],
+	"hit_dice": "12d8+12",
+	"level": "12",
+	"name": "Ranaer Neverember",
+	"class": "humanoid",
+	"strength": 12,
+	"dexterity": 18,
+	"constitution": 12,
+	"intelligence": 14,
+	"wisdom": 11,
+	"charisma": 15,
+	"armor_class": 17,
+	"speed": "30 ft.",
+	"hitPoints": 66,
+	"temp_hit_points": 0,
+	"damage_log": [],
+	"riders": [],
+	"Cantrips": [],
+	"Level1": [],
+	"Level2": [],
+	"Level3": [],
+	"Level4": [],
+	"Level5": [],
+	"Level6": [],
+	"Level7": [],
+	"Level8": [],
+	"Level9": [],
+	"damage_resistances": "",
+	"damage_vulnerabilities": "",
+	"damage_immunities": "",
+	"senses": "passive Perception 10",
+	"Languages": "any one language (usually Common)"
+}
