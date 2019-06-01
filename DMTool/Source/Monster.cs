@@ -91,25 +91,15 @@ namespace DMTool.Source
                 string[] splitTwo = splitOne[1].Split('+');
 
                 int diceCount = Int32.Parse(splitOne[0]);
-                if (hitDice > 0)
-                {
-                    diceCount = hitDice;
-                }
                 int diceValue = Int32.Parse(splitTwo[0]);
                 int flat = splitTwo.Length == 2 ? Int32.Parse(splitTwo[1]) : 0;
 
                 int hp = flat;
                 r = r == null ? new Random() : r;
 
-                var a2s = new Converters.AttributeToString();
-                var conMods = (string)a2s.Convert(Constitution, null, null, null);
-                conMods = conMods.Substring(1, conMods.Length - 2);
-                var conMod = Constitution > 0 ? Int32.Parse((string)conMods) : 0;
-
                 for (int i = 0; i < diceCount; i++)
                 {
                     hp += r.Next(1, diceValue);
-                    hp += conMod;
                 }
                 HitPoints = hp;
             }

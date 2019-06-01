@@ -200,15 +200,7 @@ namespace DMTool.Source
         public int RemainingHitDice
         {
             get { return GetProperty<int>(); }
-            set {
-                SetProperty(value);
-
-                if (GetType() == typeof(Monster))
-                {
-                    Monster m = (Monster)this;
-                    m.GenerateHitPoints(null, value);
-                }
-            }
+            set { SetProperty(value); }
         }
 
         [JsonProperty(PropertyName = "riders")]
