@@ -23,7 +23,10 @@
         </Grid.Resources>
         <ScrollViewer>
             <StackPanel>
-                <ListView x:Name="participantsListView" Background="Transparent" ItemsSource="{Binding Path=Participants, UpdateSourceTrigger=PropertyChanged}" SelectionChanged="participantsListView_SelectionChanged">
+                <ListView x:Name="participantsListView" Background="Transparent" 
+                          ItemsSource="{Binding Path=Participants, UpdateSourceTrigger=PropertyChanged}" 
+                          SelectionChanged="participantsListView_SelectionChanged"
+                          SelectedIndex="{Binding Path=ActiveParticipant, UpdateSourceTrigger=PropertyChanged}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Border HorizontalAlignment="Stretch" Width="1000">

@@ -43,11 +43,17 @@ namespace DMTool.UserControls
 
         private void SelectableTextBox_KeyUp(object sender, KeyEventArgs e)
         {
-            int dmg;
-            if(e.Key == Key.Enter && Int32.TryParse((sender as TextBox).Text, out dmg))
+            if (e.Key == Key.Return)
             {
-                Character.ApplyDamage(dmg);
-                (sender as TextBox).Text = "0";
+                TextBox tb = sender as TextBox;
+                int dmg;
+                if (Int32.TryParse(tb.Text, out dmg))
+                {
+                    Character.ApplyDamage(dmg);
+                }
+
+                tb.Text = "00";
+                tb.SelectAll();
             }
         }
 

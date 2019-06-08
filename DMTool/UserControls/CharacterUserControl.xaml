@@ -68,6 +68,8 @@
                         <local:StylizedTextBlock Text="{Binding Path=RemainingHitDice}" />
                         <Button Content="5" FontFamily="Marlett" Margin="3,0,0,0" Click="IncrementRemainingHitDice" />
                         <Button Content="6" FontFamily="Marlett" Click="DecrementRemainingHitDice"/>
+                        <local:StylizedTextBlock Margin="10,0,0,0" Text="Apply Damage" />
+                        <local:SelectableTextBox Background="Transparent" BorderThickness="0" FontSize="10pt" Text="00" VerticalAlignment="Top" KeyUp="SelectableTextBox_KeyUp" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
