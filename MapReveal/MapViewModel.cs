@@ -99,6 +99,17 @@ namespace MapReveal
             try
             {
                 File.WriteAllText(fileName, JsonConvert.SerializeObject(this));
+
+                using (FileStream fs = new FileStream($"{fileName}_dmView.isf", FileMode.Create))
+                {
+                    _dmView.Strokes.Save(fs);
+                }
+
+                using (FileStream fs = new FileStream($"{fileName}_playerView.isf", FileMode.Create))
+                {
+                    _playerView.Strokes.Save(fs);
+                }
+
                 MessageBox.Show("Map saved");
             }
             catch (Exception e)
@@ -125,13 +136,23 @@ namespace MapReveal
                     {
                         Console.SetCursorPosition(0, Console.CursorTop);
                         Console.Write($" { (100 * (double)i / (double)loaded.ErasePoints.Count).ToString("0")}%");
-
-                        _dispatcher.Invoke(() =>
-                        {
-                            this.ErasePoints.Add(loaded.ErasePoints[i]);
-                            Erase(loaded.ErasePoints[i]);
-                        });
+                        this.ErasePoints.Add(loaded.ErasePoints[i]);
                     }
+
+                    _dispatcher.Invoke(() =>
+                    {
+                        using (FileStream fs = new FileStream($"{fileName}_dmView.isf", FileMode.Open, FileAccess.Read))
+                        {
+                            StrokeCollection strokes = new StrokeCollection(fs);
+                            _dmView.Strokes = strokes;
+                        }
+
+                        using (FileStream fs = new FileStream($"{fileName}_playerView.isf", FileMode.Open, FileAccess.Read))
+                        {
+                            StrokeCollection strokes = new StrokeCollection(fs);
+                            _playerView.Strokes = strokes;
+                        }
+                    });
                 });
             }
             catch (Exception e)
