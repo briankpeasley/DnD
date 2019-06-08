@@ -100,14 +100,9 @@ namespace MapReveal
             {
                 File.WriteAllText(fileName, JsonConvert.SerializeObject(this));
 
-                using (FileStream fs = new FileStream($"{fileName}_dmView.isf", FileMode.Create))
+                using (FileStream fs = new FileStream($"{fileName}.isf", FileMode.Create))
                 {
                     _dmView.Strokes.Save(fs);
-                }
-
-                using (FileStream fs = new FileStream($"{fileName}_playerView.isf", FileMode.Create))
-                {
-                    _playerView.Strokes.Save(fs);
                 }
 
                 MessageBox.Show("Map saved");
@@ -141,15 +136,10 @@ namespace MapReveal
 
                     _dispatcher.Invoke(() =>
                     {
-                        using (FileStream fs = new FileStream($"{fileName}_dmView.isf", FileMode.Open, FileAccess.Read))
+                        using (FileStream fs = new FileStream($"{fileName}.isf", FileMode.Open, FileAccess.Read))
                         {
                             StrokeCollection strokes = new StrokeCollection(fs);
                             _dmView.Strokes = strokes;
-                        }
-
-                        using (FileStream fs = new FileStream($"{fileName}_playerView.isf", FileMode.Open, FileAccess.Read))
-                        {
-                            StrokeCollection strokes = new StrokeCollection(fs);
                             _playerView.Strokes = strokes;
                         }
                     });
