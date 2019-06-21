@@ -184,12 +184,30 @@ namespace DMTool.Source
                         // assign XP to the players
                         if (s.GetType() == typeof(Monster))
                         {
+                            var m = s as Monster;
+
                             double xp = 0;
                             try
                             {
-                                xp = Charts.ChallengeToXp[(s as Monster).ChallengeRating];
+                                xp = Charts.ChallengeToXp[m.ChallengeRating];
                             }
                             catch { }
+
+                            var currentHitPoints = m.ComputeCurrentHitPoints();
+                            if (currentHitPoints < 0)
+                            {
+                                currentHitPoints = 0;
+                            }
+
+                            if (currentHitPoints >= m.HitPoints)
+                            {
+                                xp = 0;
+                            }
+                            else
+                            {
+                                var percentOfMax = (m.HitPoints - currentHitPoints) / (double)m.HitPoints;
+                                xp *= Math.Min(percentOfMax, 1.0);
+                            }
 
                             int pcCount = 0;
                             foreach (Character pc in Participants)
