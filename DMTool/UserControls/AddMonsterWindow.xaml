@@ -20,6 +20,7 @@
             <local:StylizedTextBlock Text="Search: " />
             <TextBox x:Name="txtSearch" Width="100" TextChanged="txtSearch_TextChanged" />
             <Button Content="Refresh" HorizontalAlignment="Right" Margin="50,0,0,0" Click="RefreshMonsters" />
+            <Button Content="Import" HorizontalAlignment="Right" Margin="50,0,0,0" Click="ImportMonster" />
         </StackPanel>
         <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1">
             <ListView x:Name="monsters" Background="Transparent" MouseDoubleClick="monsters_MouseDoubleClick">

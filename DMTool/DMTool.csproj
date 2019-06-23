@@ -118,6 +118,9 @@
     <Compile Include="UserControls\Combat.xaml.cs">
       <DependentUpon>Combat.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ImportFromPastedText.xaml.cs">
+      <DependentUpon>ImportFromPastedText.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\MonsterUserControl.xaml.cs">
       <DependentUpon>MonsterUserControl.xaml</DependentUpon>
     </Compile>
@@ -176,6 +179,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Combat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ImportFromPastedText.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

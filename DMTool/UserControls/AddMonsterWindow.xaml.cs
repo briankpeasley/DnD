@@ -238,5 +238,11 @@ namespace DMTool.UserControls
                 (App.Current as App).CombatViewModel.Participants.Add(monster);
             }
         }
+
+        private void ImportMonster(object sender, RoutedEventArgs e)
+        {
+            var importer = new ImportFromPastedText();
+            importer.ShowDialog();
+        }
     }
 }

@@ -8,14 +8,27 @@ using System.Threading.Tasks;
 
 namespace DMTool.Source
 {
+    public enum SaveType
+    {
+        Auto,
+        Monster,
+        Character
+    }
+
     public static class CharacterExtensions
     {
-        public static void Save(this Character c)
+        public static void Save(this Character c, SaveType saveType = SaveType.Auto)
         {
             if (c != null)
             {
                 string result = JsonConvert.SerializeObject(c);
-                string dir = c.GetType() == typeof(PlayerCharacter) ? "./PlayerCharacter" : "./Monsters";
+
+                if (saveType == SaveType.Auto)
+                {
+                    saveType = c.GetType() == typeof(PlayerCharacter) ? SaveType.Character : SaveType.Monster;
+                }
+
+                string dir = saveType == SaveType.Character ? "./PlayerCharacter" : "./Monsters";
 
                 if (Directory.Exists(dir) == false)
                 {
