@@ -115,6 +115,11 @@ namespace DMTool.UserControls
         private void RefreshMonsters(object sender, RoutedEventArgs e)
         {
             (App.Current as App).MonstersViewModel.Refresh();
+            Monsters = (App.Current as App).MonstersViewModel.DiscoveredMonsters;
+            monsters.ItemsSource = Monsters;
+            encounterableMonsters.ItemsSource = EncounterableMonsters;
+            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(monsters.ItemsSource);
+            view.Filter = Filter;
         }
 
         private void discoverableMonsters_MouseDoubleClick(object sender, MouseButtonEventArgs e)

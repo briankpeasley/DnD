@@ -6,35 +6,37 @@
         xmlns:local="clr-namespace:DMTool.UserControls"
         mc:Ignorable="d"
         Title="Import Pasted Text" Height="700" Width="1000">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-
-        <TextBox Name="ImportText" Grid.Row="0" TextWrapping="Wrap" AcceptsReturn="True" BorderThickness="10"/>
-        <Separator Grid.Row="1"/>
-        <local:MonsterUserControl x:Name="MonsterUserControl" Grid.Row="2" BorderThickness="10"/>
-        <Separator Grid.Row="3"/>
-
-        <Grid Grid.Row="4" Grid.ColumnSpan="2">
+    <ScrollViewer VerticalScrollBarVisibility="Visible">
+        <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <CheckBox Grid.Column="0" Name="SaveAsNPC">Save as NPC</CheckBox>
-            <Button Grid.Column="2" Name="ParseButton" Click="ParseButton_Click">Parse</Button>
-            <Button Grid.Column="3" Name="SaveButton" Click="SaveButton_Click">Save</Button>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBox Name="ImportText" Grid.Row="0" TextWrapping="Wrap" AcceptsReturn="True" BorderThickness="10" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+            <Separator Grid.Row="1"/>
+            <local:MonsterUserControl x:Name="MonsterUserControl" Grid.Row="2" BorderThickness="10"/>
+            <Separator Grid.Row="3"/>
+
+            <Grid Grid.Row="4" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <CheckBox Grid.Column="0" Name="SaveAsNPC">Save as NPC</CheckBox>
+                <Button Grid.Column="2" Name="ParseButton" Click="ParseButton_Click">Parse</Button>
+                <Button Grid.Column="3" Name="SaveButton" Click="SaveButton_Click">Save</Button>
+            </Grid>
         </Grid>
-    </Grid>
+    </ScrollViewer>
 </Window>
