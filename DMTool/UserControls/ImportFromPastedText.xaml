@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DMTool.UserControls"
         mc:Ignorable="d"
-        Title="Import Pasted Text" Height="700" Width="1000">
-    <ScrollViewer VerticalScrollBarVisibility="Visible">
+        Title="Import Pasted Text" Height="700" Width="1000" Background="#FFEEDAA5">
+    <ScrollViewer VerticalScrollBarVisibility="Visible" Name="MainScrollViewer">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
@@ -33,9 +33,9 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <CheckBox Grid.Column="0" Name="SaveAsNPC">Save as NPC</CheckBox>
-                <Button Grid.Column="2" Name="ParseButton" Click="ParseButton_Click">Parse</Button>
-                <Button Grid.Column="3" Name="SaveButton" Click="SaveButton_Click">Save</Button>
+                <CheckBox Grid.Column="0" Name="SaveAsNPC" Margin="10">Save as NPC</CheckBox>
+                <Button Grid.Column="2" Name="ParseButton" Click="ParseButton_Click" Margin="10">Parse</Button>
+                <Button Grid.Column="3" Name="SaveButton" Click="SaveButton_Click" Margin="10">Save</Button>
             </Grid>
         </Grid>
     </ScrollViewer>
