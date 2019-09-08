@@ -3,6 +3,8 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -79,28 +81,40 @@ namespace MapReveal2
             _eraser.Height = EraserSize;
         }
 
+        private int drawCount = 0;
+
         private void DrawEraser(object sender, MouseEventArgs e, bool undo = false)
         {
-            if (_opacityMask == null)
+            if (_opacityMask == null || drawCount > 0)
             {
                 return;
             }
 
-            Point mousePosition = e.GetPosition(OpacityImage);
-            var xPcnt = mousePosition.X / OpacityImage.ActualWidth;
-            var yPcnt = mousePosition.Y / OpacityImage.ActualHeight;
-            var xPos = _opacityMask.Width * xPcnt;
-            var yPos = _opacityMask.Height * yPcnt;
+            Interlocked.Increment(ref drawCount);
 
-            var rect = new Int32Rect()
+            if (drawCount == 1)
             {
-                X = (int)xPos - EraserSize / 2,
-                Y = (int)yPos - EraserSize / 2,
-                Width = EraserSize,
-                Height = EraserSize
-            };
+                _dispatcher.Invoke(() =>
+                {
+                    Point mousePosition = e.GetPosition(OpacityImage);
+                    var xPcnt = mousePosition.X / OpacityImage.ActualWidth;
+                    var yPcnt = mousePosition.Y / OpacityImage.ActualHeight;
+                    var xPos = _opacityMask.Width * xPcnt;
+                    var yPos = _opacityMask.Height * yPcnt;
 
-            DrawOnOpacityMask(_opacityMask, rect, 0, 0, 0, undo ? (byte)255 : (byte)0);
+                    var rect = new Int32Rect()
+                    {
+                        X = (int)xPos - EraserSize / 2,
+                        Y = (int)yPos - EraserSize / 2,
+                        Width = EraserSize,
+                        Height = EraserSize
+                    };
+
+                    DrawOnOpacityMask(_opacityMask, rect, 0, 0, 0, undo ? (byte)255 : (byte)0);
+                });
+            }
+
+            Interlocked.Decrement(ref drawCount);
         }
 
         private void DrawOnOpacityMask(WriteableBitmap opacityMask, Int32Rect rect, byte r, byte g, byte b, byte a)
