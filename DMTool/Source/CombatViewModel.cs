@@ -183,13 +183,14 @@ namespace DMTool.Source
                 currentHitPoints = 0;
             }
 
+            var percentOfMax = 0.0;
             if (currentHitPoints >= m.HitPoints)
             {
                 xp = 0;
             }
             else
             {
-                var percentOfMax = (m.HitPoints - currentHitPoints) / (double)m.HitPoints;
+                percentOfMax = (m.HitPoints - currentHitPoints) / (double)m.HitPoints;
                 xp *= Math.Min(percentOfMax, 1.0);
             }
 
@@ -202,16 +203,25 @@ namespace DMTool.Source
                 }
             }
 
+            System.Diagnostics.Debug.WriteLine($"Handing out {xp} xp for {m.Name} with c/r {m.ChallengeRating} and destriction {percentOfMax} to {pcCount} players");
+
             if (pcCount > 1)
             {
                 xp /= pcCount;
             }
 
             xp = Math.Round(xp, 2);
+            if (xp <= 0)
+            {
+                return;
+            }
+
             foreach (Character pc in Participants)
             {
                 if (pc.GetType() == typeof(PlayerCharacter))
                 {
+                    System.Diagnostics.Debug.WriteLine($"    - Giving {xp} xp to {pc.Name}");
+
                     (pc as PlayerCharacter).XP += xp;
                 }
             }
