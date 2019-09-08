@@ -11,6 +11,11 @@ namespace DMTool.Source
 {
     public class Character : ViewModel, IEquatable<Character>
     {
+        private event EventHandler removeCharacter;
+        private object removeCharacterHandlerLock = new object();
+
+        private bool removeCharacterSubscribed { get; set; } = false;
+
         public Character()
         {
             Level = "1";
@@ -39,11 +44,22 @@ namespace DMTool.Source
             HandleSpellList(Level8);
             HandleSpellList(Level9);
         }
+        
+        public void SubscribeToRemoveCharacter(EventHandler handler)
+        {
+            lock (removeCharacterHandlerLock)
+            {
+                if (removeCharacterSubscribed)
+                    return;
 
-        public event EventHandler RemoveCharacter;
+                removeCharacter += handler;
+                removeCharacterSubscribed = true;
+            }
+        }
+
         public void Remove()
         {
-            RemoveCharacter?.Invoke(this, EventArgs.Empty);
+            removeCharacter?.Invoke(this, EventArgs.Empty);
         }
 
         private void HandleSpellList(ObservableCollection<Spell> spellList)

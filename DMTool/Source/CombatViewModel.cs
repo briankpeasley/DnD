@@ -12,6 +12,9 @@ namespace DMTool.Source
     public class CombatViewModel : ViewModel
     {
         private static int secondsPerRound = 6;
+
+        private object participantsLock = new object();
+
         public CombatViewModel()
         {
             Participants = new ObservableCollection<Character>();
@@ -165,77 +168,84 @@ namespace DMTool.Source
             }
         }
 
+        private void GiveExperiencePointsToPlayersForMonster(Monster m)
+        {
+            double xp = 0;
+            try
+            {
+                xp = Charts.ChallengeToXp[m.ChallengeRating];
+            }
+            catch { }
+
+            var currentHitPoints = m.ComputeCurrentHitPoints();
+            if (currentHitPoints < 0)
+            {
+                currentHitPoints = 0;
+            }
+
+            if (currentHitPoints >= m.HitPoints)
+            {
+                xp = 0;
+            }
+            else
+            {
+                var percentOfMax = (m.HitPoints - currentHitPoints) / (double)m.HitPoints;
+                xp *= Math.Min(percentOfMax, 1.0);
+            }
+
+            int pcCount = 0;
+            foreach (Character pc in Participants)
+            {
+                if (pc.GetType() == typeof(PlayerCharacter))
+                {
+                    pcCount++;
+                }
+            }
+
+            if (pcCount > 1)
+            {
+                xp /= pcCount;
+            }
+
+            xp = Math.Round(xp, 2);
+            foreach (Character pc in Participants)
+            {
+                if (pc.GetType() == typeof(PlayerCharacter))
+                {
+                    (pc as PlayerCharacter).XP += xp;
+                }
+            }
+        }
+
         private void Participants_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             if (e.NewItems != null)
             {
                 foreach (Character c in e.NewItems)
                 {
-                    c.RemoveCharacter += (s, evt) =>
+                    c.SubscribeToRemoveCharacter((s, evt) =>
                     {
-                        // update the active player to the first player in initiation order
-                        // if this participant was last in the order
-                        int index = Participants.IndexOf(s as Character);
-                        if (index == Participants.Count - 1 && ActiveParticipant == index)
+                        lock (participantsLock)
                         {
-                            ActiveParticipant = 0;
+                            // update the active player to the first player in initiation order
+                            // if this participant was last in the order
+                            int index = Participants.IndexOf(s as Character);
+                            if (index == Participants.Count - 1 && ActiveParticipant == index)
+                            {
+                                ActiveParticipant = 0;
+                            }
+
+                            // assign XP to the players
+                            if (s.GetType() == typeof(Monster) && Participants.Contains(s))
+                            {
+                                var m = s as Monster;
+                                GiveExperiencePointsToPlayersForMonster(m);
+                            }
+
+                            // Remove from participant combat
+                            Participants.Remove(s as Character);
                         }
-
-                        // assign XP to the players
-                        if (s.GetType() == typeof(Monster))
-                        {
-                            var m = s as Monster;
-
-                            double xp = 0;
-                            try
-                            {
-                                xp = Charts.ChallengeToXp[m.ChallengeRating];
-                            }
-                            catch { }
-
-                            var currentHitPoints = m.ComputeCurrentHitPoints();
-                            if (currentHitPoints < 0)
-                            {
-                                currentHitPoints = 0;
-                            }
-
-                            if (currentHitPoints >= m.HitPoints)
-                            {
-                                xp = 0;
-                            }
-                            else
-                            {
-                                var percentOfMax = (m.HitPoints - currentHitPoints) / (double)m.HitPoints;
-                                xp *= Math.Min(percentOfMax, 1.0);
-                            }
-
-                            int pcCount = 0;
-                            foreach (Character pc in Participants)
-                            {
-                                if (pc.GetType() == typeof(PlayerCharacter))
-                                {
-                                    pcCount++;
-                                }
-                            }
-
-                            if (pcCount > 1)
-                            {
-                                xp /= pcCount;
-                            }
-
-                            xp = Math.Round(xp, 2);
-                            foreach (Character pc in Participants)
-                            {
-                                if (pc.GetType() == typeof(PlayerCharacter))
-                                {
-                                    (pc as PlayerCharacter).XP += xp;
-                                }
-                            }
-                        }
-
-                        // Remove from participant combat
-                        Participants.Remove(s as Character);
-                    };
+                    });
                 }
             }
         }
