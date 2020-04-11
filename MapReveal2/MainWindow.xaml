@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MapReveal DM Window" Height="350" Width="525" MouseMove="Window_MouseMove" KeyUp="Window_KeyUp" MouseLeftButtonDown="Window_MouseLeftButtonDown" MouseRightButtonDown="Window_MouseRightButtonDown">
     <Grid x:Name="grid">
-        <Image Name="DMImage" />
-        <Image Name="OpacityImage" Opacity="0.5"/>
+        <Image Name="DMImage" Grid.Row="0"/>
+        <Image Name="OpacityImage" Opacity="0.5" Grid.Row="0"/>
     </Grid>
 </Window>

@@ -20,6 +20,7 @@ namespace MapReveal2
     public partial class MainWindow : Window
     {
         public int EraserSize { get; set; } = 20;
+        public int TranslateSize { get; set; } = 50;
 
         private Dispatcher _dispatcher;
         private WriteableBitmap _opacityMask;
@@ -27,6 +28,9 @@ namespace MapReveal2
         private EraseBlock _eraser;
         private string _filenameDm;
         private string _filenamePlayer;
+        private ScaleTransform _scaleTransform = new ScaleTransform(1.0, 1.0);
+        private TranslateTransform _scaleOrigin = new TranslateTransform();
+        private TransformGroup _transforms = new TransformGroup();
 
         public MainWindow()
         {
@@ -44,6 +48,9 @@ namespace MapReveal2
             _eraser.IsHitTestVisible = false;
             this.grid.Children.Add(_eraser);
             _eraser.Loaded += _eraser_Loaded;
+
+            _transforms.Children.Add(_scaleTransform);
+            _transforms.Children.Add(_scaleOrigin);
         }
 
         private void Window_MouseMove(object sender, MouseEventArgs e)
@@ -70,8 +77,8 @@ namespace MapReveal2
             var yPcnt = mousePosition.Y / OpacityImage.ActualHeight;
             var borderLeft = Math.Max(_playerWindow.grid.ActualWidth - _playerWindow.OpacityImage.ActualWidth, 0) / 2;
             var borderTop = Math.Max(_playerWindow.grid.ActualHeight - _playerWindow.OpacityImage.ActualHeight, 0) / 2;
-            var xPos = _playerWindow.OpacityImage.ActualWidth * xPcnt + borderLeft;
-            var yPos = _playerWindow.OpacityImage.ActualHeight * yPcnt + borderTop;
+            var xPos = ((_playerWindow.OpacityImage.ActualWidth * xPcnt) * _scaleTransform.ScaleX) + borderLeft + _scaleOrigin.X;
+            var yPos = ((_playerWindow.OpacityImage.ActualHeight * yPcnt) * _scaleTransform.ScaleY) + borderTop + _scaleOrigin.Y ;
             _playerWindow.laserPoint.Margin = new Thickness(xPos - 5, yPos - 5, 0, 0);
         }
 
@@ -204,6 +211,7 @@ namespace MapReveal2
             }
 
             opacityImage.Source = opacityMask;
+            opacityImage.RenderTransform = _transforms;
             return opacityMask;
         }
 
@@ -228,6 +236,7 @@ namespace MapReveal2
             bitmap.BeginInit();
             bitmap.UriSource = new Uri(filename);
             bitmap.EndInit();
+            image.RenderTransform = _transforms;
             image.Source = bitmap;
         }
 
@@ -242,6 +251,46 @@ namespace MapReveal2
                     _opacityMask = ClearOpacityMask(OpacityImage, DMImage, 0, 0, 0, 255);
                     _playerWindow.OpacityImage.Source = _opacityMask;
                 });
+            }
+            else if (e.Key == Key.S && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
+            {
+                _dispatcher.Invoke(() =>
+                {
+                    Save();
+                });
+            }
+            else if (e.Key == Key.L && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
+            {
+                _dispatcher.Invoke(() =>
+                {
+                    Load();
+                });
+            }
+            else if (e.Key == Key.Z)
+            {
+                _scaleTransform.ScaleX += 0.1;
+                _scaleTransform.ScaleY += 0.1;
+            }
+            else if (e.Key == Key.X)
+            {
+                _scaleTransform.ScaleX -= 0.1;
+                _scaleTransform.ScaleY -= 0.1;
+            }
+            else if (e.Key == Key.W)
+            {
+                _scaleOrigin.Y += TranslateSize;
+            }
+            else if (e.Key == Key.S)
+            {
+                _scaleOrigin.Y -= TranslateSize;
+            }
+            else if (e.Key == Key.A)
+            {
+                _scaleOrigin.X += TranslateSize;
+            }
+            else if (e.Key == Key.D)
+            {
+                _scaleOrigin.X -= TranslateSize;
             }
             else if (e.Key == Key.Up)
             {
@@ -260,20 +309,6 @@ namespace MapReveal2
 
                 _eraser.Width = EraserSize;
                 _eraser.Height = EraserSize;
-            }
-            if (e.Key == Key.S && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
-            {
-                _dispatcher.Invoke(() =>
-                {
-                    Save();
-                });
-            }
-            if (e.Key == Key.L && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
-            {
-                _dispatcher.Invoke(() =>
-                {
-                    Load();
-                });
             }
         }
 
@@ -325,7 +360,9 @@ namespace MapReveal2
                 var bitmap = new BitmapImage(new Uri($"{_filenamePlayer}.mask.png", UriKind.RelativeOrAbsolute));
                 _opacityMask = new WriteableBitmap(bitmap);
                 OpacityImage.Source = _opacityMask;
+                OpacityImage.RenderTransform = _transforms;
                 _playerWindow.OpacityImage.Source = _opacityMask;
+                _playerWindow.OpacityImage.RenderTransform = _transforms;
             }
         }
 
