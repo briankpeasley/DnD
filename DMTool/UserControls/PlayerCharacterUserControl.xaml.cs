@@ -95,16 +95,23 @@ namespace DMTool.UserControls
         {
             if (e.Key == Key.Enter)
             {
-                Counter c = new Counter()
+                try
                 {
-                    Name = newCounter.Text,
-                    Max = Int32.Parse(newCounterMax.Text),
-                    Current = Int32.Parse(newCounterMax.Text)
-                };
+                    Counter c = new Counter()
+                    {
+                        Name = newCounter.Text,
+                        Max = Int32.Parse(newCounterMax.Text),
+                        Current = Int32.Parse(newCounterMax.Text)
+                    };
 
-                newCounter.Text = string.Empty;
-                newCounterMax.Text = string.Empty;
-                PlayerCharacter.Counters.Add(c);
+                    newCounter.Text = string.Empty;
+                    newCounterMax.Text = string.Empty;
+                    PlayerCharacter.Counters.Add(c);
+                }
+                catch
+                {
+                    MessageBox.Show("Type it better yah dumbass");
+                }
             }
         }
     }

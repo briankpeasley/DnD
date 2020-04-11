@@ -31,6 +31,13 @@ namespace MapReveal
         public MainWindow()
         {
             InitializeComponent();
+
+            this.Dispatcher.UnhandledException += Dispatcher_UnhandledException;
+        }
+
+        private void Dispatcher_UnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            MessageBox.Show("You did something only a dumbass would do!", "Don't be a dumbass!");
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
