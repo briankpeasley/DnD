@@ -1,0 +1,11 @@
+﻿{
+    "name": "Enthrall",
+    "level": "2",
+    "areaOfEffect": "90' radius\n",
+    "casting_time": "1 round",
+    "range": "3 \"",
+    "components": "V, S",
+    "duration": "Special",
+    "savingThrow": "Neg.",
+    "desc": "<p>A cleric who uses this spell can bind and enthrall an audience that can fully understand his or her language. Listeners of the same race as the cleric are allowed a saving throw versus spell; those of a different race which is generally unfriendly to the cleric’s race save at + 4. It is impossible to enthrall a character or creature with more than 4 levels or hit dice, or one with a wisdom score greater than 15. To effect the spell, the caster must speak without interruption for a full round. Thereafter, the enchantment lasts for as long as the cleric keeps speaking, to a maximum of 6 turns. Those who fail their saving throw will view the cleric as if he or she had a charisma of 21 (loyalty base + 70%, reaction adjustment + 50%). They will stand and listen to the cleric’s words, but will not act on them as if a suggestion had been cast. When the cleric stops talking, the spell is broken and the listeners regain control of their own minds. Any form of attack (Le., a successful hit or the casting of a spell) against the cleric will instantly cancel the enthrall spell, as will any attempt by the cleric to cast a different spell or perform some other action. Members of the audience who make a successful saving throw will view the cleric as having a charisma of 3; they may (50% chance) hoot and jeer, allowing a new saving throw for others listening. If the cleric tries to take undue advantage of the spell by preaching about a religion or alignment opposed to that to which the members of the audience subscribe, each “offended” listener is allowed a new saving throw at + 5.</p>"
+}

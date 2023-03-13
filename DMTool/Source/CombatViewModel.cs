@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
@@ -14,6 +17,7 @@ namespace DMTool.Source
         private static int secondsPerRound = 6;
 
         private object participantsLock = new object();
+        private Random rnJesus = new Random();
 
         public CombatViewModel()
         {
@@ -21,6 +25,10 @@ namespace DMTool.Source
             Participants.CollectionChanged += Participants_CollectionChanged;
             ActiveParticipant = 0;
             Clock = 0;
+
+
+            Participants.Add(JsonConvert.DeserializeObject<PlayerCharacter>(File.ReadAllText("C:/Repos/DnD/DMTool/bin/Debug/PlayerCharacter/test.json")));
+            Participants.Add(JsonConvert.DeserializeObject<Monster>(File.ReadAllText("C:/Repos/DnD/DMTool/bin/Debug/Monsters/Allosaurus.json")));
         }
 
         public void SaveAll(bool showAcknowledgementUI)
@@ -96,54 +104,9 @@ namespace DMTool.Source
                 }
                 catch { }
 
-                foreach (Spell s in c.Cantrips)
+                foreach(SpellSlot s in c.SpellSlots)
                 {
-                    s.Cooldown = false;
-                }
-
-                foreach (Spell s in c.Level1)
-                {
-                    s.Cooldown = false;
-                }
-
-                foreach (Spell s in c.Level2)
-                {
-                    s.Cooldown = false;
-                }
-
-                foreach (Spell s in c.Level3)
-                {
-                    s.Cooldown = false;
-                }
-
-                foreach (Spell s in c.Level4)
-                {
-                    s.Cooldown = false;
-                }
-
-                foreach (Spell s in c.Level5)
-                {
-                    s.Cooldown = false;
-                }
-
-                foreach (Spell s in c.Level6)
-                {
-                    s.Cooldown = false;
-                }
-
-                foreach (Spell s in c.Level7)
-                {
-                    s.Cooldown = false;
-                }
-
-                foreach (Spell s in c.Level8)
-                {
-                    s.Cooldown = false;
-                }
-
-                foreach (Spell s in c.Level9)
-                {
-                    s.Cooldown = false;
+                    s.Used = 0;
                 }
             }
         }
@@ -166,6 +129,16 @@ namespace DMTool.Source
                     }
                 }
             }
+        }
+
+        public void RollInitiative()
+        {
+            for (int i = 0; i < Participants.Count; i++)
+            {
+                Participants[i].Initiative = Math.Max(1, rnJesus.Next(1, 20) + Modifiers.Compute(Participants[i].Dexterity));
+            }
+
+            Sort();
         }
 
         private void GiveExperiencePointsToPlayersForMonster(Monster m)
@@ -264,7 +237,10 @@ namespace DMTool.Source
         public int ActiveParticipant
         {
             get { return GetProperty<int>(); }
-            set { SetProperty(value); }
+            set {
+                // Thread.Sleep(250);
+                SetProperty(value); 
+            }
         }
 
         public float Clock

@@ -99,5 +99,25 @@ namespace DMTool.UserControls
         {
             (App.Current as App).CombatViewModel.LongRest();
         }
+
+        private void RollInitiative(object sender, RoutedEventArgs e)
+        {
+            (App.Current as App).CombatViewModel.RollInitiative();
+        }
+
+        private void ResetClock_Click(object sender, RoutedEventArgs e)
+        {
+            (App.Current as App).CombatViewModel.Clock = 0;
+        }
+
+        private void participantsListView_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            //e.Handled = true;
+        }
+
+        private void participantsListView_PreviewKeyUp(object sender, KeyEventArgs e)
+        {
+            //e.Handled = true;
+        }
     }
 }

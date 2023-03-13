@@ -173,12 +173,10 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" >
-            <local:StylizedTextBlock Text="Spell Book" />
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
@@ -188,19 +186,18 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <local:SpellGroupUserControl SpellGroup="{Binding Path=Cantrips}" SpellGroupName="Cantrips" />
-                <local:SpellGroupUserControl SpellGroup="{Binding Path=Level1}" SpellGroupName="Level 1" Grid.Column="1" />
-                <local:SpellGroupUserControl SpellGroup="{Binding Path=Level2}" SpellGroupName="Level 2" Grid.Column="2" />
+                <local:SpellGroupUserControl SpellGroup="{Binding Path=KnownSpells}" SpellGroupName="Spell Book" />
 
-                <local:SpellGroupUserControl SpellGroup="{Binding Path=Level3}" SpellGroupName="Level 3" Grid.Column="0" Grid.Row="1" />
-                <local:SpellGroupUserControl SpellGroup="{Binding Path=Level4}" SpellGroupName="Level 4" Grid.Column="1" Grid.Row="1" />
-                <local:SpellGroupUserControl SpellGroup="{Binding Path=Level5}" SpellGroupName="Level 5" Grid.Column="2" Grid.Row="1" />
-
-                <local:SpellGroupUserControl SpellGroup="{Binding Path=Level6}" SpellGroupName="Level 6" Grid.Column="0" Grid.Row="2" />
-                <local:SpellGroupUserControl SpellGroup="{Binding Path=Level7}" SpellGroupName="Level 7" Grid.Column="1" Grid.Row="2" />
-                <local:SpellGroupUserControl SpellGroup="{Binding Path=Level8}" SpellGroupName="Level 8" Grid.Column="2" Grid.Row="2" />
-
-                <local:SpellGroupUserControl SpellGroup="{Binding Path=Level9}" SpellGroupName="Level 9" Grid.Column="0" Grid.Row="3" />
+                <StackPanel Grid.Column="2">
+                    <Button HorizontalAlignment="Left" Click="AddSpellSlot">Add</Button>
+                    <ItemsControl ItemsSource="{Binding Path=SpellSlots}" >
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <local:SpellSlotUserControl SpellSlot="{Binding}" Margin="0,0,0,5" />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
             </Grid>
         </StackPanel>
         <Button Content="Save" HorizontalAlignment="Right" VerticalAlignment="Top" Click="Button_Click" />

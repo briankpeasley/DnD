@@ -1,0 +1,11 @@
+﻿{
+    "name": "Aid",
+    "level": "2",
+    "areaOfEffect": "One person\n",
+    "casting_time": "4 segments",
+    "range": "Touch",
+    "components": "V, S, M",
+    "duration": "1 round + 1/level",
+    "savingThrow": "None",
+    "desc": "<p> The recipient of this spell gains the benefit of a bless spell and a special benison of 1-8 additional hit points. The bless lasts as long as the aid spell, as do the hit points thus gained. The aid allows a character to actually have more hit points than the character’s full normal total. The added hit points last only for the duration of the aidspell. Any damage taken by the recipient while the aid spell is in effect is taken off the 1-8 additional hit points before regular ones are lost. Hit points bestowed by an aidspell and then lost cannot be regained by curative magic. Example: A 1st-level fighter has 8 hit points, takes 2 points of damage, and then receives an aid spell which gives 6 additional hit points. The fighter now has 12 hit points, 6 of which are temporary. If he is then hit for 7 points of damage, 1 regular point and all 6 of the temporary points are lost. The material compoComponents: V; S, M Casting Time: 4 segments Saving Throw: None nents of this spell are a tiny strip of white cloth with a sticky substance (such as tree sap) on the ends, plus the cleric’s holy symbol</p>"
+}

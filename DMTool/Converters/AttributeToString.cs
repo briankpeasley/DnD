@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DMTool.Source;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -14,18 +15,7 @@ namespace DMTool.Converters
         {
             if(value.GetType() == typeof(int))
             {
-                int baseValue = (int)value;
-                if (baseValue < 1)
-                {
-                    baseValue = 1;
-                }
-
-                if (baseValue > 30)
-                {
-                    baseValue = 30;
-                }
-
-                int mod = (int)(baseValue / 2) - 5;
+                int mod = Modifiers.Compute((int)value);
 
                 string sign = mod >= 0 ? "+" : "";
                 return $"({sign}{mod})";

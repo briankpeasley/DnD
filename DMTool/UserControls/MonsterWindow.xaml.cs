@@ -23,11 +23,14 @@ namespace DMTool.UserControls
         public MonsterWindow()
         {
             InitializeComponent();
+            PreventClosing = true;
         }
+
+        public bool PreventClosing { get; set; }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            e.Cancel = true;
+            e.Cancel = PreventClosing;
         }
         
         private void Window_KeyUp(object sender, KeyEventArgs e)

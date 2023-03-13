@@ -210,26 +210,26 @@ namespace DMTool.UserControls
                         continue;
                     }
 
-                    if (lineLower.StartsWith("cantrips"))
-                    {
-                        var match = Regex.Match(lineLower, @"(cantrips.*): (.*)");
-                        var cantrips = match.Groups[2].Value.Split(commaSplit);
-                        foreach (var cantrip in cantrips)
-                        {
-                            m.Cantrips.Add(new Spell()
-                            {
-                                Name = cantrip.Trim(),
-                            });
-                        }
+                    //if (lineLower.StartsWith("cantrips"))
+                    //{
+                    //    var match = Regex.Match(lineLower, @"(cantrips.*): (.*)");
+                    //    var cantrips = match.Groups[2].Value.Split(commaSplit);
+                    //    foreach (var cantrip in cantrips)
+                    //    {
+                    //        m.Cantrips.Add(new Spell()
+                    //        {
+                    //            Name = cantrip.Trim(),
+                    //        });
+                    //    }
 
-                        actions.Add(new SpecialAbility()
-                        {
-                            Name = match.Groups[1].Value,
-                            Description = match.Groups[2].Value,
-                        });
+                    //    actions.Add(new SpecialAbility()
+                    //    {
+                    //        Name = match.Groups[1].Value,
+                    //        Description = match.Groups[2].Value,
+                    //    });
 
-                        continue;
-                    }
+                    //    continue;
+                    //}
 
                     for (int spellLvlIndex = 1; spellLvlIndex <= 9; spellLvlIndex++)
                     {
@@ -248,18 +248,18 @@ namespace DMTool.UserControls
                             }
 
                             ObservableCollection<Spell> col = new ObservableCollection<Spell>();
-                            switch (spellLvlIndex)
-                            {
-                                case 1: col = m.Level1; break;
-                                case 2: col = m.Level2; break;
-                                case 3: col = m.Level3; break;
-                                case 4: col = m.Level4; break;
-                                case 5: col = m.Level5; break;
-                                case 6: col = m.Level6; break;
-                                case 7: col = m.Level7; break;
-                                case 8: col = m.Level8; break;
-                                case 9: col = m.Level9; break;
-                            }
+                            //switch (spellLvlIndex)
+                            //{
+                            //    case 1: col = m.Level1; break;
+                            //    case 2: col = m.Level2; break;
+                            //    case 3: col = m.Level3; break;
+                            //    case 4: col = m.Level4; break;
+                            //    case 5: col = m.Level5; break;
+                            //    case 6: col = m.Level6; break;
+                            //    case 7: col = m.Level7; break;
+                            //    case 8: col = m.Level8; break;
+                            //    case 9: col = m.Level9; break;
+                            //}
 
                             foreach (var spell in spellsCollection)
                             {

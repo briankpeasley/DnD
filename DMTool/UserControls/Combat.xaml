@@ -14,7 +14,7 @@
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
         <Grid.Resources>
-            <Converters:CharacterToFontWeight x:Key="CharacterToFontWeight" />
+            <Converters:CharacterTextStyling x:Key="CharacterTextStyling" />
             <Converters:CharacterToCurrentHitPoints x:Key="CharacterToCurrentHitPoints" />
             <Converters:ComputeCurrentHitPoints x:Key="ComputeCurrentHitPoints" />
             <Converters:DisplayTurn x:Key="DisplayTurn" />
@@ -23,10 +23,10 @@
         </Grid.Resources>
         <ScrollViewer>
             <StackPanel>
-                <ListView x:Name="participantsListView" Background="Transparent" 
+                <ListView x:Name="participantsListView" Background="Transparent" PreviewKeyDown="participantsListView_PreviewKeyDown" PreviewKeyUp="participantsListView_PreviewKeyUp"
                           ItemsSource="{Binding Path=Participants, UpdateSourceTrigger=PropertyChanged}" 
                           SelectionChanged="participantsListView_SelectionChanged"
-                          SelectedIndex="{Binding Path=ActiveParticipant, UpdateSourceTrigger=PropertyChanged}">
+                          SelectedIndex="{Binding Path=ActiveParticipant, UpdateSourceTrigger=PropertyChanged,Mode=OneWay}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Border HorizontalAlignment="Stretch" Width="1000">
@@ -40,11 +40,15 @@
                                 </Border.Background>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="35" />
                                         <ColumnDefinition Width="20" />
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
 
-                                    <local:StylizedTextBox Text="{Binding Path=Initiative, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,40"/>
+                                    <!--Initiative text box-->
+                                    <local:StylizedTextBox Text="{Binding Path=Initiative, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,40" FontSize="18pt"/>
+                                    
+                                    <!--Arrow showing current turn-->
                                     <TextBlock Text="&#x2794;" VerticalAlignment="Center" FontSize="16pt" Foreground="#FF964529">
                                         <TextBlock.Visibility>
                                             <MultiBinding Converter="{StaticResource DisplayTurn}">
@@ -54,7 +58,11 @@
                                             </MultiBinding>
                                         </TextBlock.Visibility>
                                     </TextBlock>
-                                    <Border Grid.Column="1" BorderThickness="0,0,0,3">
+
+                                    <Border Grid.Column="1" Background="{Binding ConverterParameter=colorBadge, Converter={StaticResource CharacterTextStyling}}" Margin="5,0,5,0" />
+
+                                    <!--Content-->
+                                    <Border Grid.Column="2" BorderThickness="0,0,0,3">
                                         <Border.BorderBrush>
                                             <LinearGradientBrush EndPoint="0,0" StartPoint="1,0">
                                                 <GradientStop Color="#FF964529" Offset="0.46"/>
@@ -64,7 +72,14 @@
                                         <StackPanel>
                                             <StackPanel Orientation="Horizontal">
                                                 <Button Content="x" Click="RemoveCharacter" Tag="{Binding}" />
-                                                <local:StylizedTextBox Text="{Binding Path=Name}" FontWeight="{Binding Converter={StaticResource CharacterToFontWeight}}" FontSize="12pt" VerticalAlignment="Center" />
+                                                
+                                                <!--Text for character-->
+                                                <local:StylizedTextBox Text="{Binding Path=Name}" 
+                                                                       FontWeight="{Binding ConverterParameter=weight, Converter={StaticResource CharacterTextStyling}}" 
+                                                                       FontSize="12pt" 
+                                                                       VerticalAlignment="Center"
+                                                                       />
+                                                
                                                 <local:StylizedTextBlock Text="  EHP: " />
                                                 <local:StylizedTextBlock VerticalAlignment="Top" FontSize="13pt">
                                                     <TextBlock.Text>
@@ -137,13 +152,15 @@
 
         <Grid Grid.Row="1">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
-                <local:StylizedTextBlock Text="Battle Clock: " />
-                <local:StylizedTextBlock Text="{Binding Path=Clock, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource BattleClockDisplay}}"/>
+                <local:StylizedTextBlock Text="Battle Clock: "  FontSize="18pt" Margin="0,0,5,0"/>
+                <local:StylizedTextBlock Text="{Binding Path=Clock, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource BattleClockDisplay}}" FontSize="18pt" Margin="0,0,5,0"/>
+                <Button Click="ResetClock_Click">Reset Clock</Button>
             </StackPanel>
 
             <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Orientation="Horizontal">
                 <Button Content="Long Rest" Click="LongRestClick" Margin="0,0,5,0"/>
-                <Button Content="Sort" Click="SortClick"/>
+                <Button Content="Roll Initiative" Click="RollInitiative"  Margin="0,0,5,0"/>
+                <Button Content="Combat Order" Click="SortClick"/>
             </StackPanel>
         </Grid>
     </Grid>

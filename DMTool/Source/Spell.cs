@@ -74,4 +74,43 @@ namespace DMTool.Source
             };
         }
     }
+
+    public class SpellSlot : ViewModel, ICloneable
+    {
+        public SpellSlot(int level, int total, int used)
+        {
+            Total = total;
+            Level = level;
+            Used = used;
+        }
+
+        public SpellSlot()
+        {
+            Total = 0;
+            Level = 0;
+            Used = 0;
+        }
+
+        [JsonProperty(PropertyName = "Total")]
+        public int Total
+        {
+            get { return GetProperty<int>(); }
+            set { SetProperty(value); }
+        }
+
+        [JsonProperty(PropertyName = "Used")]
+        public int Used
+        {
+            get { return GetProperty<int>(); }
+            set { SetProperty(value); }
+        }
+
+        [JsonProperty(PropertyName = "Level")]
+        public int Level { get; set; }
+
+        public object Clone()
+        {
+            return new SpellSlot(Level, Total, Used);
+        }
+    }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DMTool"
         xmlns:UserControls="clr-namespace:DMTool.UserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1200" KeyUp="Window_KeyUp">
+        Title="MainWindow" Height="600" Width="1200" KeyUp="Window_KeyUp" Closing="Window_Closing">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />

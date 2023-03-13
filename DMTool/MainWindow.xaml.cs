@@ -76,5 +76,11 @@ namespace DMTool
                 }
             }
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            (App.Current as App).MonsterWindow.PreventClosing = false;
+            (App.Current as App).MonsterWindow.Close();
+        }
     }
 }

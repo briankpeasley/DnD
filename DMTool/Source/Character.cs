@@ -22,27 +22,10 @@ namespace DMTool.Source
             DamageLog = new List<int>();
             Riders = new ObservableCollection<Rider>();
             Riders.CollectionChanged += Riders_CollectionChanged;
-            Cantrips = new ObservableCollection<Spell>();
-            Level1 = new ObservableCollection<Spell>();
-            Level2 = new ObservableCollection<Spell>();
-            Level3 = new ObservableCollection<Spell>();
-            Level4 = new ObservableCollection<Spell>();
-            Level5 = new ObservableCollection<Spell>();
-            Level6 = new ObservableCollection<Spell>();
-            Level7 = new ObservableCollection<Spell>();
-            Level8 = new ObservableCollection<Spell>();
-            Level9 = new ObservableCollection<Spell>();
+            KnownSpells = new ObservableCollection<Spell>();
+            SpellSlots = new ObservableCollection<SpellSlot>();
 
-            HandleSpellList(Cantrips);
-            HandleSpellList(Level1);
-            HandleSpellList(Level2);
-            HandleSpellList(Level3);
-            HandleSpellList(Level4);
-            HandleSpellList(Level5);
-            HandleSpellList(Level6);
-            HandleSpellList(Level7);
-            HandleSpellList(Level8);
-            HandleSpellList(Level9);
+            HandleSpellList(KnownSpells);
         }
         
         public void SubscribeToRemoveCharacter(EventHandler handler)
@@ -223,16 +206,12 @@ namespace DMTool.Source
         public ObservableCollection<Rider> Riders { get; set; }
 
         /* Spells */
-        public ObservableCollection<Spell> Cantrips { get; set; }
-        public ObservableCollection<Spell> Level1 { get; set; }
-        public ObservableCollection<Spell> Level2 { get; set; }
-        public ObservableCollection<Spell> Level3 { get; set; }
-        public ObservableCollection<Spell> Level4 { get; set; }
-        public ObservableCollection<Spell> Level5 { get; set; }
-        public ObservableCollection<Spell> Level6 { get; set; }
-        public ObservableCollection<Spell> Level7 { get; set; }
-        public ObservableCollection<Spell> Level8 { get; set; }
-        public ObservableCollection<Spell> Level9 { get; set; }
+        [JsonProperty(PropertyName = "KnownSpells")]
+        public ObservableCollection<Spell> KnownSpells { get; set; }
+
+        [JsonProperty(PropertyName = "SpellSlots")]
+        public ObservableCollection<SpellSlot> SpellSlots { get; set; }
+
 
         /* Additional */
         [JsonProperty(PropertyName = "damage_resistances")]

@@ -76,5 +76,14 @@ namespace DMTool.UserControls
         {
             Character.RemainingHitDice--;
         }
+
+        private void AddSpellSlot(object sender, RoutedEventArgs e)
+        {
+            SpellSlot slot = new SpellSlot();
+            slot.Level = this.Character.SpellSlots.Count + 1;
+            slot.Total = 0;
+            slot.Used = 0;
+            this.Character.SpellSlots.Add(slot);
+        }
     }
 }
