@@ -29,7 +29,7 @@ namespace DMTool.UserControls
             PlayerCharacterUserControl ctrl = d as PlayerCharacterUserControl;
             ctrl.grid.DataContext = e.NewValue;
             ctrl.gear.ItemsSource = (e.NewValue as PlayerCharacter).Gear;
-            ctrl.counters.ItemsSource = (e.NewValue as PlayerCharacter).Counters;
+            // ctrl.counters.ItemsSource = (e.NewValue as PlayerCharacter).Counters;
         }
 
         public PlayerCharacterUserControl()
@@ -46,28 +46,6 @@ namespace DMTool.UserControls
         {
             get { return GetValue(PlayerCharacterProperty) as PlayerCharacter; }
             set { SetValue(PlayerCharacterProperty, value); }
-        }
-
-        private void StackPanel_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                Gear g = new Gear()
-                {
-                    Name = newName.Text,
-                    Count = newCount.Text,
-                    Description = newDescription.Text,
-                    Weight = newWeight.Text,
-                    Value = newValue.Text
-                };
-
-                newName.Text = string.Empty;
-                newCount.Text = string.Empty;
-                newDescription.Text = string.Empty;
-                newWeight.Text = string.Empty;
-                newValue.Text = string.Empty;
-                PlayerCharacter.Gear.Add(g);
-            }
         }
 
         private void RemoveGear(object sender, RoutedEventArgs e)
@@ -91,28 +69,99 @@ namespace DMTool.UserControls
             c.Current--;
         }
 
-        private void StackPanel_KeyUp_1(object sender, KeyEventArgs e)
+        private void newCount_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            ValidateNumericInput(sender, e);
+        }
+
+        private void newWeight_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            ValidateNumericInput(sender, e);
+        }
+
+        private void ExistingCount_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            ValidateNumericInput(sender, e);
+        }
+
+        private void ExistingWeight_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            ValidateNumericInput(sender, e);
+        }
+
+        private void ValidateNumericInput(object sender, TextCompositionEventArgs e)
+        {
+            if (e.Text == ".")
+            {
+                int count = (sender as TextBox).Text.Count((char c) =>
+                {
+                    return c == '.';
+                });
+
+                e.Handled = count > 0;
+                return;
+            }
+
+            e.Handled = !double.TryParse(e.Text, out double foo);
+        }
+
+        private void Grid_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
-                try
+                if (double.TryParse(newCount.Text, out double count) == false)
                 {
-                    Counter c = new Counter()
-                    {
-                        Name = newCounter.Text,
-                        Max = Int32.Parse(newCounterMax.Text),
-                        Current = Int32.Parse(newCounterMax.Text)
-                    };
+                    MessageBox.Show("Count needs to be a number");
+                    return;
+                }
 
-                    newCounter.Text = string.Empty;
-                    newCounterMax.Text = string.Empty;
-                    PlayerCharacter.Counters.Add(c);
-                }
-                catch
+
+                if (double.TryParse(newWeight.Text, out double weight) == false)
                 {
-                    MessageBox.Show("Type it better yah dumbass");
+                    MessageBox.Show("Weight needs to be a number");
+                    return;
                 }
+
+                Gear g = new Gear()
+                {
+                    Name = newName.Text,
+                    Count = count,
+                    Description = newDescription.Text,
+                    Weight = weight,
+                    Value = newValue.Text
+                };
+
+                newName.Text = string.Empty;
+                newCount.Text = string.Empty;
+                newDescription.Text = string.Empty;
+                newWeight.Text = string.Empty;
+                newValue.Text = string.Empty;
+                PlayerCharacter.Gear.Add(g);
             }
         }
+
+        //private void StackPanel_KeyUp_1(object sender, KeyEventArgs e)
+        //{
+        //    if (e.Key == Key.Enter)
+        //    {
+        //        try
+        //        {
+        //            Counter c = new Counter()
+        //            {
+        //                Name = newCounter.Text,
+        //                Max = Int32.Parse(newCounterMax.Text),
+        //                Current = Int32.Parse(newCounterMax.Text)
+        //            };
+
+        //            newCounter.Text = string.Empty;
+        //            newCounterMax.Text = string.Empty;
+        //            PlayerCharacter.Counters.Add(c);
+        //        }
+        //        catch
+        //        {
+        //            MessageBox.Show("Type it better yah dumbass");
+        //        }
+        //    }
+        //}
     }
 }

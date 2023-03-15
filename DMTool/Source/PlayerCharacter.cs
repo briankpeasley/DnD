@@ -19,6 +19,8 @@ namespace DMTool.Source
             Platinum = 0;
         }
 
+        public event EventHandler CoinsChanged;
+
         public int Copper
         {
             get { return GetProperty<int>(); }
@@ -85,6 +87,7 @@ namespace DMTool.Source
                 + Platinum * 10;
 
             total = Math.Round(total, 3);
+            CoinsChanged?.Invoke(this, EventArgs.Empty);
             return total;
         }
 
@@ -95,6 +98,11 @@ namespace DMTool.Source
             Gold += c.Gold;
             Electrum += c.Electrum;
             Platinum += c.Platinum;
+        }
+
+        public double GetWeight()
+        {
+            return (Copper + Silver + Gold + Electrum + Platinum) / 50;
         }
     }
 
@@ -115,15 +123,15 @@ namespace DMTool.Source
             set { SetProperty(value); }
         }
 
-        public string Weight
+        public double Weight
         {
-            get { return GetProperty<string>(); }
+            get { return GetProperty<double>(); }
             set { SetProperty(value); }
         }
 
-        public string Count
+        public double Count
         {
-            get { return GetProperty<string>(); }
+            get { return GetProperty<double>(); }
             set { SetProperty(value); }
         }
 
@@ -162,6 +170,38 @@ namespace DMTool.Source
             Gear = new ObservableCollection<Gear>();
             Counters = new ObservableCollection<Counter>();
             Coin = new Coin();
+
+            Coin.CoinsChanged += Coin_CoinsChanged;
+            Gear.CollectionChanged += Gear_CollectionChanged;
+        }
+
+        private void Gear_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            if (e.NewItems != null)
+            {
+                foreach (Gear g in e.NewItems)
+                {
+                    g.PropertyChanged += gearPropertyChanged;
+                }
+            }
+
+            if (e.OldItems != null)
+            {
+                foreach (Gear g in e.OldItems)
+                {
+                    g.PropertyChanged -= gearPropertyChanged;
+                }
+            }
+
+            EvaluateWeight();
+        }
+
+        private void gearPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if(e.PropertyName == "Weight" || e.PropertyName == "Count")
+            {
+                EvaluateWeight();
+            }
         }
 
         public double XP
@@ -178,5 +218,31 @@ namespace DMTool.Source
             get { return GetProperty<Coin>(); }
             set { SetProperty(value); }
         }
+
+        public double Weight
+        {
+            get { return GetProperty<double>(); }
+            set { SetProperty(value); }
+        }
+
+        private void Coin_CoinsChanged(object sender, EventArgs e)
+        {
+            coinWeight = (sender as Coin).GetWeight();
+            Weight = coinWeight + gearWeight;
+        }
+
+        private void EvaluateWeight()
+        {
+            gearWeight = 0;
+            foreach (Gear g in Gear)
+            {
+                gearWeight = g.Count * g.Weight;
+            }
+
+            Weight = coinWeight + gearWeight;
+        }
+
+        private double coinWeight;
+        private double gearWeight;
     }
 }

@@ -15,7 +15,7 @@
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <StackPanel>
                 <local:CharacterUserControl x:Name="characterUserControl" Character="{Binding Path=PlayerCharacter, UpdateSourceTrigger=PropertyChanged}" />
-                <Border BorderThickness="0,3,0,0" Margin="0,3,0,0">
+                <!--<Border BorderThickness="0,3,0,0" Margin="0,3,0,0">
                     <Border.BorderBrush>
                         <LinearGradientBrush EndPoint="0,0" StartPoint="1,0">
                             <GradientStop Color="#FF964529" Offset="0.46"/>
@@ -52,7 +52,7 @@
                             </Border>
                         </Grid>
                     </StackPanel>
-                </Border>
+                </Border>-->
                 <Border BorderThickness="0,3,0,0" Margin="0,3,0,0">
                     <Border.BorderBrush>
                         <LinearGradientBrush EndPoint="0,0" StartPoint="1,0">
@@ -102,7 +102,20 @@
                             <GradientStop/>
                         </LinearGradientBrush>
                     </Border.BorderBrush>
-                    <StackPanel KeyUp="StackPanel_KeyUp" Margin="0,0,0,20">
+
+                    <StackPanel Orientation="Horizontal">
+                        <local:StylizedTextBlock Text="Total Weight" FontWeight="Bold" />
+                        <local:StylizedTextBlock Text="{Binding Path=Weight}" Margin="25,0,0,0" />
+                    </StackPanel>
+                </Border>
+                <Border BorderThickness="0,3,0,0" Margin="0,3,0,0">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush EndPoint="0,0" StartPoint="1,0">
+                            <GradientStop Color="#FF964529" Offset="0.46"/>
+                            <GradientStop/>
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <StackPanel Margin="0,0,0,20">
                         <local:StylizedTextBlock Text="Gear" />
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -130,7 +143,7 @@
                                 <local:StylizedTextBlock Text="Description" TextDecorations="Underline" TextAlignment="Center" />
                             </Border>
                         </Grid>
-                        
+
                         <ItemsControl x:Name="gear">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
@@ -151,10 +164,10 @@
                                             <local:StylizedTextBox Text="{Binding Path=Name, Mode=TwoWay}" Background="WhiteSmoke" />
                                         </Border>
                                         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1">
-                                            <local:StylizedTextBox Text="{Binding Path=Count, Mode=TwoWay}" Background="WhiteSmoke" />
+                                            <local:StylizedTextBox Text="{Binding Path=Count, Mode=TwoWay}" Background="WhiteSmoke" PreviewTextInput="ExistingCount_PreviewTextInput" />
                                         </Border>
                                         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2">
-                                            <local:StylizedTextBox Text="{Binding Path=Weight, Mode=TwoWay}" Background="WhiteSmoke" />
+                                            <local:StylizedTextBox Text="{Binding Path=Weight, Mode=TwoWay}" Background="WhiteSmoke" PreviewTextInput="ExistingWeight_PreviewTextInput" />
                                         </Border>
                                         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="3">
                                             <local:StylizedTextBox Text="{Binding Path=Value, Mode=TwoWay}" Background="WhiteSmoke" />
@@ -168,8 +181,8 @@
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
-                        
-                        <Grid>
+
+                        <Grid x:Name="gearGrid" KeyUp="Grid_KeyUp">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
@@ -183,10 +196,10 @@
                                 <local:StylizedTextBox x:Name="newName" Background="WhiteSmoke" />
                             </Border>
                             <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1">
-                                <local:StylizedTextBox x:Name="newCount" Background="WhiteSmoke" />
+                                <local:StylizedTextBox x:Name="newCount" Background="WhiteSmoke" PreviewTextInput="newCount_PreviewTextInput" />
                             </Border>
                             <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2">
-                                <local:StylizedTextBox x:Name="newWeight" Background="WhiteSmoke" />
+                                <local:StylizedTextBox x:Name="newWeight" Background="WhiteSmoke" PreviewTextInput="newWeight_PreviewTextInput" />
                             </Border>
                             <Border BorderBrush="Black" BorderThickness="1" Grid.Column="3">
                                 <local:StylizedTextBox x:Name="newValue" Background="WhiteSmoke" />
@@ -199,6 +212,8 @@
                 </Border>
             </StackPanel>
         </ScrollViewer>
+
+        
 
         <ProgressBar Maximum="100" VerticalAlignment="Bottom" Height="20">
             <ProgressBar.Value>
