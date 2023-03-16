@@ -85,5 +85,25 @@ namespace DMTool.UserControls
             slot.Used = 0;
             this.Character.SpellSlots.Add(slot);
         }
+
+        private void AddEffect(object sender, RoutedEventArgs e)
+        {
+            AddEffectWindow window = new AddEffectWindow();
+
+            Point mousePosition = Mouse.GetPosition(null);
+            Point screenPosition = PointToScreen(mousePosition);
+
+            // Set the location of the new window to the mouse position
+            window.Left = screenPosition.X;
+            window.Top = screenPosition.Y;
+
+            window.RiderViewModel = (App.Current as App).RiderViewModel;
+            window.RiderSelected += (s, r) =>
+            {
+                Character.Riders.Add(r);
+            };
+
+            window.ShowDialog();
+        }
     }
 }

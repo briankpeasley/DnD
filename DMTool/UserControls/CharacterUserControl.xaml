@@ -199,6 +199,15 @@
                     </ItemsControl>
                 </StackPanel>
             </Grid>
+            <Border BorderThickness="0,0,0,3" Margin="0,2,0,0">
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0,0" StartPoint="1,0">
+                        <GradientStop Color="#FF964529" Offset="0.46"/>
+                        <GradientStop/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+            </Border>
+            <Button HorizontalAlignment="Left" Click="AddEffect">Add Effect</Button>
         </StackPanel>
         <Button Content="Save" HorizontalAlignment="Right" VerticalAlignment="Top" Click="Button_Click" />
     </Grid>

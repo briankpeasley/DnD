@@ -36,15 +36,36 @@ namespace DMTool.UserControls
 
         private void Window_KeyUp(object sender, KeyEventArgs e)
         {
-            if (riders.SelectedItem != null)
+            if (e.Key == Key.Enter)
             {
-                Rider r = (riders.SelectedItem as Rider).Clone() as Rider;
-                int duration;
-                if(Int32.TryParse(txtDuration.Text, out duration))
+                if (riders.SelectedItem != null)
                 {
-                    r.Duration = duration;
-                    RiderSelected?.Invoke(this, r);
+                    Rider r = (riders.SelectedItem as Rider).Clone() as Rider;
+                    int duration;
+                    if (Int32.TryParse(txtDuration.Text, out duration))
+                    {
+                        r.Duration = duration;
+                        RiderSelected?.Invoke(this, r);
+                    }
                 }
+            }
+        }
+
+        private void customRider_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter && customRider.Text != string.Empty)
+            {
+                Rider newRider = new Rider();
+                newRider.Description = "";
+                newRider.Name = customRider.Text;
+
+                if (Int32.TryParse(txtDuration.Text, out int duration))
+                {
+                    newRider.Duration = duration;
+                    RiderSelected?.Invoke(this, newRider);
+                }
+
+                e.Handled = true;
             }
         }
     }

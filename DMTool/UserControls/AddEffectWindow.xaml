@@ -10,7 +10,7 @@
         <StackPanel>
             <StackPanel Orientation="Horizontal">
                 <local:StylizedTextBlock Text="Duration: " />
-                <local:StylizedTextBox Width="50" Text="60" TextAlignment="Center" x:Name="txtDuration" />
+                <local:StylizedTextBox Width="50" Text="6" TextAlignment="Center" x:Name="txtDuration" />
             </StackPanel>
             <ListBox x:Name="riders" Background="Transparent" VerticalAlignment="Center">
                 <ItemsControl.ItemTemplate>
@@ -19,6 +19,7 @@
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ListBox>
+            <local:StylizedTextBox x:Name="customRider" Text="" Background="White" KeyUp="customRider_KeyUp" />
         </StackPanel>
     </Grid>
 </Window>
