@@ -1,4 +1,5 @@
 ﻿using DMTool.Source;
+using Microsoft.Win32;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -130,14 +131,6 @@ namespace DMTool.UserControls
         {
         }
 
-        private void SaveEncounterTable(object sender, RoutedEventArgs e)
-        {
-            string path = "./Encounters.json";
-
-            File.WriteAllText(path, JsonConvert.SerializeObject(EncounterableMonsters.ToArray()));
-            MessageBox.Show("Encounter table saved");
-        }
-
         private double ComputeDifficulty(List<Monster> monsters, int partySize)
         {
             double difficulty = 0;
@@ -248,6 +241,35 @@ namespace DMTool.UserControls
         {
             var importer = new ImportFromPastedText();
             importer.ShowDialog();
+        }
+
+        private void SaveEncounterTable(object sender, RoutedEventArgs e)
+        {
+            if (!Directory.Exists("./Encounters"))
+            {
+                Directory.CreateDirectory("./Encounters");
+            }
+
+            string path = $"./Encounters/{txtEncounterTableName.Text}.json";
+
+            File.WriteAllText(path, JsonConvert.SerializeObject(EncounterableMonsters.ToArray()));
+            MessageBox.Show("Encounter table saved");
+        }
+
+        private void LoadEncounterTable(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog ofd = new Microsoft.Win32.OpenFileDialog();
+            ofd.RestoreDirectory = true;
+            ofd.InitialDirectory = System.IO.Path.Combine(Environment.CurrentDirectory, "Encounters");
+            ofd.Multiselect = false;
+            bool? ret = ofd.ShowDialog();
+            if (ret.HasValue && ret.Value)
+            {
+                foreach (string filename in ofd.FileNames)
+                {
+                    (App.Current as App).MonstersViewModel.LoadEncounters(filename);
+                }
+            }
         }
     }
 }

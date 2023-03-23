@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DMTool.UserControls"
         mc:Ignorable="d"
-        Title="AddMonsterWindow" Height="600" Width="700" Background="#FFEEDAA5" KeyUp="Window_KeyUp" Loaded="Window_Loaded">
+        Title="AddMonsterWindow" Height="600" Width="800" Background="#FFEEDAA5" KeyUp="Window_KeyUp" Loaded="Window_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -13,6 +13,7 @@
         </Grid.ColumnDefinitions>
         
         <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
             <RowDefinition Height="20" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
@@ -22,7 +23,7 @@
             <Button Content="Refresh" HorizontalAlignment="Right" Margin="50,0,0,0" Click="RefreshMonsters" />
             <Button Content="Import" HorizontalAlignment="Right" Margin="50,0,0,0" Click="ImportMonster" />
         </StackPanel>
-        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="2">
             <ListView x:Name="monsters" Background="Transparent" MouseDoubleClick="monsters_MouseDoubleClick">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
@@ -40,8 +41,15 @@
             <RadioButton x:Name="deadly" Content="Deadly" GroupName="Difficutly" VerticalAlignment="Center"/>
         </StackPanel>
 
-        <Button Content="Save" Grid.Column="1" Click="SaveEncounterTable" HorizontalAlignment="Right" />
-        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.Column="1">
+        <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
+            <local:StylizedTextBox x:Name="txtEncounterTableName" Width="67" Background="White" />
+            <Button Content="Load" Margin="5,0,5,0" Click="LoadEncounterTable"/>
+            <Button Content="Save" Click="SaveEncounterTable" HorizontalAlignment="Right" />
+        </StackPanel>
+
+        <local:StylizedTextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="Easy: 0-15     Medium: 16 - 50       Hard: 51 - 95       Deadly: 96-100" HorizontalAlignment="Center" />
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="2" Grid.Column="1">
         <ListView x:Name="encounterableMonsters" Background="Transparent" MouseDoubleClick="discoverableMonsters_MouseDoubleClick">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>

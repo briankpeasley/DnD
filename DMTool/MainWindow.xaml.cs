@@ -40,6 +40,12 @@ namespace DMTool
                 Name = "Empty"
             };
 
+            Character c = JsonConvert.DeserializeObject<PlayerCharacter>(File.ReadAllText("./PlayerCharacter/Pippin.json"));
+            (App.Current as App).CombatViewModel.Participants.Add(c);
+
+            //c = JsonConvert.DeserializeObject<PlayerCharacter>(File.ReadAllText("./PlayerCharacter/Niko Fogshine.json"));
+            //(App.Current as App).CombatViewModel.Participants.Add(c);
+
             // Used for testing a default character
             /*for (int i = 0; i < 5; i++)
             {

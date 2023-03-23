@@ -40,9 +40,14 @@ namespace DMTool.Source
                 }
             }
 
-            path = "./Encounters.json";
+        }
+
+        public void LoadEncounters(string path)
+        {
             if (File.Exists(path))
             {
+                EncounterableMonsters.Clear();
+
                 try
                 {
                     string s = File.ReadAllText(path);

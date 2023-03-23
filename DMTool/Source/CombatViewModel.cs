@@ -25,10 +25,6 @@ namespace DMTool.Source
             Participants.CollectionChanged += Participants_CollectionChanged;
             ActiveParticipant = 0;
             Clock = 0;
-
-
-            Participants.Add(JsonConvert.DeserializeObject<PlayerCharacter>(File.ReadAllText("C:/Repos/DnD/DMTool/bin/Debug/PlayerCharacter/test.json")));
-            Participants.Add(JsonConvert.DeserializeObject<Monster>(File.ReadAllText("C:/Repos/DnD/DMTool/bin/Debug/Monsters/Allosaurus.json")));
         }
 
         public void SaveAll(bool showAcknowledgementUI)

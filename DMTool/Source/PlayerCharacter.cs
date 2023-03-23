@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -219,6 +220,7 @@ namespace DMTool.Source
             set { SetProperty(value); }
         }
 
+        [JsonIgnore]
         public double Weight
         {
             get { return GetProperty<double>(); }
@@ -228,7 +230,7 @@ namespace DMTool.Source
         private void Coin_CoinsChanged(object sender, EventArgs e)
         {
             coinWeight = (sender as Coin).GetWeight();
-            Weight = coinWeight + gearWeight;
+            EvaluateWeight();
         }
 
         private void EvaluateWeight()
@@ -236,7 +238,7 @@ namespace DMTool.Source
             gearWeight = 0;
             foreach (Gear g in Gear)
             {
-                gearWeight = g.Count * g.Weight;
+                gearWeight += g.Count * g.Weight;
             }
 
             Weight = coinWeight + gearWeight;
