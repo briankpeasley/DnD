@@ -26,38 +26,15 @@ namespace DMTool
             ToolTipService.ShowDurationProperty.OverrideMetadata(
                 typeof(DependencyObject), new FrameworkPropertyMetadata(Int32.MaxValue));
 
-            (App.Current as App).MonsterWindow = new MonsterWindow();
-            (App.Current as App).MonsterWindow.MonsterUserControl.Monster = new Monster()
-            {
-                Name = "Empty"
-            };
-
-            (App.Current as App).MonsterWindow.Show();
             (App.Current as App).CombatViewModel = new CombatViewModel();
+            (App.Current as App).TableTopWindow = new TableTop();
+            (App.Current as App).TableTopWindow.participants.DataContext = (App.Current as App).CombatViewModel;
+            (App.Current as App).TableTopWindow.Show();
             
             playCharUserControl.PlayerCharacter = new PlayerCharacter()
             {
                 Name = "Empty"
             };
-
-            Character c = JsonConvert.DeserializeObject<PlayerCharacter>(File.ReadAllText("./PlayerCharacter/Pippin.json"));
-            (App.Current as App).CombatViewModel.Participants.Add(c);
-
-            //c = JsonConvert.DeserializeObject<PlayerCharacter>(File.ReadAllText("./PlayerCharacter/Niko Fogshine.json"));
-            //(App.Current as App).CombatViewModel.Participants.Add(c);
-
-            // Used for testing a default character
-            /*for (int i = 0; i < 5; i++)
-            {
-                Character c = JsonConvert.DeserializeObject<PlayerCharacter>(File.ReadAllText("./PlayerCharacter/Test.json"));
-                (c as PlayerCharacter).Counters.Add(new Counter()
-                {
-                    Name = "Test",
-                    Max = 25,
-                    Current = 10
-                });
-                (App.Current as App).CombatViewModel.Participants.Add(c);
-            }*/
 
             combatControl.DataContext = (App.Current as App).CombatViewModel;
         }
@@ -74,19 +51,18 @@ namespace DMTool
                 if ((e as CombatEventArgs).Character.GetType() == typeof(PlayerCharacter))
                 {
                     playCharUserControl.PlayerCharacter = (e as CombatEventArgs).Character as PlayerCharacter;
-                    (App.Current as App).MonsterWindow.PlayerCharacterUserControl.PlayerCharacter = (e as CombatEventArgs).Character as PlayerCharacter;
                 }
                 else
                 {
-                    (App.Current as App).MonsterWindow.MonsterUserControl.Monster = (e as CombatEventArgs).Character as Monster;
+                    monsterUserControl.Monster = (e as CombatEventArgs).Character as Monster;
                 }
             }
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            (App.Current as App).MonsterWindow.PreventClosing = false;
-            (App.Current as App).MonsterWindow.Close();
+            (App.Current as App).TableTopWindow.PreventClosing = false;
+            (App.Current as App).TableTopWindow.Close();
         }
     }
 }

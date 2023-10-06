@@ -255,6 +255,19 @@ namespace DMTool.Source
             set { SetProperty(value); }
         }
 
+        [JsonIgnore]
+        public bool TheirTurn
+        {
+            get { return GetProperty<bool>(); }
+            set { SetProperty(value); }
+        }
+
+        public string Portrait
+        {
+            get { return GetProperty<string>(); }
+            set { SetProperty(value); }
+        }
+
         public void InvokePropertyChange(string Member)
         {
             this.Invoke(Member);

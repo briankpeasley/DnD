@@ -234,7 +234,6 @@ namespace DMTool.Source
         {
             get { return GetProperty<int>(); }
             set {
-                // Thread.Sleep(250);
                 SetProperty(value); 
             }
         }
@@ -249,6 +248,7 @@ namespace DMTool.Source
         {
             SaveAll(false);
             int active = ActiveParticipant;
+
             active += dir;
             float clockIncrement = dir * (float)secondsPerRound / (float)Participants.Count;
             Clock += clockIncrement;
@@ -274,6 +274,16 @@ namespace DMTool.Source
             }
 
             ActiveParticipant = active;
+
+            foreach (Character c in Participants)
+            {
+                c.TheirTurn = false;
+            }
+
+            if (ActiveParticipant >= 0 && ActiveParticipant < Participants.Count)
+            {
+                Participants[active].TheirTurn = true;
+            }
         }
     }
 }

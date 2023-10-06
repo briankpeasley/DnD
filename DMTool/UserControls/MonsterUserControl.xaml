@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DMTool.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="700" d:DesignWidth="700">
+             d:DesignHeight="700" d:DesignWidth="700" Background="#FFEEDAA5">
     <Grid x:Name="grid">
         <ScrollViewer>
             <StackPanel>

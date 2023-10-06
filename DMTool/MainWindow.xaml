@@ -11,9 +11,11 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         
         <UserControls:Combat x:Name="combatControl" PlayerSelectionChanged="combatControl_PlayerSelectionChanged" />
         <UserControls:PlayerCharacterUserControl Grid.Column="1" x:Name="playCharUserControl" />
+        <UserControls:MonsterUserControl Grid.Column="2" x:Name="monsterUserControl" />
     </Grid>
 </Window>

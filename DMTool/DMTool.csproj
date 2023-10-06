@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>DMTool</RootNamespace>
     <AssemblyName>DMTool</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -28,6 +28,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -85,6 +86,7 @@
     <Compile Include="Converters\DisplayTurn.cs" />
     <Compile Include="Converters\LevelToNextLevelXP.cs" />
     <Compile Include="Converters\RiderToText.cs" />
+    <Compile Include="Converters\SelectedPlayerToBorder.cs" />
     <Compile Include="Converters\SpellToTooltip.cs" />
     <Compile Include="Converters\XPToProgressBar.cs" />
     <Compile Include="Source\Charts.cs" />
@@ -150,6 +152,9 @@
       <DependentUpon>StylizedTextBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Source\ViewModel.cs" />
+    <Compile Include="UserControls\TableTop.xaml.cs">
+      <DependentUpon>TableTop.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -223,6 +228,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\StylizedTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TableTop.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

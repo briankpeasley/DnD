@@ -23,7 +23,7 @@ namespace DMTool
         public RidersViewModel RiderViewModel { get; set; }
         public SpellsViewModel SpellsViewModel { get; set; }
         public MonstersViewModel MonstersViewModel { get; set; }
-        public MonsterWindow MonsterWindow { get; set; }
+        public TableTop TableTopWindow { get; set; }
         public CombatViewModel CombatViewModel { get; set; }
         public Random RNG { get; set; }
         public string Version { get; set; }
